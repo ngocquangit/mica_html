@@ -80,13 +80,119 @@ $(".sp_row_select_item").click(function () {
   $(`.${id}.plan_button_row`).addClass("active");
 });
 
-$(".stay_plan_content .col_select_item").click(function () {
+// <---- PLAN CONTENT ---->
+const dataPlan = [
+  {
+    image: "../assets/img/top/img_food.png",
+    heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
+    period_from: "2022年04月01日",
+    period_to: "2022年06月30日",
+    amount: "45,100~",
+    recommended: "人気",
+    breakfast: "素泊まり"
+  },
+  {
+    image: "../assets/img/top/img_food.png",
+    heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
+    period_from: "2022年04月01日",
+    period_to: "2022年06月30日",
+    amount: "45,100~",
+    recommended: "おすすめ",
+    breakfast: "すべて"
+  },
+  {
+    image: "../assets/img/top/img_food.png",
+    heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
+    period_from: "2022年04月01日",
+    period_to: "2022年06月30日",
+    amount: "45,100~",
+    recommended: "おすすめ",
+    breakfast: "すべて"
+  },
+  {
+    image: "../assets/img/top/img_food.png",
+    heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
+    period_from: "2022年04月01日",
+    period_to: "2022年06月30日",
+    amount: "45,100~",
+    recommended: "おすすめ",
+    breakfast: "すべて"
+  },
+  {
+    image: "../assets/img/top/img_food.png",
+    heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
+    period_from: "2022年04月01日",
+    period_to: "2022年06月30日",
+    amount: "45,100~",
+    recommended: "おすすめ",
+    breakfast: "すべて"
+  },
+];
+let tempDataPlan = [];
+// active recommended btn 
+$("#recommended .plan_button_item").click(function (e) {
   var id = $(this).attr("id");
-  $(".stay_plan_content .col_select_item.active").removeClass("active");
-  $(".stay_plan_content  .col_radio_wrap-item.active").removeClass("active");
-  $(`.stay_plan_content  #${id}.col_select_item`).addClass("active");
-  $(`.stay_plan_content  .${id}.col_radio_wrap-item`).addClass("active");
+  var idxRCM = $(e.target).text();
+  var idxBRF = $('#breakfast .plan_button_item.active').text()
+  forEachPlanItem(idxRCM,idxBRF)
+  $("#recommended  .plan_button_item").removeClass("active");
+  $(`#recommended  #${id}`).addClass("active");
 });
+// active breakfast btn 
+$("#breakfast .plan_button_item").click(function (e) {
+  var id = $(this).attr("id");
+  var idxBRF = $(e.target).text();
+  var idxRCM = $('#recommended .plan_button_item.active').text()
+  forEachPlanItem(idxRCM,idxBRF)
+  $("#breakfast  .plan_button_item").removeClass("active");
+  $(`#breakfast  #${id}`).addClass("active");
+});
+// sort data by active recommended variable , breakfast variable
+function forEachPlanItem(idxRCM,idxBRF) {
+  tempDataPlan = [];
+  dataPlan.forEach(element => {
+    if(element.recommended == idxRCM && element.breakfast == idxBRF) {
+      tempDataPlan.push(element)
+    }
+  });
+  showDataPlan(tempDataPlan)
+}
+
+// show data
+function showDataPlan (data) {
+  var dataHtml = '<div class="swiper-wrapper slide__plan_wrap flex">';
+  $.each(data, function (index, item) {
+      dataHtml += '<div class="slide_plan_box swiper-slide relative"><div class="img_wrap"><img src="' + item.image +'" alt="" /></div><div class="slide_txt_wrap flex col"><div class="slide_txt_title">' + item.heading + '<table class="table_txt flex"><tr class="flex"><td class="table_txt_left">期間：</td><td class="table_txt_right">' + item.period_from + '〜' + item.period_to + '</td></tr><tr class="flex"><td class="table_txt_left">料金：</td><td class="table_txt_right">' + item.amount + '</td></tr><tr><td class="table_txt_left">お料理：</td><td class="table_txt_right">' + item.recommended + '、' + item.breakfast + '</td></tr></table></div><a class="btn_detail_plan sp_flex" href="#">詳細をみる</a></div></div>'
+  });
+  dataHtml += '</div>';
+  $(".slide__plan_swiper").html(dataHtml);
+  var swiper = new Swiper(".slide__plan_swiper", {
+    centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: "auto"
+      },
+      769: {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+    },
+  });
+}
+// first show data 
+$(document).ready(function () {
+  var idxRCM = $('#recommended .plan_button_item.active').text()
+  var idxBRF = $('#breakfast .plan_button_item.active').text()
+  forEachPlanItem(idxRCM,idxBRF)
+})
+
+// <---- PLAN CONTENT ----/>
+
+
 
 $("#btn_view_more").click(function () {
   $(".slide_stay_plan.sp .slide_plan_item.hide").toggle();
@@ -358,412 +464,7 @@ $(function () {
             title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
             imgsrc: "/assets/img/news/event-img-1.jpg",
             date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
+          }
       ],
       pageSize: 12,
       nextText: "次へ >",

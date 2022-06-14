@@ -191,25 +191,17 @@ block main
         .text_title_EN Plan
         .text_title_JP 宿泊プラン
         .plan_content_row.flex 
-          .plan_content_left
-            .sp_row_select.sp_flex.center__justify
-              #row_select_item01.sp_row_select_item おすすめ
-              #row_select_item02.sp_row_select_item.active 人気
-              #row_select_item03.sp_row_select_item 期間限定
-            p.plan_title.pc プランの絞り込み
-            .plan_button_row.flex.row_select_item01 
-              .plan_button_item.active おすすめ
-              .plan_button_item 人気
-              .plan_button_item 期間限定
+          #plan_content_select.plan_content_left
+            p.plan_title プランの絞り込み
+            #recommended.plan_button_row.flex.row_select_item01 
+              #recommended-item-01.plan_button_item.active おすすめ
+              #recommended-item-02.plan_button_item 人気
+              #recommended-item-03.plan_button_item 期間限定
             p.plan_title.pc お食事の有無
-            .plan_button_row.flex.active.row_select_item02
-              .plan_button_item.active すべて
-              .plan_button_item 素泊まり
-              .plan_button_item 食事付き
-            .plan_button_row.sp_flex.row_select_item03
-              .plan_button_item.active おすすめ
-              .plan_button_item 人気
-              .plan_button_item 期間限定
+            #breakfast.plan_button_row.flex.row_select_item02
+              #breakfast-item-01.plan_button_item.active すべて
+              #breakfast-item-02.plan_button_item 素泊まり
+              #breakfast-item-03.plan_button_item 食事付き
             a.btn_link.pc_flex.center__align(href="#") 
               span プラン一覧を見る
               .next_icon.flex.center__align
