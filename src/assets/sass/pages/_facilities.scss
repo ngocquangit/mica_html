@@ -1,0 +1,182 @@
+.facilities{
+  .container{
+    @include mq-pc(){
+      max-width: unset;
+    }
+  }
+  .facilities-box{
+    margin: 186px 0 100px;
+    .facilities-box__left{
+      width: 50%;
+      @include mq-sp(){
+        width: unset;
+        margin-right: 0;
+      }
+    }
+    .facilities-box__slide{
+      width: calc( 100% - 80px);
+      margin: unset;
+      @include mq-sp(){
+        width: unset;
+      }
+    }
+    .facilities-box__title{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #333333;
+      @include mq-extra-large(){
+        font-size: 18px;
+      }
+      @include mq-sp(){
+        margin-top: 20px;
+      }
+    }
+    .facilities-box__right{
+      max-width: 335px;
+      @include mq-extra-large(){
+        max-width: unset;
+      }
+      @include mq-sp(){
+        max-width: unset;
+        margin-left: 0;
+      }
+    }
+    .ml-180{
+      margin-left: 180px;
+      @include mq-sp(){
+        margin-left: 0;
+      }
+    }
+    .facilities-box__desc{
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.04rem;
+      margin: 10px 0 5px;
+      color: #333333;
+      @include mq-extra-large(){
+        font-size: 14px;
+      }
+    }
+    .facilities-box__row {
+      display: flex;
+    }
+    .facilities-box__row-left{
+      width: 60px;
+      @include mq-extra-large(){
+        width: 80px;
+      }
+    }
+    .facilities-box__text{
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #37373C;
+      @include mq-extra-large(){
+        font-size: 14px;
+      }
+    }
+    .facilities-gray{
+      line-height: 17px;
+      color: #AFAFB9;
+    }
+    .mt-23{
+      margin-top: 23px;
+    }
+    .mt-20{
+      margin-top: 20px;
+    }
+    .order-2{
+      order: 2;
+      .facilities-box__slide{
+        margin-right: 0;
+        margin-left: auto;
+      }
+      @include mq-sp(){
+        order: unset;
+      }
+    }
+    .jsb{
+      justify-content: space-between;
+    }
+    .facilities-box__note{
+      font-size: 10px;
+      line-height: 15px;
+      font-weight: bold;
+      color: #AFAFB9;
+      @include mq-extra-large(){
+        font-size: 12px;
+      }
+    }
+    .facilities-box__note-desc{
+      font-size: 10px;
+      line-height: 20px;
+      color: #AFAFB9;
+      margin-top: 10px;
+      @include mq-extra-large(){
+       font-size: 12px; 
+      }
+    }
+    .facilities-box__title-sp{
+      font-family: 'Gotham';
+      font-size: 16px;
+      line-height: 21px;
+      color: #AFAFB9;
+      margin-bottom: 20px;
+      display: none;
+      @include mq-sp(){
+        display: block;
+      }
+    }
+    .swiper-slide{
+      height: 444px;
+      object-fit: cover;
+      @include mq-sp(){
+        height: 240px;
+      }
+    }
+    .facilities-box__swiper-pagination{
+      position: absolute;
+      z-index: 99;
+      bottom: 20px;
+      text-align: center;
+    }
+    .swiper-pagination-bullet {
+      background: #C9C9C9;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: var(--swiper-pagination-color,var(--swiper-theme-color));
+    }
+    @include mq-sp(){
+      margin: 36px 0 60px;
+    }
+  }
+  .column-sp{
+    @include mq-sp(){
+      flex-direction: column;
+    }
+  }
+  .stay_plan_content{
+    .text_title_EN {
+      @include mq-sp(){
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+    @include mq-sp(){
+      padding: 0;
+    }
+  }
+  img{
+    width: 100%;
+  }
+  .top__page{
+    .container{
+      @include mq-pc(){
+        max-width: 1280px;
+      }
+    }
+  }
+}

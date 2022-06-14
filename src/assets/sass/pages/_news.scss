@@ -1,0 +1,167 @@
+.news_page {
+    .banner__txt {
+        text-align: center;
+        p {
+            @include mq-sp(){
+                font-weight: 400;
+            }
+        }
+        
+    }
+    .container_child {
+        h1 {
+            font-size: 30px;
+            font-family: "Gotham";
+            @include mq-sp() {
+                font-size: 14px;
+            }
+        }
+        .pc {
+            font-size: 30px;
+            line-height: 24px;
+            margin-top: 19px;
+            font-weight: 400;
+            @include mq-large() {
+                font-size: 28px;
+                font-weight: 400;
+            }
+        }
+    }
+    .infomation_content {
+        margin-top: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mq-sp() {
+            margin-top: 36px;
+        }
+        .container_child {
+            width: 1080px;
+        }
+        .text_title_EN {
+            margin-bottom: 10px;
+            font-size: 30px;
+            line-height: 36px;
+            letter-spacing: 0.1rem;
+            font-family: "Gotham";
+            font-weight: 500;
+            color: #AFAFB9;
+            @include mq-sp() {
+                font-size: 14px;
+                margin-bottom: inherit;
+                line-height: 19px;
+            }
+        }
+        .infomation_events {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include mq-large() {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .infomation_event {
+                width: 47%;
+                margin-top: 28px;
+                @include mq-sp() {
+                    margin-top: 30px;
+                }
+                .infomation_event_img {
+                    img {
+                        width: 100%;
+                        @include mq-large() {
+                            width: 100%;
+                            height: initial;
+                        }
+                    }
+                }
+                .infomation_event_date {
+                    font-size: 24px;
+                    margin-top: 28px;
+                    font-weight: 400;
+                    font-family: 'DINPro';
+                    @include mq-large() {
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-top: 14px;
+                        font-weight: 400;
+                    }
+                    @include mq-sp() {
+                        font-size: 12px;
+                        margin-top: 14px;
+                    }
+                }
+
+                .infomation_event_des {
+                    max-width: 500px;
+                    font-size: 24px;
+                    margin-top: 8px;
+                    font-weight: 400;
+                    font-family: 'Source Han Sans JP';
+                    @include mq-large() {
+                        max-width: 320px;
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-top: 4px;
+                        font-weight: 400;
+                        font-family: 'Source Han Sans JP';
+                    }
+                    @include mq-sp() {
+                        font-size: 12px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+        .infomation_pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 76px;
+            @include mq-sp() {
+                margin-top: 35px;
+            }
+            .paginationjs-pages {
+                li {
+                    border: 0;
+                }
+                li:hover a {
+                    background-color: #EFEFEF;
+                    border-radius: 5px;
+                }
+                .active a {
+                    background-color: #EFEFEF;
+                    border-radius: 5px;
+                    height: 40px !important;
+                    width: 40px !important;
+                    @include mq-sp() {
+                        height: 20px !important;
+                        width: 20px !important;
+                    }
+                }
+                a {
+                    font-family: 'DINPro';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 32px;
+                    letter-spacing: 0.06rem;
+                    color: #000 !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    min-width: 40px;
+                    @include mq-sp() {
+                        height: 20px;
+                        min-width: 20px;
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .slide_product_content {
+        margin-top: 100px;
+    }
+}

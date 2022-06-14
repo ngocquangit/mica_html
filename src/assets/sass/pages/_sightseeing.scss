@@ -1,0 +1,189 @@
+.sightseeing_page {
+    overflow-x: hidden;
+    .sightseeing-title {
+        font-size: 30px;
+        line-height: 60px;
+        font-weight: 600;
+        color: #AFAFB9;
+        @include mq-sp() {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 20px;
+        }
+    }
+    .tour_content,.tour-review,.sightseeing-map,.event-content{
+        margin-top: 100px;
+        @include mq-sp() {
+            margin-top: 38px;
+        }
+    }
+    .sightseeing-map {
+        iframe {
+            width: 100% !important;
+            @include mq-sp() {
+                height: 200px !important;
+            }
+        }
+    }
+    .location__edu {
+        margin: 0;
+        .loop__img_wrap {
+            margin-right: 0;
+            height: auto;
+            .item__title {
+                font-weight: 600;
+            }
+            .item__desc {
+                color: #333;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .count-block {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #DF5958;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            &.spencial {
+                width: 50px;
+                height: 26px;
+                background-color: #C4B674;
+                border-radius: 0;
+            }
+        }
+    }
+    .tour_infor_left {
+        width: 50%;
+        padding-top: 77px;
+        padding-right: 70px;
+        @include mq-lg() {
+            padding-top: 50px;
+            padding-right: 40px;
+        }
+        @include mq-sp() {
+            width: 100%;
+            padding: 15px 0 0;
+        }
+        .tour_title {
+            font-size: 24px;
+            line-height: 44px;
+            font-weight: 600;
+            letter-spacing: 0.06rem;
+            color: #333;
+            margin-bottom: 32px;
+            @include mq-lg() {
+                margin-bottom: 20px;
+            }
+            @include mq-sp() {
+                margin-bottom: 10px;
+            }
+        }
+        .tour_description {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.04rem;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+    .tour_infor_right {
+        width: 50%;
+        padding-top: 42px;
+        @include mq-lg() {
+            padding-right: 20px;
+        }
+        @include mq-sp() {
+            width: 100%;
+            padding: 0;
+        }
+        .tour_table_infor {
+            width: 100%;
+            .tour_table_row {
+                border-bottom: 1px solid #ddd;
+            }
+            .tour_table_left {
+                width: 80px;
+                color: #AFAFB9;
+            }
+            .tour_table_col {
+                padding: 20px 0;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+                @include mq-sp() {
+                    padding: 15px 0;
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+            
+        }
+        .couple_btn {
+            margin-top: 35px;
+            @include mq-sp() {
+                margin-top: 30px;
+            }
+            a {
+                width: 165px;
+                height: 60px;
+                border-radius: 5px;
+                border: 2px solid #552C6E;
+                color: #552C6E;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include mq-sp() {
+                    font-size: 12px;
+                    line-height: 17px;
+                    width: 165px;
+                    height: 44px;
+                }
+            }
+            .btn-violet {
+                background-color: #552C6E;
+                color: #fff;
+                margin-right: 10px;
+            }
+        }
+    }
+    .allcontaints__content 
+    {
+        .text__title_EN{
+            color: #AFAFB9;
+            font-family: 'Gotham';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0.1rem;
+            @include mq-sp(){
+                font-size: 14px;
+                line-height: 19px;
+                letter-spacing: 0.1rem;
+            }
+        }
+        .allcontaints__wrap_slide {
+            @include mq-sp(){
+                padding-right: 20px;
+            }
+        }
+    }
+    .mt-120 {
+        margin-top: 120px;
+    }
+}

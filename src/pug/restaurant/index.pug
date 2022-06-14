@@ -1,0 +1,393 @@
+extends ../_include/layouts/master.pug
+include ../_include/components/banner-block.pug
+include ../_include/components/allcontaints.pug
+
+block variable
+  - var thisPageTitle = "Micadorayout"
+  - var pageName = ""
+
+block description
+  - var thisPageDescription = ""
+
+block keywords
+  - var thisPageKeywords = "Micadorayout"
+
+block ogpType
+  - var thisPageOgpType = "article"
+
+block main
+    .restaurant
+      +banner-block("/assets/img/restaurant/restaurant_img06.png","DINING","レストラン紹介")
+      .restaurant-box.pc(data-aos='fade-in')
+        .container
+          .restaurant-box__title 遥かな眺望と心身のリラックスを誘うゲストルーム
+          .restaurant-box__desc 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など江戸情緒を
+            |<br>色濃く残す「浅草」の風景が広がります。
+            |<br>つくばエクスプレス「浅草駅」直結、東京を代表する観光地 「浅草」に
+            |<br>佇む浅草唯一の高層シティーホテルです。
+      .restaurant-list.container.sp
+        .restaurant-title RESTAURANT LIST
+        ul.restaurant-list__menu
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title 26F スカイグリルブッフェ 武藏
+                .restaurant-list__sub-title コンチネンタルブッフェ
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title 27F THE DINING
+                  |<br>シノワ 唐紅花＆鉄板フレンチ 蒔絵
+                .restaurant-list__sub-title 中国料理 & 鉄板フレンチ
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title GRILL DINING 薪火
+                .restaurant-list__sub-title 11:00 - 14:00
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title 穂乃華
+                .restaurant-list__sub-title 11:00 - 14:00
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title THE LOUNGE
+                .restaurant-list__sub-title 11:00 - 14:00
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title 28F トップバー アイスハウス
+                .restaurant-list__sub-title 11:00 - 14:00
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+          li.restaurant-list__item 
+            a.restaurant-list__link(href="#")
+              .restaurant-list__col 
+                .restaurant-list__title 28F メンバーズバー
+                  |<br>セント・クリスティーナ
+                .restaurant-list__sub-title 06:30 - 09:00
+              .restaurant-list__col 
+                svg(xmlns='http://www.w3.org/2000/svg' width='11.414' height='6.414' viewbox='0 0 11.414 6.414')
+                  path#Path_681(data-name='Path 681' d='M4102.758,188.041l5,5-5,5' transform='translate(198.748 -4102.051) rotate(90)' fill='none' stroke='#afafb9' stroke-linecap='round' stroke-width='1')
+
+      .slide_product_content(data-aos='fade-in') 
+        .slide__product_swiper
+          .swiper-wrapper.slide__product_wrap.flex.center__align
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+          .slide_product_pagination.swiper-pagination  
+          .swiper-button.flex 
+            .swiper-button-prev
+            .swiper-button-next
+      .container(data-aos='fade-in')
+        .restaurant-desc
+          .restaurant-desc__col
+            .restaurant-desc__title 26F スカイグリルブッフェ 武藏
+            .restaurant-desc__content.pc こちらのエグゼクティブツインルームは26.1㎡の広さをご用意
+              |<br>しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
+            .restaurant-desc__content.sp メンバースオンリーの特別感と、香り高く味わい豊かな銘酒に酔いしれる空間。
+              |<br>喧騒を忘れ、プレシャスなひとときをお過ごしください。
+          .restaurant-desc__col.hide-box-sp
+            .restaurant-desc__row 
+              .restaurant-desc__gray 営業時間
+              ul.restaurant-desc__list.pc
+                li.restaurant-desc__item.restaurant-desc__text 朝食  6:30 - 10:00
+                li.restaurant-desc__item.restaurant-desc__text ランチ <90分制>  ①11:30  ②13:30
+                li.restaurant-desc__item.restaurant-desc__text ディナー<120分制>  -平日
+              .restaurant-desc__text.sp 17:30 - 23:30 (ラストオーダー 23:00)
+            .restaurant-desc__row.sp_flex
+              .restaurant-desc__gray 直通電話
+              .restaurant-desc__text 03-3842-3367
+            .restaurant-desc__row 
+              .restaurant-desc__gray.pc コース
+              .restaurant-desc__gray.sp 入会金
+              a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
+              span
+                  svg(xmlns='http://www.w3.org/2000/svg' width='19.528' height='24' viewbox='0 0 19.528 24')
+                    g(id='PDFアイコン' transform='translate(-47.706)')
+                      path#Path_716(data-name='Path 716' d='M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z' fill='#4b4b4b')
+                      path#Path_717(data-name='Path 717' d='M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z' transform='translate(-82.947 -240.936)' fill='#4b4b4b')
+                      path#Path_718(data-name='Path 718' d='M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z' transform='translate(-163.872 -240.936)' fill='#4b4b4b')
+                      path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
+            .restaurant-desc__row.pc_flex
+              .restaurant-desc__gray ご予約
+              .restaurant-desc__text スカイグリルブッフェ 武蔵予約専用 
+                |<br>03-3842-6341（10:00～17:00）
+                |<br>当日のご予約は 03-3842-3376（直通）
+            .restaurant-desc__row.sp
+              .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
+              .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
+          .restaurant-desc__button.sp_flex 詳細をみる
+      .slide_product_content(data-aos='fade-in') 
+        .slide__product_swiper
+          .swiper-wrapper.slide__product_wrap.flex.center__align
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+          .slide_product_pagination.swiper-pagination  
+          .swiper-button.flex 
+            .swiper-button-prev
+            .swiper-button-next
+      .container(data-aos='fade-in')
+        .restaurant-desc
+          .restaurant-desc__col
+            .restaurant-desc__title 26F スカイグリルブッフェ 武藏
+            .restaurant-desc__content.pc こちらのエグゼクティブツインルームは26.1㎡の広さをご用意
+              |<br>しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
+            .restaurant-desc__content.sp メンバースオンリーの特別感と、香り高く味わい豊かな銘酒に酔いしれる空間。
+              |<br>喧騒を忘れ、プレシャスなひとときをお過ごしください。
+          .restaurant-desc__col.hide-box-sp
+            .restaurant-desc__row 
+              .restaurant-desc__gray 営業時間
+              ul.restaurant-desc__list.pc
+                li.restaurant-desc__item.restaurant-desc__text 朝食  6:30 - 10:00
+                li.restaurant-desc__item.restaurant-desc__text ランチ <90分制>  ①11:30  ②13:30
+                li.restaurant-desc__item.restaurant-desc__text ディナー<120分制>  -平日
+              .restaurant-desc__text.sp 17:30 - 23:30 (ラストオーダー 23:00)
+            .restaurant-desc__row.sp_flex
+              .restaurant-desc__gray 直通電話
+              .restaurant-desc__text 03-3842-3367
+            .restaurant-desc__row 
+              .restaurant-desc__gray.pc コース
+              .restaurant-desc__gray.sp 入会金
+              a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
+              span
+                  svg(xmlns='http://www.w3.org/2000/svg' width='19.528' height='24' viewbox='0 0 19.528 24')
+                    g(id='PDFアイコン' transform='translate(-47.706)')
+                      path#Path_716(data-name='Path 716' d='M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z' fill='#4b4b4b')
+                      path#Path_717(data-name='Path 717' d='M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z' transform='translate(-82.947 -240.936)' fill='#4b4b4b')
+                      path#Path_718(data-name='Path 718' d='M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z' transform='translate(-163.872 -240.936)' fill='#4b4b4b')
+                      path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
+            .restaurant-desc__row.pc_flex
+              .restaurant-desc__gray ご予約
+              .restaurant-desc__text スカイグリルブッフェ 武蔵予約専用 
+                |<br>03-3842-6341（10:00～17:00）
+                |<br>当日のご予約は 03-3842-3376（直通）
+            .restaurant-desc__row.sp
+              .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
+              .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
+          .restaurant-desc__button.sp_flex 詳細をみる
+      .slide_product_content(data-aos='fade-in') 
+        .slide__product_swiper
+          .swiper-wrapper.slide__product_wrap.flex.center__align
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+          .slide_product_pagination.swiper-pagination  
+          .swiper-button.flex 
+            .swiper-button-prev
+            .swiper-button-next
+      .container(data-aos='fade-in')
+        .restaurant-desc
+          .restaurant-desc__col
+            .restaurant-desc__title 26F スカイグリルブッフェ 武藏
+            .restaurant-desc__content.pc こちらのエグゼクティブツインルームは26.1㎡の広さをご用意
+              |<br>しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
+            .restaurant-desc__content.sp メンバースオンリーの特別感と、香り高く味わい豊かな銘酒に酔いしれる空間。
+              |<br>喧騒を忘れ、プレシャスなひとときをお過ごしください。
+          .restaurant-desc__col.hide-box-sp
+            .restaurant-desc__row 
+              .restaurant-desc__gray 営業時間
+              ul.restaurant-desc__list.pc
+                li.restaurant-desc__item.restaurant-desc__text 朝食  6:30 - 10:00
+                li.restaurant-desc__item.restaurant-desc__text ランチ <90分制>  ①11:30  ②13:30
+                li.restaurant-desc__item.restaurant-desc__text ディナー<120分制>  -平日
+              .restaurant-desc__text.sp 17:30 - 23:30 (ラストオーダー 23:00)
+            .restaurant-desc__row.sp_flex
+              .restaurant-desc__gray 直通電話
+              .restaurant-desc__text 03-3842-3367
+            .restaurant-desc__row 
+              .restaurant-desc__gray.pc コース
+              .restaurant-desc__gray.sp 入会金
+              a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
+              span
+                  svg(xmlns='http://www.w3.org/2000/svg' width='19.528' height='24' viewbox='0 0 19.528 24')
+                    g(id='PDFアイコン' transform='translate(-47.706)')
+                      path#Path_716(data-name='Path 716' d='M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z' fill='#4b4b4b')
+                      path#Path_717(data-name='Path 717' d='M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z' transform='translate(-82.947 -240.936)' fill='#4b4b4b')
+                      path#Path_718(data-name='Path 718' d='M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z' transform='translate(-163.872 -240.936)' fill='#4b4b4b')
+                      path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
+            .restaurant-desc__row.pc_flex
+              .restaurant-desc__gray ご予約
+              .restaurant-desc__text スカイグリルブッフェ 武蔵予約専用 
+                |<br>03-3842-6341（10:00～17:00）
+                |<br>当日のご予約は 03-3842-3376（直通）
+            .restaurant-desc__row.sp
+              .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
+              .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
+          .restaurant-desc__button.sp_flex 詳細をみる
+      .rooms_page.sp
+        .stay_plan_content 
+          .container
+              .text_title_EN STAY PLAN
+              .stay_plan_row.flex 
+                  .stay_plan_left
+                      .col_select
+                          #recommendation.col_select_item.flex.center__align.center__justify.active おすすめ
+                          #popular_plan.col_select_item.flex.center__align.center__justify 人気プラン
+                          #winter_only.col_select_item.flex.center__align.center__justify 冬季限定
+                      .col_radio_wrap.relative    
+                          .flex.col.recommendation.col_radio_wrap-item.active
+                              .flex.center__align.radio_item
+                                  input#recommendation-01(type="radio", name="recommendation", checked) 
+                                  label(for='recommendation-01') 全て
+                              .flex.center__align.radio_item
+                                  input#recommendation-02(type="radio", name="recommendation") 
+                                  label(for='recommendation-02') 素泊まり
+                              .flex.center__align.radio_item
+                                  input#recommendation-03(type="radio", name="recommendation") 
+                                  label(for='recommendation-03') 朝食付き
+                              .flex.center__align.radio_item
+                                  input#recommendation-04(type="radio", name="recommendation") 
+                                  label(for='recommendation-04') 朝夕食付き
+                          .flex.col.popular_plan.col_radio_wrap-item
+                              .flex.center__align.radio_item
+                                  input#popular_plan-01(type="radio", name="popular_plan", checked) 
+                                  label(for='popular_plan-01') 朝食付き
+                              .flex.center__align.radio_item
+                                  input#popular_plan-02(type="radio", name="popular_plan") 
+                                  label(for='popular_plan-02') 素泊まり
+                              .flex.center__align.radio_item
+                                  input#popular_plan-03(type="radio", name="popular_plan") 
+                                  label(for='popular_plan-03') 全て
+                              .flex.center__align.radio_item
+                                  input#popular_plan-04(type="radio", name="popular_plan") 
+                                  label(for='popular_plan-04') 朝夕食付き
+                          .flex.col.winter_only.col_radio_wrap-item
+                              .flex.center__align.radio_item
+                                  input#winter_only-01(type="radio", name="winter_only", checked) 
+                                  label(for='winter_only-01') 朝食付き
+                              .flex.center__align.radio_item
+                                  input#winter_only-02(type="radio", name="winter_only") 
+                                  label(for='winter_only-02') 朝食付き
+                              .flex.center__align.radio_item
+                                  input#winter_only-03(type="radio", name="winter_only") 
+                                  label(for='winter_only-03') 全て
+                              .flex.center__align.radio_item
+                                  input#winter_only-04(type="radio", name="winter_only") 
+                                  label(for='winter_only-04') 素泊まり
+                  .stay_plan_right.flex.relative
+                      .stay_plan_btn_swiper.swiper-button-next.pc_flex
+                      .slide_stay_plan.pc
+                          .swiper-wrapper.slide_stay_plan_wrap.flex
+                              .slide_plan_item.swiper-slide.relative
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.swiper-slide.relative
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.swiper-slide.relative
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜           
+                      .slide_stay_plan.sp
+                          .slide_stay_plan_wrap
+                              .slide_plan_item.relative
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.relative
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.relative.hide
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.relative.hide
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜   
+                              .slide_plan_item.relative.hide
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              .slide_plan_item.relative.hide
+                                  .img_wrap
+                                      img(src="../assets/img/top/img_food.png", alt="")
+                                  .slide_txt_wrap
+                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                      .slide_txt_price.flex 
+                                          .properties 一人あたりの参考料金
+                                          .value 4,014 
+                                              span 円〜
+                              #btn_view_more.btn_view_more.sp_flex.center__justify.center__align もっとみる    
+      +allcontaints()

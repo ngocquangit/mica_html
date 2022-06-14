@@ -1,0 +1,562 @@
+extends ./_include/layouts/master.pug
+include ./_include/components/btn-link.pug
+include ./_include/components/location-slide.pug
+include ./_include/components/menu-inside-image.pug
+include ./_include/components/plan-model.pug
+
+block variable
+  - var thisPageTitle = "Micadorayout"
+  - var pageName = ""
+
+block description
+  - var thisPageDescription = ""
+
+block keywords
+  - var thisPageKeywords = "Micadorayout"
+
+block ogpType
+  - var thisPageOgpType = "article"
+
+block main 
+  .top__page.master__body 
+    .home__banner.relative
+      .mv-content__slide
+        ul.mv-slide.container
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='../assets/img/top/pc_slide_top_img01.jpg' alt='')
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='../assets/img/top/pc_slide_top_img02.jpg' alt='')
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='../assets/img/top/pc_slide_top_img03.jpg' alt='')
+          .name-silde
+            p.name-slide__item.active testname1
+            p.name-slide__item testname2 
+            p.name-slide__item testname3
+      .overlay
+      .banner_text.flex.center__align
+        .container
+          h1.relative 忘れられない<br>体験が<br>生まれる場所へ。
+    .search_box(data-aos='fade-up')
+      .container
+        .search_box__body
+          .search_box__search_text.sp 宿泊予約空室検索
+          .search_box__left
+            .search_box__search.search_border.pc_flex
+              .search_box__svg
+                svg(id='検索用の虫眼鏡アイコン素材_その3_1_' data-name='検索用の虫眼鏡アイコン素材 その3 (1)' xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewbox='0 0 30 30')
+                  path#Path_891(data-name='Path 891' d='M29.114,24.834l-5-5a14.54,14.54,0,0,1-.9,1.239l-1.845-1.845c.08-.1.158-.208.235-.315.052-.072.1-.144.152-.216.009-.011.016-.023.024-.035.05-.073.1-.148.149-.222.105-.161.207-.323.3-.489a11.914,11.914,0,0,0,0-12.038,12.026,12.026,0,0,0-4.28-4.28,11.914,11.914,0,0,0-12.038,0c-.073.042-.144.086-.216.131-.092.056-.183.114-.273.173-.16.1-.318.213-.473.325-.052.037-.1.075-.154.113L4.635,2.5l-.149.118c-.1.078-.193.157-.287.238A11.949,11.949,0,0,0,2.851,4.2c-.081.094-.16.189-.238.287L2.5,4.635,2.374,4.8c-.038.051-.076.1-.113.154-.112.155-.22.313-.325.473-.059.09-.117.182-.173.273-.045.072-.088.143-.131.216a11.914,11.914,0,0,0,0,12.038,12.026,12.026,0,0,0,4.28,4.28,11.913,11.913,0,0,0,12.038,0q.166-.1.328-.2c.054-.034.108-.068.162-.1.074-.048.149-.1.222-.149l.035-.024c.073-.049.144-.1.216-.152.106-.077.211-.156.315-.235l1.845,1.845a14.582,14.582,0,0,1-1.239.9l5,5a3.026,3.026,0,0,0,4.279-4.28ZM16.681,18.942c-.024.017-.048.034-.073.049s-.056.038-.085.056l-.078.05-.1.062-.1.058c-.068.041-.137.08-.206.118l-.016.009c-.056.031-.113.061-.17.091-.022.013-.045.025-.068.036l-.137.068q-.131.065-.265.124a8.465,8.465,0,0,1-6.911,0,8.517,8.517,0,0,1-4.28-4.28,8.444,8.444,0,0,1,.448-7.773l.058-.1c.054-.089.11-.177.169-.264.032-.049.065-.1.1-.146s.083-.12.127-.179c.067-.091.135-.181.2-.269A8.565,8.565,0,0,1,6.66,5.3c.088-.07.178-.138.269-.2q.088-.066.179-.127c.048-.035.1-.067.146-.1.086-.059.175-.115.264-.169l.1-.058A8.47,8.47,0,0,1,19.666,15.386q-.06.134-.124.265c-.022.046-.045.092-.068.137-.011.023-.023.046-.036.068-.029.057-.06.114-.091.17l-.009.016c-.038.069-.078.137-.118.206l-.058.1q-.03.051-.062.1c-.016.026-.033.052-.05.078s-.036.057-.056.085-.032.049-.049.073l-.05.073a.362.362,0,0,1-.03.043c-.019.029-.04.058-.061.086a8.024,8.024,0,0,1-.5.63c-.032.037-.065.073-.1.11s-.085.093-.128.138-.1.105-.154.157-.1.1-.157.154-.092.086-.138.128-.073.066-.11.1a8.027,8.027,0,0,1-.63.5l-.086.061a.349.349,0,0,1-.043.03Z')
+              .search_box__search_text 空室検索
+            .search_box__date_time.search_border 
+              .search_box__text.pc チェックイン日
+              .search_box__time 
+                input#input_date.input_date(type='text' name='date',value='2021/12/27')
+            .search_box__select.search_border
+              .search_box__text.pc ご宿泊数
+              .search_box__text.sp DAY
+              .search_box__option 
+                select#cars(name='numNight')
+                  option(value='1') 1泊
+                  option(value='2') 2泊
+            .search_box__select.search_border
+              .search_box__text.pc お部屋数
+              .search_box__text.sp ROOMS
+              .search_box__option 
+                select#cars(name='numRoom')
+                  option(value='1') 1室
+                  option(value='2') 2室
+            .search_box__select 
+              .search_box__text.pc 人数(1部屋あたり)
+              .search_box__text.sp GUESTS
+              .search_box__option 
+                select#cars(name='numPeople')
+                  option(value='1') 2名
+                  option(value='2') 3室            
+          .search_box__right    
+            .couple__button_purple.search_box__button.flex.center__align.center__justify 
+              svg(xmlns='http://www.w3.org/2000/svg' width='17.355' height='17.355' viewbox='0 0 17.355 17.355')
+                path#Path_925(data-name='Path 925' d='M16.843,14.367l-2.893-2.893a8.412,8.412,0,0,1-.522.717L12.36,11.123c.046-.06.092-.121.136-.182.03-.042.06-.083.088-.125l.014-.02c.029-.043.058-.086.086-.129.061-.093.12-.187.176-.283a6.892,6.892,0,0,0,0-6.964A6.957,6.957,0,0,0,10.384.944a6.892,6.892,0,0,0-6.964,0l-.125.076c-.053.033-.106.066-.158.1-.093.061-.184.123-.274.188l-.089.066-.093.071L2.6,1.512c-.056.045-.112.091-.166.138a6.913,6.913,0,0,0-.78.78c-.047.055-.093.11-.138.166l-.068.086-.071.093-.066.089c-.065.09-.128.181-.188.274-.034.052-.068.105-.1.158s-.051.083-.076.125a6.892,6.892,0,0,0,0,6.964A6.957,6.957,0,0,0,3.42,12.86a6.892,6.892,0,0,0,6.964,0q.1-.056.19-.116l.094-.06L10.8,12.6l.02-.014c.042-.029.084-.058.125-.088.062-.045.122-.09.182-.136l1.067,1.067a8.436,8.436,0,0,1-.717.522l2.893,2.893a1.751,1.751,0,0,0,2.476-2.476ZM9.65,10.958l-.043.029-.049.033-.045.029-.059.036-.055.034-.119.069-.009.005-.1.053-.04.021-.079.04q-.076.038-.153.072a4.9,4.9,0,0,1-4,0A4.927,4.927,0,0,1,2.427,8.9a4.885,4.885,0,0,1,.259-4.5l.033-.055c.031-.052.064-.1.1-.153.019-.029.037-.057.057-.085s.048-.07.074-.1c.038-.053.078-.1.119-.156a4.955,4.955,0,0,1,.786-.786c.051-.041.1-.08.156-.119q.051-.038.1-.074L4.2,2.817c.05-.034.1-.067.153-.1L4.4,2.686A4.9,4.9,0,0,1,11.377,8.9q-.035.077-.072.153l-.04.079c-.007.013-.014.027-.021.04-.017.033-.035.066-.053.1l-.005.009c-.022.04-.045.08-.069.119l-.033.055-.036.059-.029.045c-.011.017-.021.033-.033.049s-.019.029-.029.043l-.029.042a.209.209,0,0,1-.017.025l-.035.05a4.642,4.642,0,0,1-.291.365l-.057.064c-.025.027-.049.054-.074.08l-.089.091-.091.089-.08.074-.064.057a4.643,4.643,0,0,1-.365.291l-.05.035-.025.017Z' transform='translate(0)' fill='#fff')
+              |検索する      
+            .search_box__detail
+              p.search_box__desc >プラン一覧をみる
+              p.search_box__desc.pc >ご予約確認
+    .slide__top(data-aos='fade-in') 
+      .container.relative
+        .slide__top_swiper
+          .swiper-wrapper.slide__top_wrap.flex.center__align
+            .top__slide_box.swiper-slide.img_wrap.relative
+              .overlay
+              .slide_txt_wrap.flex.col.center__align
+                .txt_big 夜桜を愉しめる<br>春季限定プラン
+                .txt_small VIEW MORE
+              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+            .top__slide_box.swiper-slide.img_wrap.relative
+              .overlay
+              .slide_txt_wrap.flex.col.center__align
+                .txt_big レストラン<br>リニューアル
+                .txt_small VIEW MORE
+              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+            .top__slide_box.swiper-slide.img_wrap.relative
+              .overlay
+              .slide_txt_wrap.flex.col.center__align
+                .txt_big 手ぶらで焚き火が楽しめる<br>グランピングプラン
+                .txt_small VIEW MORE
+              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+
+        .slide__top_pagination.swiper-pagination
+    .top_concept
+      .container
+        .top_concept__title(data-aos='fade-in') CONCEPT
+        .top_concept__sub_title(data-aos='fade-in') 浅草ビューホテルについて
+        .top_concept__desc(data-aos='fade-in') “新と旧”、調和された絶景を一望
+          |<br>浅草唯一の高層シティーホテル
+        .top_concept__text.pc(data-aos='fade-in') 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など江戸情緒を色濃く残す「浅草」の風景が広がります。
+          |<br>つくばエクスプレス「浅草駅」直結、東京を代表する観光地 「浅草」に佇む浅草唯一の高層シティーホテルです。
+          |<br>浅草ビューホテルならではの眺望と、東京スカイツリータウン®までのアクセスの良さをご体感ください。
+        .top_concept__text.sp 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など
+           |<br>江戸情緒を色濃く残す「浅草」の風景が広がります。
+           |<br>浅草ビューホテルならではの眺望と、東京スカイツリータ
+           |<br>ウン®までのアクセスの良さをご体感ください。
+        
+        .top_concept__image.img_wrap.pc(data-aos='fade-in')
+          img(src="/assets/img/top/concept_image.png")
+      .top_concept__image.img_wrap.sp
+        img(src="/assets/img/top/img_main26.png")
+    .four_image.pc_flex(data-aos='fade-in') 
+      .four_image__box
+        .four_image__text
+          .four_image__number 01
+          .four_image__title ROOMS
+          .four_image__sub リラックス
+          .four_image_desc 体と心を整えたい
+        .four_image__image.relative
+          img(src="/assets/img/top/img_rooms.png")
+          .overlay
+      .four_image__box
+        .four_image__text
+          .four_image__number 02
+          .four_image__title FOOD
+          .four_image__sub ダイニング
+          .four_image_desc 食を楽しみたい
+        .four_image__image.relative
+          img(src="/assets/img/top/img_food.png")
+          .overlay
+      .four_image__box
+        .four_image__text
+          .four_image__number 03
+          .four_image__title FACILITIES
+          .four_image__sub ウェディング
+          .four_image_desc 体と心を整えたい
+        .four_image__image.relative
+          img(src="/assets/img/top/img_facilities.png")
+          .overlay
+      .four_image__box
+        .four_image__text
+          .four_image__number 04
+          .four_image__title ACTIVITIES
+          .four_image__sub アクティビティ
+          .four_image_desc いろんなアクティビティに挑戦したい
+        .four_image__image.relative
+          img(src="/assets/img/top/img_activities.png")
+          .overlay
+    .rooms__content.sp
+      .container
+        .rooms__content_title ROOMS
+        .rooms__content_sub_title 客室一覧
+        .rooms__content_slide.swiper
+          .swiper-wrapper
+            .swiper-slide.rooms_slide
+              .rooms_img.img_wrap
+                img(src="../assets/img/top/room_sp_img01.png", alt="")
+              .rooms_txt 
+                p.text_big ダブルルーム
+                p.text_small 19.00㎡ - 22.04㎡
+            .swiper-slide.rooms_slide
+              .rooms_img.img_wrap
+                img(src="../assets/img/top/room_sp_img02.png", alt="")
+              .rooms_txt 
+                p.text_big エグゼクティブキングルーム
+                p.text_small 37.05㎡
+            .swiper-slide.rooms_slide
+              .rooms_img.img_wrap
+                img(src="../assets/img/top/room_sp_img01.png", alt="")
+              .rooms_txt 
+                p.text_big ダブルルーム
+                p.text_small 19.00㎡ - 22.04㎡
+        +btn-link('客室一覧を見る','#')
+    .plan_content.relative(data-aos='fade-left') 
+      .container
+        .text_title_EN Plan
+        .text_title_JP 宿泊プラン
+        .plan_content_row.flex 
+          .plan_content_left
+            .sp_row_select.sp_flex.center__justify
+              #row_select_item01.sp_row_select_item おすすめ
+              #row_select_item02.sp_row_select_item.active 人気
+              #row_select_item03.sp_row_select_item 期間限定
+            p.plan_title.pc プランの絞り込み
+            .plan_button_row.flex.row_select_item01 
+              .plan_button_item.active おすすめ
+              .plan_button_item 人気
+              .plan_button_item 期間限定
+            p.plan_title.pc お食事の有無
+            .plan_button_row.flex.active.row_select_item02
+              .plan_button_item.active すべて
+              .plan_button_item 素泊まり
+              .plan_button_item 食事付き
+            .plan_button_row.sp_flex.row_select_item03
+              .plan_button_item.active おすすめ
+              .plan_button_item 人気
+              .plan_button_item 期間限定
+            a.btn_link.pc_flex.center__align(href="#") 
+              span プラン一覧を見る
+              .next_icon.flex.center__align
+          .plan_content_right.flex
+            .slide__plan 
+              .relative
+                .swiper-button.flex 
+                  .swiper-button-prev
+                  .swiper-button-next
+                .slide__plan_swiper
+                  .swiper-wrapper.slide__plan_wrap.flex
+                    .slide_plan_box.swiper-slide.relative
+                      .img_wrap
+                        img(src="../assets/img/top/img_food.png", alt="")
+                      .slide_txt_wrap.flex.col
+                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
+                          table.table_txt.flex
+                            tr.flex 
+                              td.table_txt_left 期間：
+                              td.table_txt_right 2022年04月01日〜2022年06月30日
+                            tr.flex 
+                              td.table_txt_left 料金：
+                              td.table_txt_right 45,100~
+                            tr 
+                              td.table_txt_left お料理：
+                              td.table_txt_right 夕食付き
+                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
+                    .slide_plan_box.swiper-slide.relative
+                      .img_wrap
+                        img(src="../assets/img/top/img_food.png", alt="")
+                      .slide_txt_wrap.flex.col
+                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
+                          table.table_txt.flex
+                            tr.flex 
+                              td.table_txt_left 期間：
+                              td.table_txt_right 2022年04月01日〜2022年06月30日
+                            tr.flex 
+                              td.table_txt_left 料金：
+                              td.table_txt_right 45,100~
+                            tr 
+                              td.table_txt_left お料理：
+                              td.table_txt_right 夕食付き
+                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
+                    .slide_plan_box.swiper-slide.relative
+                      .img_wrap
+                        img(src="../assets/img/top/img_food.png", alt="")
+                      .slide_txt_wrap.flex.col
+                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
+                          table.table_txt.flex
+                            tr.flex 
+                              td.table_txt_left 期間：
+                              td.table_txt_right 2022年04月01日〜2022年06月30日
+                            tr.flex 
+                              td.table_txt_left 料金：
+                              td.table_txt_right 45,100~
+                            tr 
+                              td.table_txt_left お料理：
+                              td.table_txt_right 夕食付き
+                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
+            a.btn_link.sp_flex.center__align(href="#") 
+              span プラン一覧を見る
+              .next_icon.flex.center__align                
+    .facilities__content.rooms__content.sp
+      .container
+        .rooms__content_title facilities
+        .rooms__content_sub_title その他施設
+      .facilities__content_slide.swiper
+        .swiper-wrapper
+          .swiper-slide.facilities_slide
+            .facilities_img.img_wrap
+              img(src="../assets/img/top/facilities_club.png", alt="")
+          .swiper-slide.facilities_slide
+            .facilities_img.img_wrap
+              img(src="../assets/img/top/facilities_img09.png", alt="")
+          .swiper-slide.facilities_slide
+            .facilities_img.img_wrap
+              img(src="../assets/img/top/facilities_club.png", alt="")
+          .swiper-slide.facilities_slide
+            .facilities_img.img_wrap
+              img(src="../assets/img/top/facilities_img09.png", alt="")
+      .container
+        .facilities__title 歴史を感じる7つの神社と、
+          |<br>街を見渡すスカイチャペル
+        .facilities__desc 昔から街を見守る神社で行う神前挙式は、行き交う人からも祝福を受け日本の温かさと粋を感じます。神社も7社から選択可能。スカイチャペルでは美しい空と街が挙式の背景に。浅草神社の分社でもある館内神殿もございます。
+        +btn-link('その他施設の詳細を見る','#')
+    .dining__content.sp_flex 
+      .dining__content_left.relative
+        .img_wrap
+          img(src="../assets/img/top/diningsp.png", alt="")
+        .overlay
+      .dining__content_right.clear_fix
+        .container
+          h3.text__title_EN DINING
+          h3.text__title_JP 料理
+          .dining_sub_title 日本のとびきりの旬を、
+            |<br>絶景で味わう。
+          p.detail__content.sp 目で、舌で味わう、彩り豊かな飯綱の食材。地元特産の食材を贅沢に活かした、自慢のコース料理をご賞味ください。
+          +btn-link('料理の詳細を見る','#')  
+    .four_seasons(data-aos='fade-right')
+      .container.flex.jb-sp
+        .four_seasons__box 
+          .four_seasons__head
+            .four_seasons__title FOUR SEASONS
+            .four_seasons__link
+              .four_seasons__link-slide.active
+                |春 
+                .four_seasons_line 
+                .four_seasons_run
+              .four_seasons__link-slide 
+                |夏
+                .four_seasons_line 
+                .four_seasons_run 
+              .four_seasons__link-slide 
+                |秋 
+                .four_seasons_line 
+                .four_seasons_run
+              .four_seasons__link-slide 
+                |秋
+                .four_seasons_line 
+                .four_seasons_run 
+          .four_seasons__body 
+            img.four_seasons__image-slide.image-active.img_wrap(src="/assets/img/top/img_rooms.png")
+            img.four_seasons__image-slide.img_wrap(src="/assets/img/top/img_food.png")
+            img.four_seasons__image-slide.img_wrap(src="/assets/img/top/img_facilities.png")
+            img.four_seasons__image-slide.img_wrap(src="/assets/img/top/img_activities.png")
+        .four_seasons__instagram.pc
+          .four_seasons__head
+            .four_seasons__title Instagram
+            .four_seasons__link 
+              .four_seasons__link-text follow > 
+          .four_seasons__body 
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram1.png")
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram2.png")
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram3.png")
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram4.png")
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram5.png")
+            img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram6.png")
+    .four_seasons.sp.ptsp-57
+      .four_seasons__instagram
+        .four_seasons__head
+          .container 
+            .four_seasons__title Instagram
+        .four_seasons__body 
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram1.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram2.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagramsp3.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagramsp4.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram4.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagram5.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagramsp7.png")
+          img.four_seasons__image.w_3.img_wrap(src="/assets/img/top/instagramsp8.png")
+    .news_slide(data-aos='fade-in')
+      .container.relative
+        .text_title_EN.flex.center__justify News
+        .text_title_JP.flex.center__justify.pc_flex お知らせ
+        .swiper-button.sp_flex 
+          .swiper-button-prev
+          .swiper-button-next
+        .news_slide_swiper
+          .swiper-wrapper.flex
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/news_slide_img.jpg") 
+              .slide_item_txt
+                .txt_date 2021.11.19
+                .txt_desc 4室数限定！GoToグランピングキャンペーン開催中
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png")
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc レストランがリニューアルいたしました！
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png") 
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc 学区小学校  |  徒歩4分・約300m
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png")
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc 学区小学校  |  徒歩4分・約300m
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png")
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc 学区小学校  |  徒歩4分・約300m
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png")
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc 学区小学校  |  徒歩4分・約300m
+            .news_slide_item.swiper-slide
+              .img_wrap
+                img(src="../assets/img/top/img_activities.png")
+              .slide_item_txt
+                .txt_date 2021.10.02
+                .txt_desc 学区小学校  |  徒歩4分・約300m
+    .concept__content_ver02.content__right(data-aos='fade-in')
+      .container.clear_fix.flex
+        .text_wrap.flex.col.center__justify
+          h3.text__title_EN.color_FB9 CONCEPT
+          h3.text__title_JP 人生に、美しい景色を。
+          p.detail__content 高台に位置する「グランカサーレ豊中ヒルズコート」。<br/>
+            |そして、眼下には第一種低層住居専用地域に指定されている上野西の邸宅街が見下ろせ、<br/>
+            |目線の先には梅田など大阪都心の高層ビル群や大阪平野が一望できます。<br/>
+            |さらに、日が暮れると無数の灯りが描く夜景も印象的です。          
+        .concept__img.img_wrap
+          img(src="../assets/img/top/content_img_openair.png", alt="")     
+    .sub__content.concept__content_ver02.content__left(data-aos='fade-in')
+      .container.clear_fix.flex
+        .text_wrap.flex.col.center__justify
+          h3.text__title_JP 人生に、美しい景色を。
+          p.detail__content 高台に位置する「グランカサーレ豊中ヒルズコート」。<br/>
+            |そして、眼下には第一種低層住居専用地域に指定されている上野西の邸宅街が見下ろせ、<br/>
+            |目線の先には梅田など大阪都心の高層ビル群や大阪平野が一望できます。<br/>
+            |さらに、日が暮れると無数の灯りが描く夜景も印象的です。          
+        .concept__img.img_wrap.flex.col
+          img(src="../assets/img/top/content_img_openair.png", alt="")  
+          p.desc_txt 竣工予定のイメージ画像です。           
+    .slide.location__edu(data-aos='fade-in')
+      .container
+        .loop__img_wrap.flex.location__swiper_swap
+          ul.flex.item01.loop__img_item01.swiper-wrapper
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_01 
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_01 
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+            li.loop_item.swiper-slide
+              img(src="../assets/img/top/content_img_openair.png").location__img_02
+              .item__txt
+                .item__title 市立鷺洲小学校
+                .item__desc 学区小学校  |  徒歩4分・約300m
+    .image_width_margin(data-aos='fade-in')
+      .container
+        .img_wrap 
+          img(src="../assets/img/top/content_img03.png", alt="content img")
+    .image_full_width.pt-100(data-aos='fade-in')
+      .img_wrap 
+        img(src="../assets/img/top/content_img03.png", alt="content img")
+    a.pt-100.block(href="#")(data-aos='fade-in') 
+      .image_width_margin
+        .container
+          .img_wrap 
+            img(src="../assets/img/top/content_img03.png", alt="content img")
+    a.pt-100.block(href="")(data-aos='fade-in') 
+      .image_full_width
+        .img_wrap 
+          img(src="../assets/img/top/content_img03.png", alt="content img")
+    .allcontaints__content.sp
+      .container
+        .container
+          h3.text__title_EN.color_FB9.flex.center__justify ALL CONTENTS
+        .allcontaints__wrap_slide.swiper
+          .container
+            .swiper-pagination.allcontaints__pagination
+          .allcontaints__wrap
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontentsp1.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN TOP
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontentsp2.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN ROOM TYPE
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontentsp3.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN STAY PLAN
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontaints_img04.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN PLAN
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontaints_img05.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN DESIGN
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontaints_img06.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN MODEL ROOM
+            .allcontaints__wrap_item.swiper-slide
+              .img_wrap.allcontaints__img
+                img(src="../assets/img/top/allcontaints_img07.png", alt="all containts img")
+              .allcontaints__detailt 
+                a(href="#") 
+                  p.text_EN QUALITY
+    +menu-inside-image('/assets/img/top/reserve.png')

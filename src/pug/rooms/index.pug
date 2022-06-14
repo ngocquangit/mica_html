@@ -1,0 +1,430 @@
+extends ../_include/layouts/master.pug
+include ../_include/components/btn-link.pug
+include ../_include/components/location-slide.pug
+include ../_include/components/menu-inside-image.pug
+include ../_include/components/plan-model.pug
+include ../_include/components/banner-block.pug
+include ../_include/components/amenity.pug
+
+block variable
+  - var thisPageTitle = "Micadorayout"
+  - var pageName = ""
+
+block description
+  - var thisPageDescription = ""
+
+block keywords
+  - var thisPageKeywords = "Micadorayout"
+
+block ogpType
+  - var thisPageOgpType = "article"
+
+block main
+    .rooms_page
+        +banner-block("/assets/img/rooms/rooms_mv.jpg","Rooms","客室一覧")
+        .container_child
+            a(href="#").reservations_btn.sp_flex.center__align.center__justify.next_icon.relative 宿泊予約空室検索
+        .rooms_intro.pc(data-aos='fade-in')
+            .container_child
+                .intro_txt_JP 遥かな眺望と心身のリラックスを誘うゲストルーム  
+                .intro_txt_EN The dream of “Asakusa”, which is called Tokyo Sky Tree ® and 
+                .intro_txt_description 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など江戸情緒を<br>色濃く残す「浅草」の風景が広がります。<br>つくばエクスプレス「浅草駅」直結、東京を代表する観光地 「浅草」に<br>佇む浅草唯一の高層シティーホテルです。
+        .rooms_type
+            .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in')  
+                img.pc(src="../assets/img/rooms/room_type_title.jpg", alt="rooms title img")
+                .rooms_type_txt 
+                    h3 Double Rooms
+                    p ダブルルーム
+                .overlay.pc
+            .rooms_type_content  
+                .container_child.relative
+                    .rooms_post_container.flex
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_01.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_02.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_02.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
+                .control_layout.sp_flex  
+                    a(href="#").rooms_button_link.flex.center__align 
+                    span MORE TWIN ROOM
+                    .next_icon.flex.center__align     
+        .rooms_type 
+            .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in') 
+                img.pc(src="../assets/img/rooms/room_type_title.jpg", alt="rooms title img")
+                .rooms_type_txt 
+                    h3 Double Rooms
+                    p ダブルルーム
+                .overlay.pc
+            .rooms_type_content 
+                .container_child.relative
+                    .rooms_post_container.flex
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_01.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_02.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
+                .control_layout.sp_flex  
+                    a(href="#").rooms_button_link.flex.center__align 
+                    span MORE TWIN ROOM
+                    .next_icon.flex.center__align     
+        .rooms_type 
+            .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in') 
+                img.pc(src="../assets/img/rooms/room_type_title.jpg", alt="rooms title img")
+                .rooms_type_txt 
+                    h3 Double Rooms
+                    p ダブルルーム
+                .overlay.pc
+            .rooms_type_content 
+                .container_child.relative
+                    .rooms_post_container.flex
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_01.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る
+                        .rooms_post_item.swiper-slide.relative(data-aos='fade-in')
+                            .img_wrap.rooms_img_display
+                                img(src="../assets/img/rooms/room_img_02.jpg", alt="")
+                            .rooms_text_infor
+                                .rooms_name_JP デラックストリプル
+                                .rooms_name_EN.pc STANDARD TRIPPLE
+                                .rooms_description.pc 最大3名までご利用いただける、こちらの客室では、<br>スタンダードとデラックスの2種類からお選びいただけます。
+                                .room_infor.flex
+                                    .properties.pc Room Size：
+                                    .value.flex 78㎡
+                                .room_infor.pc_flex
+                                    .properties Capacity：
+                                    .value.flex 2〜3名
+                                .couple_btn.pc_flex 
+                                    a(href="#").btn_link.flex.center__justify.center__align お部屋の詳細
+                                    a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
+                .control_layout.sp_flex  
+                    a(href="#").rooms_button_link.flex.center__align 
+                    span MORE TWIN ROOM
+                    .next_icon.flex.center__align     
+        +amenity()
+        .stay_plan_content(data-aos='fade-in') 
+            .container_child
+                .text_title_EN STAY PLAN
+                .stay_plan_row.flex 
+                    .stay_plan_left
+                        .col_select
+                            #recommendation.col_select_item.flex.center__align.center__justify.active おすすめ
+                            #popular_plan.col_select_item.flex.center__align.center__justify 人気プラン
+                            #winter_only.col_select_item.flex.center__align.center__justify 冬季限定
+                        .col_radio_wrap.relative    
+                            .flex.col.recommendation.col_radio_wrap-item.active
+                                .flex.center__align.radio_item
+                                    input#recommendation-01(type="radio", name="recommendation", checked) 
+                                    label(for='recommendation-01') 全て
+                                .flex.center__align.radio_item
+                                    input#recommendation-02(type="radio", name="recommendation") 
+                                    label(for='recommendation-02') 素泊まり
+                                .flex.center__align.radio_item
+                                    input#recommendation-03(type="radio", name="recommendation") 
+                                    label(for='recommendation-03') 朝食付き
+                                .flex.center__align.radio_item
+                                    input#recommendation-04(type="radio", name="recommendation") 
+                                    label(for='recommendation-04') 朝夕食付き
+                            .flex.col.popular_plan.col_radio_wrap-item
+                                .flex.center__align.radio_item
+                                    input#popular_plan-01(type="radio", name="popular_plan", checked) 
+                                    label(for='popular_plan-01') 朝食付き
+                                .flex.center__align.radio_item
+                                    input#popular_plan-02(type="radio", name="popular_plan") 
+                                    label(for='popular_plan-02') 素泊まり
+                                .flex.center__align.radio_item
+                                    input#popular_plan-03(type="radio", name="popular_plan") 
+                                    label(for='popular_plan-03') 全て
+                                .flex.center__align.radio_item
+                                    input#popular_plan-04(type="radio", name="popular_plan") 
+                                    label(for='popular_plan-04') 朝夕食付き
+                            .flex.col.winter_only.col_radio_wrap-item
+                                .flex.center__align.radio_item
+                                    input#winter_only-01(type="radio", name="winter_only", checked) 
+                                    label(for='winter_only-01') 朝食付き
+                                .flex.center__align.radio_item
+                                    input#winter_only-02(type="radio", name="winter_only") 
+                                    label(for='winter_only-02') 朝食付き
+                                .flex.center__align.radio_item
+                                    input#winter_only-03(type="radio", name="winter_only") 
+                                    label(for='winter_only-03') 全て
+                                .flex.center__align.radio_item
+                                    input#winter_only-04(type="radio", name="winter_only") 
+                                    label(for='winter_only-04') 素泊まり
+                    .stay_plan_right.flex.relative
+                        .stay_plan_btn_swiper.swiper-button-next.pc_flex
+                        .slide_stay_plan.pc
+                            .swiper-wrapper.slide_stay_plan_wrap.flex
+                                .slide_plan_item.swiper-slide.relative
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.swiper-slide.relative
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.swiper-slide.relative
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜           
+                        .slide_stay_plan.sp
+                            .slide_stay_plan_wrap
+                                .slide_plan_item.relative
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.relative
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.relative.hide
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.relative.hide
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜   
+                                .slide_plan_item.relative.hide
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                .slide_plan_item.relative.hide
+                                    .img_wrap
+                                        img(src="../assets/img/top/img_food.png", alt="")
+                                    .slide_txt_wrap
+                                        .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
+                                        .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
+                                        .slide_txt_price.flex 
+                                            .properties 一人あたりの参考料金
+                                            .value 4,014 
+                                                span 円〜
+                                #btn_view_more.btn_view_more.sp_flex.center__justify.center__align もっとみる          
+        .allcontaints__content.pc(data-aos='fade-in')
+          .container_child
+            h3.text__title_EN.color_FB9.flex ALL CONTAINTS
+            .allcontaints__wrap_slide
+                .swiper-pagination.allcontaints__pagination
+                .allcontaints__wrap
+                  .allcontaints__wrap_item
+                    .img_wrap.allcontaints__img
+                      img(src="../assets/img/rooms/img_1.png", alt="all containts img")
+                    .allcontaints__detailt 
+                      a(href="#")
+                        p.text_EN TOP
+                      p.text_JP.pc 天国の名にもっともふさわしい楽園へ
+                  .allcontaints__wrap_item
+                      .img_wrap.allcontaints__img
+                          img(src="../assets/img/rooms/img_2.png", alt="all containts img")
+                      .allcontaints__detailt 
+                          a(href="#")
+                              p.text_EN ROOM TYPE
+                          p.text_JP.pc バリエーション豊かな客室
+                  .allcontaints__wrap_item
+                      .img_wrap.allcontaints__img
+                              img(src="../assets/img/rooms/img_3.png", alt="all containts img")
+                      .allcontaints__detailt 
+                          a(href="#")
+                              p.text_EN FOOD
+                          p.text_JP.pc 沖縄のすべてを楽しめる豊富なプラン
+                  .allcontaints__wrap_item
+                      .img_wrap.allcontaints__img
+                          img(src="../assets/img/rooms/img_4.png", alt="all containts img")
+                      .allcontaints__detailt 
+                          a(href="#")
+                              p.text_EN FACILITY
+                          p.text_JP.pc 天国の名にもっともふさわしい楽園へ
+                  .allcontaints__wrap_item
+                      .img_wrap.allcontaints__img
+                          img(src="../assets/img/rooms/img_5.png", alt="all containts img")
+                      .allcontaints__detailt 
+                          a(href="#")
+                              p.text_EN ACTIVITY
+                          p.text_JP.pc 沖縄のすべてを楽しめる豊富なプラン
+                  .allcontaints__wrap_item
+                      .img_wrap.allcontaints__img
+                          img(src="../assets/img/rooms/img_6.png", alt="all containts img")
+                      .allcontaints__detailt 
+                          a(href="#")
+                              p.text_EN ACCESS
+                          p.text_JP.pc 沖縄のすべてを楽しめる豊富なプラン
+        .allcontaints__content.sp
+          .container
+            h3.text__title_EN.color_FB9.flex.center__justify ALL CONTENTS
+          .allcontaints__wrap_slide.swiper
+            .container
+              .swiper-pagination.allcontaints__pagination
+            .allcontaints__wrap
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontentsp1.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN TOP
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontentsp2.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN ROOM TYPE
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontentsp3.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN STAY PLAN
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontaints_img04.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN PLAN
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontaints_img05.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN DESIGN
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontaints_img06.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN MODEL ROOM
+              .allcontaints__wrap_item.swiper-slide
+                .img_wrap.allcontaints__img
+                  img(src="../assets/img/top/allcontaints_img07.png", alt="all containts img")
+                .allcontaints__detailt 
+                  a(href="#") 
+                    p.text_EN QUALITY
+        +menu-inside-image('/assets/img/top/reserve.png')

@@ -1,0 +1,16 @@
+mixin banner-block(img, title,sub1,sub2,option,option1)
+    - var attributes = {};
+    - attributes.src = img;
+    - attributes.alt = title + ' banner';
+    .banner-block.flex.center__align.relative 
+        .banner__txt
+            .container_child 
+                h1= title
+                if option != ""
+                    p.pc= sub1
+                    p.pc= sub2
+                    p.sp= option
+                    p.sp= option1
+        .img_wrap 
+            img&attributes(attributes)
+        .overlay

@@ -1,0 +1,33 @@
+dist/
+
+vendor/
+storage/
+# Sass
+.sass-cache
+*.scssc
+
+# Node.js
+node_modules/
+yarn.lock
+package-lock.json
+prepros.config
+
+# Logfiles and tempfiles
+*.log
+/log/*
+!/log/.keep
+/tmp
+
+# Other unneeded files
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+.env
+bootstrap/cache/packages.php
+bootstrap/cache/services.php
+public/css/app.css
+public/js/app.js

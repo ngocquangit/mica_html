@@ -1,0 +1,19 @@
+mixin menu-inside-image(link)
+    .reserve_content.relative
+      .reserve__background 
+        .img_wrap.reserve__img.relative
+          img(src=link, alt=" reserve img")
+          .overlay 
+      .reserve__detailt.relative
+        .container   
+          h3.text_EN RESERVATION 
+          h3.text_JP ご宿泊の予約はこちら 
+          p.text_detail 来場予約いただいたお客さまから優先して<br>最新の物件情報をお知らせしています。 
+          a.reserve_btn(href="#") 空室予約
+          .noti_txt > プラン一覧はこちら
+    .menu-inside-image
+        .inside-image__row.container
+            .inside-image__col 
+              .next-content NEXT CONTENTS
+            .inside-image__col.pr-20 
+              a.next_icon(href="") 客室一覧

@@ -1,0 +1,238 @@
+.rooms_page {
+    .reservations_btn {
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.06rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #482E63;
+        height: 60px;
+        width: 100%;
+        margin-top: 40px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        &::after {
+            top: unset;
+            transform: rotate(135deg);
+            width: 8px;
+            height: 8px;
+            right: 22px;
+        }
+    }
+    .rooms_intro {
+        padding: 100px 0;
+        text-align: center;
+        .intro_txt_JP {
+            font-size: 24px;
+            line-height: 27px;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            color: #000;
+        }
+        .intro_txt_EN {
+            font-size: 14px;
+            line-height: 32px;
+            letter-spacing: 0.04rem;
+            font-weight: 500;
+            color: #333;
+            opacity: .4;
+        }
+        .intro_txt_description {
+            font-size: 16px;
+            line-height: 32px;
+            letter-spacing: 0.04rem;
+            font-weight: 400;
+            color: #333;
+            margin-top: 30px;
+        }
+    }
+    .rooms_type {
+        .rooms_post_container {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .rooms_type_title {
+            height: 280px;
+            @include mq-sp(){
+                height: unset;
+                justify-content: flex-start;
+                padding: 0 20px;
+            }
+            .rooms_type_txt {
+                position: absolute;
+                text-align: center;
+                z-index: 2;
+                @include mq-sp(){
+                    text-align: unset;
+                    position: relative;
+                }
+                h3 {
+                    font-size: 46px;
+                    line-height: 57px;
+                    font-family: 'Montserrat';
+                    font-weight: 400;
+                    color: #fff;
+                    @include mq-sp(){
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 600;
+                        letter-spacing: 0.1rem;
+                        color: #AFAFB9;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 28px;
+                    letter-spacing: 0.06rem;
+                    font-weight: 600;
+                    color: #fff;
+                    @include mq-sp(){
+                        font-size: 12px;
+                        line-height: 24px;
+                        letter-spacing: 0.04rem;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .rooms_type_content {
+            padding: 20px 0 120px;
+            background-color: #F0F0F0;
+            @include mq-sp(){
+                padding: 0 0 65px 0;
+                background-color: #fff;
+            }
+        }
+        .rooms_text_infor {
+            padding: 30px;
+            background-color: #fff;
+            @include mq-laptop(){
+                padding: 20px;
+            }
+            @include mq-sp(){
+                padding: 10px 0 0;
+            }
+        }
+        .rooms_post_item {
+            margin-top: 40px;
+            cursor: pointer;
+            width: calc(50% - 20px);
+            @include mq-sp(){
+                width: calc(50% - 10px);
+                margin-top: 20px;
+            }
+            .rooms_img_display {
+                width: 100%;
+                height: 290px;
+                @include mq-sp(){
+                    height: 40vw;
+                }
+            }
+            .rooms_name_JP {
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.06rem;
+                font-weight: 600;
+                color: #000;
+                @include mq-sp(){
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                    overflow: hidden; 
+                    white-space: nowrap;
+                }
+            }
+            .rooms_name_EN {
+                font-size: 14px;
+                line-height: 32px;
+                letter-spacing: 0.04rem;
+                font-weight: 500;
+                color: #333;
+                opacity: .4;
+            }
+            .rooms_description {
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.04rem;
+                font-weight: 400;
+                color: #333;
+                border-bottom: 1px solid #ddd ;
+                padding-bottom: 20px;
+                margin-bottom: 15px;
+                @include mq-laptop(){
+                    padding-bottom: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+            .room_infor {
+                justify-content: flex-end;
+                font-size: 14px;
+                line-height: 32px;
+                letter-spacing: 0.04rem;
+                font-weight: 500;
+                color: #333;
+                opacity: .4;
+                @include mq-sp(){
+                    justify-content: flex-start;
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+                .value {
+                    min-width: 61px;
+                    justify-content: flex-end;
+                    padding-left: 10px;
+                    @include mq-sp(){
+                        padding: 0;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+            .couple_btn {
+                margin-top: 15px;
+                justify-content: space-between;
+                .btn_link {
+                    width: calc(50% - 10px);
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.04rem;
+                    font-weight: 400;
+                    color: #333;
+                    border: 1px solid #ddd;
+                    padding: 17px;
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+        }
+        .control_layout {
+            justify-content: flex-end;
+        }
+        .rooms_button_link {
+            margin-top: 20px;
+            span {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.1rem;
+                font-weight: 400;
+                color: #37373C;
+            }
+            .next_icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+                background-color: #fff;
+                margin-left: 15px;
+                &::after {
+                    color: #000;
+                    top: unset;
+                    right: 27px;
+                    width: 7px;
+                    height: 7px;
+                }
+            }
+        }
+    }
+}

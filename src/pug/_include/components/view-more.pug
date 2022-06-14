@@ -1,0 +1,12 @@
+mixin view-more(img, titles, desc)
+    .view-more__tit.sp View More
+    .view-more.view-more__swiper
+        .swiper-wrapper
+            each title,i in titles
+                .view-more__box.swiper-slide.access__slide_item
+                    img.img__nav(src=img[i])
+                    .view-more__overlay
+                    .view-more-content
+                        .view-more__title= title
+                        .view-more__desc=desc[i]
+        .view-more__pagination.swiper-pagination

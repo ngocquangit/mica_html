@@ -1,0 +1,165 @@
+block lang
+  - var thisPageLang = "ja"
+  - var pageName = ""
+
+block variable
+  - var thisPageTitle = ""
+  - var slug = ""
+  - var nomenu = ""
+
+block description
+  - var thisPageDescription = ""
+
+block keywords
+  - var thisPageKeywords = ""
+
+block setting
+  - var siteUrl = ""
+  - var siteName = ""
+
+  if slug == ""
+    - var thisPageOgpUrl = siteUrl
+  else
+    - var thisPageOgpUrl = siteUrl + "/" + slug + "/"
+
+block ogpType
+  - var thisPageOgpType = "article"
+
+doctype html
+html(lang=thisPageLang)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0")
+    if thisPageTitle
+      title #{thisPageTitle}
+    else
+      title Rayout
+    meta(name="description" content!=thisPageDescription)
+    if thisPageKeywords != ""
+      meta(name="keywords" content!=thisPageKeywords)
+    meta(name="format-detection" content="telephone=no")
+    link(rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico")
+    link(rel="apple-touch-icon" sizes="180x180" href="")
+    link(rel="icon" type="image/png" sizes="32x32" href="")
+    link(rel="icon" type="image/png" sizes="16x16" href="")
+
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    //- <!-- Link Swiper's CSS -->
+    link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css')
+    link(rel="stylesheet" href='https://unpkg.com/aos@next/dist/aos.css')
+    link(rel="stylesheet" href="/assets/css/style.css")
+    script.
+      (function(d) {
+      var config = {
+      kitId: 'uys8ghe',
+      scriptTimeout: 3000,
+      async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    block styles
+    script(src="/assets/js/jquery.min.js")
+
+  body
+    header.header#header
+      .top_bar
+        .container
+          .flex.top_bar_wrap  
+            .top_bar_left.flex.center__align
+              a(href="/")
+                img.txt_logo.sp(src="/assets/img/common/logo_asakusavh.png")
+                p.txt_logo.header__pc.pc micado INN
+            .top_bar_right.flex
+              .order__link.center__align.pc_flex
+                a.mr_cus.nav_item.flex(href="/") トップ
+                a.nav_item.flex(href="/") 客室紹介
+                a.nav_item.flex(href="/") 料理紹介
+                a.nav_item.flex(href="/") その他施設
+                a.nav_item.flex(href="/") 周辺観光
+                a.nav_item.flex(href="/") アクセス
+              .couple__button_header.flex.center__align
+                a.couple__button_purple.couple__button_item.flex.center__align.center__justify(href="#") 空室予約
+                a.couple__button_while.couple__button_item.flex.center__align.center__justify(href="#") プラン一覧  
+              .btn__show_menu.sp_flex.col
+                img.img_btn.img_logo_top(src="/assets/img/common/btn__menu_icon.png")
+                img.img_btn.img_logo_center(src="/assets/img/common/btn__menu_icon.png")
+                img.img_btn.img_logo_bot(src="/assets/img/common/btn__menu_icon.png")
+      .menu-content.sp_flex
+        .container.relative
+          .page__menu.page__menu_sp.relative
+            .page__menu_sp_wrap.flex
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='' ? "active" : "") ,href="/") トップ
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='access' ? "active" : "") ,href="/") 客室紹介
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='location' ? "active" : "") ,href="/") 料理紹介
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='plan' ? "active" : "") ,href="/") その他施設
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='design' ? "active" : ""), href="/") 周辺観光
+              a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='modal' ? "active" : ""), href="/") アクセス  
+      .menu-content#headMenuBox
+        .container
+          .page__menu.sp_flex
+            a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='' ? "active" : "") ,href="/") トップ
+            a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='access' ? "active" : "") ,href="/") 客室紹介
+            a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='location' ? "active" : "") ,href="/") 料理紹介
+            a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='plan' ? "active" : "") ,href="/") その他施設
+            a.nav_item.center__justify.flex.center__align.color_333(class=(pageName==='design' ? "active" : ""), href="/") 周辺観光
+            a.nav_item.center__justify.flex.center__align.color_999(class=(pageName==='modal' ? "active" : ""), href="/") アクセス
+            .order__link.col.sp_flex
+              a.mr_cus.nav_item.flex(href="/") 物件概要
+              a.nav_item.flex(href="/") 現地案内図
+            .couple__button_header.sp_flex.center__align
+              a.couple__button_purple.couple__button_item.flex.center__align.center__justify(href="#") 資料請求
+              a.couple__button_while.couple__button_item.flex.center__align.center__justify(href="#") 来場予約  
+
+    main.main
+      block main
+
+    footer.footer
+      .container 
+        .footer-row
+          .footer-left 
+            a.footer-logo(href="")  micado INN
+            .footer-link.pc_flex 
+              a.footer-item(href="") トップ 
+              a.footer-item(href="") 客室一覧 
+              a.footer-item(href="") お料理
+              a.footer-item(href="") 施設紹介 
+              a.footer-item(href="") アクセス
+              a.footer-item(href="") 観光情報
+              a.footer-item(href="") ご予約・空室情報 プ
+            .footer-row.flex-wrap
+              .footer-col.mr-71
+                .footer-col__title TEL
+                .footer-col__sub 0120-000-000
+                .footer-col__desc [営業時間] 10：00 ～ 18：00
+              .footer-col.mr-80
+                .footer-col__title MAIL
+                .footer-col__sub xxx@micado-rayout.jp
+              .footer-col
+                .footer-col__title ACCESS
+                .footer-col__add 〒150-0012
+                .footer-col__add 東京都渋谷区広尾1−2−1
+          .footer-right
+            .footer-box
+              .footer-map 
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662934.3496472167!2d138.64849808935364!3d35.50628967309163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2zVMO0a3nDtCwgTmjhuq10IELhuqNu!5e0!3m2!1svi!2s!4v1655050073644!5m2!1svi!2s' width='328' height='224' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+              .footer-top.pc PAGE TOP
+        .footer-link.sp_flex 
+          .footer-link__col 
+            a.footer-item(href="") —  トップ 
+            a.footer-item(href="") —  プラン紹介 
+            a.footer-item(href="") —  施設紹介
+            a.footer-item(href="") —  アクティブティ 
+            a.footer-item(href="") —  ご予約・空室情報
+          .footer-link__col
+            a.footer-item &nbsp;
+            a.footer-item(href="") —  客室紹介
+            a.footer-item(href="") —  料理
+            a.footer-item(href="") —  アクセス / ロケーション
+        .footer-copyright © micado HOTEL co., Ltd All Rights Reserved.   
+    //-  Swiper JS 
+    script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script(src="/assets/js/common.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js')
+    block scripts

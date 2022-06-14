@@ -1,0 +1,43 @@
+mixin plan-model()
+    .plan__model.hide#plan__model
+        .plan__model_container.flex
+            .plan__model_left 
+                .product__infor 
+                    span.product_type.color_333 
+                        span#properties_type.properties_type A 
+                        span#main_type.main_type type
+                    span
+                        span.product_price.color_F21#product_price 価格未定
+                        span.product_price_unit.color_F21#product_price_unit 万円台
+                table.product__detail
+                    tr.product__detail_row.flex
+                        td.product__detail_floor.flex 
+                            .color_999.name_properties_product.spencial 間取り 
+                            .value.flex.center__align.color_333#product_type 3LDK
+                        td.product__detail_balcony.flex
+                            .color_999.name_properties_product バルコニー面積
+                            .value.flex.center__align.color_333#product__detail_balcony_value 10.89㎡
+                    tr.product__detail_row.flex
+                        td.product__detail_occupied.flex
+                            .color_999.name_properties_product.spencial 専有面積
+                            .value.flex.center__align.color_333#product__detail_occupied_value 75.84㎡
+                        td.product__detail_alcove.flex 
+                            .color_999.name_properties_product アルコーブ面積
+                            .value.flex.center__align.color_333#product__detail_alcove_value 4.87㎡
+                .product_box.sp_flex.center__justify#product__img 
+                    img.img_item(src="../assets/img/plan/plan_product01.png", alt="img product")  
+                .product__description.color_333 バルコニー側だけでなく、廊下側もアウトポールとし、ゆとりの洋室空間を実現。開放的なセンターオープンサッシも伸びやかな暮らしを満喫させる。
+                .product__link.flex
+                    a.dcm__request_btn(href="#")
+                        .product__btn.flex.center__align.center__justify 
+                            span 資料請求
+                            img(src="../assets/img/common/next_icon_gray.png", alt="")
+                    a.visit__reservation_btn(href="#")
+                        .product__btn.flex.center__align.center__justify 
+                            span 資料請求
+                            img(src="../assets/img/common/next_icon_while.png", alt="")
+            .plan__model_right
+                .product_box.img_wrap.pc_flex.center__justify#product__img 
+                    img.img_item(src="../assets/img/plan/plan_product01.png", alt="img product")    
+            .close__model_btn.img_wrap#close__model_btn 
+                img(src="../assets/img/common/close__icon.png", alt="close icon")
