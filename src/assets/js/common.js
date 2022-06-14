@@ -428,7 +428,10 @@ var swiper = new Swiper(".facilities__content_slide", {
 var swiper = new Swiper(".location__swiper_swap", {
   slidesPerView: "auto",
   spaceBetween: 25,
-  loop: true
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+  },
 });
 var swiper = new Swiper(".tour__swiper_swap", {
   slidesPerView: "auto",

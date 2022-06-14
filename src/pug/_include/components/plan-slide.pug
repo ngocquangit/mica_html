@@ -1,0 +1,30 @@
+mixin plan-slide()
+    .plan_content.relative(data-aos='fade-left') 
+      .container
+        .text_title_EN Plan
+        .text_title_JP 宿泊プラン
+        .plan_content_row.flex 
+          #plan_content_select.plan_content_left
+            p.plan_title プランの絞り込み
+            #recommended.plan_button_row.flex.row_select_item01 
+              #recommended-item-01.plan_button_item.active おすすめ
+              #recommended-item-02.plan_button_item 人気
+              #recommended-item-03.plan_button_item 期間限定
+            p.plan_title.pc お食事の有無
+            #breakfast.plan_button_row.flex.row_select_item02
+              #breakfast-item-01.plan_button_item.active すべて
+              #breakfast-item-02.plan_button_item 素泊まり
+              #breakfast-item-03.plan_button_item 食事付き
+            a.btn_link.pc_flex.center__align(href="#") 
+              span プラン一覧を見る
+              .next_icon.flex.center__align
+          .plan_content_right.flex
+            .slide__plan 
+              .relative
+                .swiper-button.flex 
+                  .swiper-button-prev
+                  .swiper-button-next
+                .slide__plan_swiper
+            a.btn_link.sp_flex.center__align(href="#") 
+              span プラン一覧を見る
+              .next_icon.flex.center__align  

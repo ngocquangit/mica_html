@@ -3,6 +3,7 @@ include ./_include/components/btn-link.pug
 include ./_include/components/location-slide.pug
 include ./_include/components/menu-inside-image.pug
 include ./_include/components/plan-model.pug
+include ./_include/components/plan-slide.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
@@ -186,84 +187,7 @@ block main
                 p.text_big ダブルルーム
                 p.text_small 19.00㎡ - 22.04㎡
         +btn-link('客室一覧を見る','#')
-    .plan_content.relative(data-aos='fade-left') 
-      .container
-        .text_title_EN Plan
-        .text_title_JP 宿泊プラン
-        .plan_content_row.flex 
-          #plan_content_select.plan_content_left
-            p.plan_title プランの絞り込み
-            #recommended.plan_button_row.flex.row_select_item01 
-              #recommended-item-01.plan_button_item.active おすすめ
-              #recommended-item-02.plan_button_item 人気
-              #recommended-item-03.plan_button_item 期間限定
-            p.plan_title.pc お食事の有無
-            #breakfast.plan_button_row.flex.row_select_item02
-              #breakfast-item-01.plan_button_item.active すべて
-              #breakfast-item-02.plan_button_item 素泊まり
-              #breakfast-item-03.plan_button_item 食事付き
-            a.btn_link.pc_flex.center__align(href="#") 
-              span プラン一覧を見る
-              .next_icon.flex.center__align
-          .plan_content_right.flex
-            .slide__plan 
-              .relative
-                .swiper-button.flex 
-                  .swiper-button-prev
-                  .swiper-button-next
-                .slide__plan_swiper
-                  .swiper-wrapper.slide__plan_wrap.flex
-                    .slide_plan_box.swiper-slide.relative
-                      .img_wrap
-                        img(src="../assets/img/top/img_food.png", alt="")
-                      .slide_txt_wrap.flex.col
-                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
-                          table.table_txt.flex
-                            tr.flex 
-                              td.table_txt_left 期間：
-                              td.table_txt_right 2022年04月01日〜2022年06月30日
-                            tr.flex 
-                              td.table_txt_left 料金：
-                              td.table_txt_right 45,100~
-                            tr 
-                              td.table_txt_left お料理：
-                              td.table_txt_right 夕食付き
-                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
-                    .slide_plan_box.swiper-slide.relative
-                      .img_wrap
-                        img(src="../assets/img/top/img_food.png", alt="")
-                      .slide_txt_wrap.flex.col
-                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
-                          table.table_txt.flex
-                            tr.flex 
-                              td.table_txt_left 期間：
-                              td.table_txt_right 2022年04月01日〜2022年06月30日
-                            tr.flex 
-                              td.table_txt_left 料金：
-                              td.table_txt_right 45,100~
-                            tr 
-                              td.table_txt_left お料理：
-                              td.table_txt_right 夕食付き
-                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
-                    .slide_plan_box.swiper-slide.relative
-                      .img_wrap
-                        img(src="../assets/img/top/img_food.png", alt="")
-                      .slide_txt_wrap.flex.col
-                        .slide_txt_title [極上夜景プラン] 16階以上、<br class="sp">東京スカイツリー®側<br class="pc">お部屋確約プラン
-                          table.table_txt.flex
-                            tr.flex 
-                              td.table_txt_left 期間：
-                              td.table_txt_right 2022年04月01日〜2022年06月30日
-                            tr.flex 
-                              td.table_txt_left 料金：
-                              td.table_txt_right 45,100~
-                            tr 
-                              td.table_txt_left お料理：
-                              td.table_txt_right 夕食付き
-                        a.btn_detail_plan.sp_flex(href="#") 詳細をみる
-            a.btn_link.sp_flex.center__align(href="#") 
-              span プラン一覧を見る
-              .next_icon.flex.center__align                
+    +plan-slide()             
     .facilities__content.rooms__content.sp
       .container
         .rooms__content_title facilities
@@ -427,7 +351,7 @@ block main
           img(src="../assets/img/top/content_img_openair.png", alt="")  
           p.desc_txt 竣工予定のイメージ画像です。           
     .slide.location__edu(data-aos='fade-in')
-      .container
+      .container_child
         .loop__img_wrap.flex.location__swiper_swap
           ul.flex.item01.loop__img_item01.swiper-wrapper
             li.loop_item.swiper-slide
@@ -485,6 +409,7 @@ block main
               .item__txt
                 .item__title 市立鷺洲小学校
                 .item__desc 学区小学校  |  徒歩4分・約300m
+      .swiper-button-next
     .image_width_margin(data-aos='fade-in')
       .container
         .img_wrap 
