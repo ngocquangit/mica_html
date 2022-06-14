@@ -2,10 +2,9 @@ extends ../_include/layouts/master.pug
 include ../_include/components/btn-link.pug
 include ../_include/components/location-slide.pug
 include ../_include/components/menu-inside-image.pug
-include ../_include/components/plan-model.pug
 include ../_include/components/banner-block.pug
 include ../_include/components/amenity.pug
-include ../_include/components/plan-block.pug
+include ../_include/components/plan-slide.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
@@ -161,7 +160,7 @@ block main
                     a(href="#").rooms_button_link.flex.center__align 
                     span MORE TWIN ROOM
                     .next_icon.flex.center__align             
-        +plan-block()
+        +plan-slide()
         .allcontaints__content.pc.mt-94(data-aos='fade-in')
           .container_child
             h3.text__title_EN.color_FB9.flex ALL CONTAINTS

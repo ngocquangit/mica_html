@@ -1,4 +1,4 @@
-mixin banner-block(img,sub1,sub2,sub3,option,option1,option2)
+mixin banner-block(img,title,sub,option,option1)
     - var attributes = {};
     - attributes.src = img;
     - attributes.alt = title + ' banner';
@@ -7,12 +7,9 @@ mixin banner-block(img,sub1,sub2,sub3,option,option1,option2)
             .container_child 
                 h1= title
                 if option != ""
-                    p.pc= sub1
-                    p.pc= sub2
-                    p.pc= sub3
+                    p= sub
                     p.sp= option
                     p.sp= option1
-                    p.sp= option2
         .img_wrap 
             img&attributes(attributes)
         .overlay
