@@ -815,6 +815,7 @@
     .btn_link {
       margin-top: 50px;
       transition: all .3s;
+      width: fit-content;
       @include mq-sp(){
         margin-top: 30px;
       }
@@ -1272,25 +1273,23 @@
       justify-content: space-between;
     }
     .four_seasons__box {
-      width: 54.68%;
+      display: flex;
+      flex-direction: column;
       position: relative;
       @include mq-sp() {
         width: 100%;
       }
     }
     .four_seasons__instagram {
-      width: 42.18%;
+      width: 47.7%;
+      padding-left: 40px;
+      @include mq-lg() {
+        padding-left: 20px;
+      }
       @include mq-sp() {
         width: 100%;
+        padding-left: 0;
       }
-    }
-    .four_seasons_line {
-      position: absolute;
-      width: 20px;
-      background-color: rgba(0, 0, 0, 0.2);
-      height: 2px;
-      bottom: -5px;
-      left: 0;
     }
     .four_seasons_run {
       position: absolute;
