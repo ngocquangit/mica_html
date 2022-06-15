@@ -410,7 +410,13 @@
             }
         }
     }
-    .mt-120 {
-        margin-top: 120px;
+    .plan_content {
+        margin-top: 100px;
+        @include mq-sp(){
+          margin-top: 45px;
+        }
+    }
+    .allcontaints__content.pc {
+        display: none !important;
     }
 }
