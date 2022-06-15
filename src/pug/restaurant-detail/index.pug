@@ -1,0 +1,108 @@
+extends ../_include/layouts/master.pug
+include ../_include/components/banner-block.pug
+include ../_include/components/allcontaints.pug
+include ../_include/components/plan-slide.pug
+include ../_include/components/menu-inside-image.pug
+
+block variable
+  - var thisPageTitle = "Micadorayout"
+  - var pageName = ""
+
+block description
+  - var thisPageDescription = ""
+
+block keywords
+  - var thisPageKeywords = "Micadorayout"
+
+block ogpType
+  - var thisPageOgpType = "article"
+
+block main
+    .restaurant
+      +banner-block("/assets/img/restaurant/restaurant_img06.png","DINNER","ご夕食")
+      .slide_product_content(data-aos='fade-in') 
+        .slide__product_swiper
+          .swiper-wrapper.slide__product_wrap.flex.center__align
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+            .product_slide_box.swiper-slide.img_wrap
+              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+          .slide_product_pagination.swiper-pagination  
+          .swiper-button.flex 
+            .swiper-button-prev
+            .swiper-button-next
+      .container(data-aos='fade-in')
+        .restaurant-desc
+          .restaurant-desc__col
+            .restaurant-desc__title 26F スカイグリルブッフェ 武藏
+            .restaurant-desc__content.pc こちらのエグゼクティブツインルームは26.1㎡の広さをご用意
+              |<br>しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
+            .restaurant-desc__content.sp メンバースオンリーの特別感と、香り高く味わい豊かな銘酒に酔いしれる空間。
+              |<br>喧騒を忘れ、プレシャスなひとときをお過ごしください。
+          .restaurant-desc__col.hide-box-sp
+            .restaurant-desc__row 
+              .restaurant-desc__gray 営業時間
+              ul.restaurant-desc__list.pc
+                li.restaurant-desc__item.restaurant-desc__text 朝食  6:30 - 10:00
+              .restaurant-desc__text.sp 17:30 - 23:30 (ラストオーダー 23:00)
+            .restaurant-desc__row.sp_flex
+              .restaurant-desc__gray 直通電話
+              .restaurant-desc__text 03-3842-3367
+            .restaurant-desc__row 
+              .restaurant-desc__gray.pc メニュー
+              .restaurant-desc__gray.sp 入会金
+              a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
+              span
+                  svg(xmlns='http://www.w3.org/2000/svg' width='19.528' height='24' viewbox='0 0 19.528 24')
+                    g(id='PDFアイコン' transform='translate(-47.706)')
+                      path#Path_716(data-name='Path 716' d='M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z' fill='#4b4b4b')
+                      path#Path_717(data-name='Path 717' d='M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z' transform='translate(-82.947 -240.936)' fill='#4b4b4b')
+                      path#Path_718(data-name='Path 718' d='M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z' transform='translate(-163.872 -240.936)' fill='#4b4b4b')
+                      path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
+            .restaurant-desc__row 
+              .restaurant-desc__gray.pc メニュー
+              .restaurant-desc__gray.sp 入会金
+              a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
+              span
+                  svg(xmlns='http://www.w3.org/2000/svg' width='19.528' height='24' viewbox='0 0 19.528 24')
+                    g(id='PDFアイコン' transform='translate(-47.706)')
+                      path#Path_716(data-name='Path 716' d='M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z' fill='#4b4b4b')
+                      path#Path_717(data-name='Path 717' d='M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z' transform='translate(-82.947 -240.936)' fill='#4b4b4b')
+                      path#Path_718(data-name='Path 718' d='M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z' transform='translate(-163.872 -240.936)' fill='#4b4b4b')
+                      path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
+            .restaurant-desc__row.pc_flex
+              .restaurant-desc__gray ご予約
+              .restaurant-desc__text 03-1234-5678（10:00～17:00）
+            .restaurant-desc__row.sp
+              .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
+              .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
+          .restaurant-desc__button.sp_flex 詳細をみる
+      .cooking_content
+        .container 
+          .cooking_title お料理メニュー
+          .cooking_title.sp MENU
+          .cooking_desc.sp メニュー一覧
+          .cooking_swiper.relative
+            .swiper-wrapper.slide__product_wrap.flex.center__align
+              .product_slide_box.swiper-slide.img_wrap
+                img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+                .txt_menu ディナーコース「mica」
+                .txt_desc フランス料理と日本料理、双方の食材と調理法を融合し、素材の秘める力を存分に引き出す新境地へと昇華させた、美食の数々をお届けいたします。
+              .product_slide_box.swiper-slide.img_wrap
+                img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+                .txt_menu ディナーコース「mica」
+                .txt_desc フランス料理と日本料理、双方の食材と調理法を融合し、素材の秘める力を存分に引き出す新境地へと昇華させた、美食の数々をお届けいたします。
+              .product_slide_box.swiper-slide.img_wrap
+                img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+                .txt_menu ディナーコース「mica」
+                .txt_desc フランス料理と日本料理、双方の食材と調理法を融合し、素材の秘める力を存分に引き出す新境地へと昇華させた、美食の数々をお届けいたします。 
+            .swiper-button-prev.cooking
+            .swiper-button-next.cooking
+          .book_dinner ディナーを予約する
+          .book_dinner.sp 予約する
+      .white
+      +plan-slide()    
+      +allcontaints()
+      +menu-inside-image('/assets/img/top/reserve.png')

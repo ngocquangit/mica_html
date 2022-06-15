@@ -392,6 +392,33 @@ var swiper = new Swiper(".rooms__content_slide", {
   slidesPerView: 1.5,
   spaceBetween: 20,
 });
+var swiper = new Swiper(".cooking_swiper", {
+  slidesPerView: 3,
+  spaceBetween: 58,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+    },
+    375: {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+    },
+    320: {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+    }
+  }
+});
 var swiper = new Swiper(".slide__rooms_swiper", {
   slidesPerView: 3,
   spaceBetween: 40,
@@ -412,14 +439,6 @@ var swiper = new Swiper(".slide__rooms_swiper", {
       slidesPerView: 2.15,
     }
   }
-});
-var swiper = new Swiper(".slide_stay_plan", {
-  slidesPerView: 2,
-  spaceBetween: 20,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-  },
 });
 var swiper = new Swiper(".facilities__content_slide", {
   slidesPerView: 1.2,

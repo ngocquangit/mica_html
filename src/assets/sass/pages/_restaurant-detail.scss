@@ -1,0 +1,157 @@
+.restaurant {
+    .slide_product_content {
+        margin-top: 120px;
+        @include mq-lg() {
+            margin-top: 60px;
+        }
+        @include mq-sp() {
+            margin-top: 40px;
+        }
+        .swiper-button-next::after {
+            font-size: 65px;
+        }
+        .swiper-button-prev::after {
+            font-size: 65px;
+        }
+    }
+    .banner__txt {
+        h1 {
+            @include mq-sp(){
+                font-size: 30px;
+            }
+        }
+        p {
+            @include mq-sp(){
+                font-size: 10px;
+            }
+        }
+    }
+
+    .cooking_content {
+        background-color: #EFEFEF;
+        padding: 60px 0 68px 0;
+        @include mq-sp(){
+            background-color: #1A1A1A;
+            padding: 25px 0 30px;
+        }
+        .container {
+            .cooking_title {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 35px;
+                margin-bottom: 30px;
+                @include mq-lg() {
+                    font-size: 22px;
+                }
+                @include mq-sp() {
+                    font-size: 30px;
+                    display: none;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+            .cooking_title.sp {
+                font-family: 'Montserrat';
+                margin-bottom: 5px;
+            }
+            .cooking_desc.sp {
+                color: #fff;
+                font-size: 10px;
+                text-align: center;
+                margin-bottom: 28px;
+            }
+            .cooking_swiper {
+                overflow: hidden;
+                .swiper-slide {
+                    background-color: #fff;
+                    .txt_menu {
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 34px;
+                        margin-left: 30px;
+                        margin-top: 25px;
+                        @include mq-lg() {
+                            font-size: 22px;
+                            margin-left: 30px;
+                            margin-top: 10px;
+                        }
+                        @include mq-mobile() {
+                            font-size: 16px;
+                            line-height: 26px;
+                            margin-left: 15px;
+                        }
+                    }
+                    .txt_desc {
+                        font-size: 14px;
+                        margin-left: 30px;
+                        margin-top: 20px;
+                        margin-right: 30px;
+                        margin-bottom: 29px;
+                        font-weight: 700;
+                        line-height: 34px;
+                        @include mq-lg() {
+                            font-size: 18px;
+                            margin: 0;
+                            max-width: 190px;
+                            margin: 10px 30px 15px;
+                        }
+                        @include mq-sp() {
+                            max-width: 95%;
+                        }
+                        @include mq-mobile() {
+                            line-height: 26px;
+                            margin-left: 15px;
+                            font-size: 12px;
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-button-next.cooking {
+            left: 97%;
+            top: 41%;
+            color: rgb(255 255 255 / 60%);
+            @include mq-sp() {
+                display: none;
+            }
+        }
+        .swiper-button-next::after {
+            font-size: 55px;
+        }
+        .swiper-button-prev.cooking {
+            top: 41%;
+            color: rgb(255 255 255 / 60%);
+            left: 1%;
+            @include mq-sp() {
+                display: none;
+            }
+        }
+        .swiper-button-prev::after {
+            font-size: 55px;
+        }
+        .book_dinner {
+            width: 189px;
+            height: 40px;
+            background-color: #2C8AAE;
+            border-radius: 5px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 0.06em;
+            color: #fff;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            @include mq-sp() {
+                display: none;
+            }
+        }
+    }
+    .white {
+        height: 90px;
+        @include mq-lg() {
+            height: 60px;
+        }
+    }
+}
