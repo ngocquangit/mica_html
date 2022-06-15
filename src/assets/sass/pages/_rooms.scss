@@ -207,24 +207,20 @@
                     }
                 }
             }
-            .couple_btn {
-                margin-top: 15px;
-                justify-content: space-between;
-                .btn_link {
-                    width: calc(50% - 10px);
-                    font-size: 14px;
-                    line-height: 24px;
-                    letter-spacing: 0.04rem;
-                    font-weight: 400;
-                    color: #333;
-                    border: 1px solid #ddd;
-                    padding: 17px;
-                    &:hover {
-                        opacity: .8;
-                    }
+            .btn_link {
+                width: 100%;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.04rem;
+                font-weight: 400;
+                color: #333;
+                border: 1px solid #ddd;
+                padding: 17px;
+                margin-top: 25px;
+                &:hover {
+                    opacity: .8;
                 }
             }
-
         }
         .control_layout {
             justify-content: flex-end;
