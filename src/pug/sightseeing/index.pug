@@ -7,7 +7,7 @@ include ../_include/components/banner-block.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
-  - var pageName = "Executive"
+  - var pageName = "Sightseeing"
 
 block description
   - var thisPageDescription = ""
@@ -20,100 +20,168 @@ block ogpType
 
 block main
   .sightseeing_page
-    +banner-block("/assets/img/sightseeing/sightseeing-mv.jpg","SIGHTSEEING","周辺観光") 
-    .sightseeing-map(data-aos='fade-in')  
-      .container
-        .sightseeing-title SIGHTSEEING 
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.24819638403!2d139.60078419861492!3d35.66844146196813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5pel5pys44CB5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2s!4v1653364893261!5m2!1sja!2s' width='1280' height='600' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
-    .tour-review(data-aos='fade-in') 
-      .location__edu
-        .container
-          .loop__img_wrap.flex.tour__swiper_swap
-            ul.flex.item01.loop__img_item.swiper-wrapper
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
+    .banner-block.flex.center__align.relative 
+        .banner__txt
+            .container_child 
+                h1 SIGHTSEEING
+                if option != ""
+                    p.pc 周辺観光
+                    p.sp micado INNの
+                    p.sp 周辺観光をご紹介します。
+        .img_wrap 
+            img(src="/assets/img/sightseeing/sightseeing-mv.png")
+        .overlay
+    .concept__content_ver02.content__right(data-aos='fade-in')
+      .container.clear_fix.flex
+        .text_wrap.flex.col.center__justify
+          h3.text__title_EN.color_FB9 周辺のおすすめスポット
+          h3.text__title_JP 自然を体験する旅行に
+          p.detail__content  海と山に囲まれたmicado INNの周りには、数々の観光スポットがあります。<br/>
+            |レンタサイクルや徒歩でも、お楽しみいただけるのは、自然に恵まれた環境にあるからこそ。          
+        .concept__img.img_wrap
+          img(src="/assets/img/sightseeing/content_img_1.png", alt="") 
+    .slide.location__edu(data-aos='fade-in')
+      .container_child
+        .loop__img_wrap.flex.location__swiper_swap.relative
+          ul.flex.item01.loop__img_item01.swiper-wrapper
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_1.png").location__img_01 
+              .item__txt
+                .item__title ヘブンビーチ
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_2.png").location__img_02
+              .item__txt
+                .item__title 太陽と海の美術館
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 絵画、彫刻、ファッション、建築、デザイン等幅広く現代美術に関する展覧会を開催しています。
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_3.png").location__img_01 
+              .item__txt
+                .item__title ikan ikan park （水族館）
+                .item__desc 車15分・約300m
+                .item__desc__detail 世界中の魚が集まる水族館。<br>イルカショーやアシカショーも圧巻！
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_4.png").location__img_02
+              .item__txt
+                .item__title サファリリオナ
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 百獣の王のライオンをはじめとするたくさんの動物が！<br>肉食動物にエサやりできる体験も好評！
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_1.png").location__img_02
+              .item__txt
+                .item__title ヘブンビーチ
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_2.png").location__img_02
+              .item__txt
+                .item__title 太陽と海の美術館
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 絵画、彫刻、ファッション、建築、デザイン等幅広く現代美術に関する展覧会を開催しています。
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_3.png").location__img_02
+              .item__txt
+                .item__title ikan ikan park （水族館）
+                .item__desc 車15分・約300m
+                .item__desc__detail 世界中の魚が集まる水族館。<br>イルカショーやアシカショーも圧巻！
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_4.png").location__img_02
+              .item__txt
+                .item__title サファリリオナ
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 百獣の王のライオンをはじめとするたくさんの動物が！<br>肉食動物にエサやりできる体験も好評！
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_1.png").location__img_02
+              .item__txt
+                .item__title ヘブンビーチ
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_2.png").location__img_02
+              .item__txt
+                .item__title 太陽と海の美術館
+                .item__desc 徒歩4分・約300m
+                .item__desc__detail 絵画、彫刻、ファッション、建築、デザイン等幅広く現代美術に関する展覧会を開催しています。
+            li.loop_item.swiper-slide
+              img(src="/assets/img/sightseeing/slide_img_3.png").location__img_02
+              .item__txt
+                .item__title ikan ikan park （水族館）
+                .item__desc 車15分・約300m
+                .item__desc__detail 世界中の魚が集まる水族館。<br>イルカショーやアシカショーも圧巻！
+          .swiper-button-next.location-slide-btn.fix-btn
     .event-content(data-aos='fade-in')  
       .location__edu
-        .container
-          .sightseeing-title EVENT 
-          .loop__img_wrap.flex.tour__swiper_swap
-            ul.flex.item01.loop__img_item.swiper-wrapper
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
-              li.loop_item.spencial.swiper-slide
-                img(src="../assets/img/top/content_img_openair.png").location__img_01 
-                .count-block.spencial 01 
-                .item__txt
-                  .item__title 市立鷺洲小学校
-                  .item__desc 634ｍと世界一の高さを誇る電波塔。展望タワーとしても東京を代表する注目の観光スポットです。周辺は東京スカイツリータウン®として巨大複合施設もあり、一日中楽しむことができます。
+          .sub__content.concept__content_ver02.content__left(data-aos='fade-in')
+            .container_child.clear_fix.flex
+              .text_wrap.flex.col.center__justify
+                h3.text__title_EN.color_FB9 年間イベント
+                h3.text__title_JP 1年中楽しめるイベント
+                p.detail__content micado INNの位置するここ、恵比寿では、1年中様々なイベントが開催されています。<br/>
+                  |ご家族やカップルでも楽しめる、イベントに是非ご参加してみてはいかがでしょうか？          
+              .concept__img.img_wrap.flex.col
+                img(src="/assets/img/sightseeing/content_img_2.png", alt="")
+          .slide.location__edu(data-aos='fade-in')
+            .container_child
+              .loop__img_wrap.flex.location__swiper_swap.relative
+                ul.flex.item01.loop__img_item01.swiper-wrapper
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_5.png").location__img_01 
+                    .item__txt
+                      .item__title メニメニフラワーイベント
+                      .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_6.png").location__img_02
+                    .item__txt
+                      .item__title 大気球乗船祭り
+                      .item__desc__detail 直径20メートルの気球に乗船して、秋ならではの紅葉を楽しめる、お祭りは毎年11月に開催されています。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_7.png").location__img_01 
+                    .item__txt
+                      .item__title アートパーク イルミネーション
+                      .item__desc__detail 毎年冬から春にかけては、ホテルの近隣にある、アートパークにて、イルミネーションイベントが開催されています。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_8.png").location__img_02
+                    .item__txt
+                      .item__title かまくら体験
+                      .item__desc__detail 積雪量の多い地域だからこそ楽しめる、かまくら体験が毎年1月には開催されます。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_5.png").location__img_02
+                    .item__txt
+                      .item__title メニメニフラワーイベント
+                      .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_6.png").location__img_02
+                    .item__txt
+                      .item__title 大気球乗船祭り
+                      .item__desc__detail 直径20メートルの気球に乗船して、秋ならではの紅葉を楽しめる、お祭りは毎年11月に開催されています。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_7.png").location__img_02
+                    .item__txt
+                      .item__title アートパーク イルミネーション
+                      .item__desc__detail 毎年冬から春にかけては、ホテルの近隣にある、アートパークにて、イルミネーションイベントが開催されています。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_8.png").location__img_02
+                    .item__txt
+                      .item__title かまくら体験
+                      .item__desc__detail 積雪量の多い地域だからこそ楽しめる、かまくら体験が毎年1月には開催されます。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_5.png").location__img_02
+                    .item__txt
+                      .item__title メニメニフラワーイベント
+                      .item__desc__detail 100を超える植物！そして季節ごとに開催しているフェアも大人気！<br>現在あじさい祭り開催中!
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_6.png").location__img_02
+                    .item__txt
+                      .item__title 大気球乗船祭り
+                      .item__desc__detail 直径20メートルの気球に乗船して、秋ならではの紅葉を楽しめる、お祭りは毎年11月に開催されています。
+                  li.loop_item.swiper-slide
+                    img(src="/assets/img/sightseeing/slide_img_7.png").location__img_02
+                    .item__txt
+                      .item__title アートパーク イルミネーション
+                      .item__desc__detail 毎年冬から春にかけては、ホテルの近隣にある、アートパークにて、イルミネーションイベントが開催されています。
+                .swiper-button-next.location-slide-btn
     .stay_plan_content(data-aos='fade-in')  
         .container_child
             .text_title_EN STAY PLAN
