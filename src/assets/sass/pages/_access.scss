@@ -1,318 +1,171 @@
 .access_page {
-    .banner__txt {
-        text-align: center;
-        p {
-            @include mq-sp(){
-                font-weight: 400;
-            }
-        }
-        
-    }
-    .container_child {
-        h1 {
-            font-size: 30px;
-            font-family: "Gotham";
+    .map_content {
+        iframe {
+            width: calc(100% - 20px);
+            margin: 70px auto 0;
+            height: 638px;
             @include mq-sp() {
-                font-size: 14px;
-            }
-        }
-        .pc {
-            font-size: 30px;
-            line-height: 24px;
-            margin-top: 19px;
-            font-weight: 400;
-            @include mq-large() {
-                font-size: 28px;
-                font-weight: 400;
-            }
-        }
-    }
-    .map {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 100px;
-        @include mq-sp() {
-            margin-top: 40px;
-        }
-        .map_content {
-            width: 1080px;
-            height: 600px;
-            @include mq-large() {
-                max-width: 95%;
-                height: 400px;
-            }
-            @include mq-sp() {
-                max-width: 95%;
-                height: 300px;
-            }
-            iframe {
+                margin-top: 40px;
                 width: 100%;
-                height: 100%;
+                height: 275px;
             }
         }
     }
-    .vehicle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .map_vehicle_content {
+        margin-top: 60px;
+        .map_vehicle_row {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            display: flex;
+            @include mq-sp() {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+        .map_vehicle_left {
+            width: 50%;
+            @include mq-sp() {
+                width: 100%;
+            }
+        }
+        .map_vehicle_right {
+            width: 50%;
+            @include mq-sp() {
+                width: 100%;
+            }
+        }
+        .map_vehicle_col {
+            margin-top: 60px;
+            width: fit-content;
+            max-width: 50%;
+            padding: 0 10px;
+            @include mq-sp() {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .map_vehicle_detail {
+            margin-top: 50px;
+            margin-bottom: 10px;
+            .map_vehicle_detail-item {
+                position: relative;
+                padding-left: 25px;
+                padding-bottom: 30px;
+                border-left: 5px solid #E1E1E1;
+                margin-left: 11px;
+                &::after {
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    border-radius: 50%;
+                    border: 7px solid #B7B7B7;
+                    background-color: #fff;
+                    left: -17px;
+                    top: -2px;
+                }
+            }
+            .map_vehicle_detail-item:last-child {
+                border-left: 7px solid transparent !important;
+                padding-bottom: 0 !important;
+                &::after {
+                    border: 7px solid #000 !important;
+                }
+            }
+        }
+        .destination_txt {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+        .location_txt {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0.1rem; 
+            margin-top: 12px;
+        }
+        .vehicle_type_EN {
+            text-align: center;
+            font-size: 30px;
+            line-height: 37px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+        }
+        .vehicle_type_JP {
+            text-align: center;
+            font-size: 10px;
+            line-height: 44px;
+            letter-spacing: 0.06rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .time_extimate {
+            text-align: center;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.06rem;
+            font-weight: 600; 
+            position: relative;
+            @include mq-sp() {
+                display: flex;
+                justify-content: center;
+            }
+            &::after {
+                @include mq-sp() {
+                    content: "";
+                    height: 50px;
+                    width: 1px;
+                    background-color: #707070;
+                    position: absolute;
+                    top: 10px;
+                    top: -55px;
+                    -webkit-animation: verticalMaskAnim 2s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite;
+                    animation: verticalMaskAnim 2s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite;
+                }
+            }
+        }
+    }
+    @keyframes verticalMaskAnim {
+        0% {
+            -webkit-clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 100% 0);
+        }
+        25% {
+            -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+        }
+        75% {
+            -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+        }
+        to {
+            -webkit-clip-path: inset(100% 0 0 0);
+            clip-path: inset(100% 0 0 0);
+        }
+    }
+    .plan_content {
         margin-top: 100px;
         @include mq-sp() {
-            margin-top: 0;
-        }
-        .vehicle_content {
-            width: 1080px;
-            display: flex;
-            @include mq-large() {
-                max-width: 95%;
-            }
-            @include mq-sp() {
-                max-width: 95%;
-                display: flex;
-                flex-direction: column;
-            }
-            .trainbus_content, .car_content {
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                @include mq-large() {
-                    max-width: 50%;
-                }
-                @include mq-sp() {
-                    width: 100%;
-                    margin-top: 40px;
-                }
-                .trainbus_title, .car_title {
-                    font-size: 30px;
-                    font-weight: 400;
-                    line-height: 37px;
-                    font-family: 'Montserrat';
-                    @include mq-sp() {
-
-                    }
-                }
-                .moved_by {
-                    font-size: 20px;
-                    font-weight: 700;
-                    margin-top: 10px;
-                    font-family: 'Source Han Sans JP';
-                    @include mq-sp() {
-                        font-size: 10px;
-                        line-height: 44px;
-                        margin-top: 0;
-                    }
-                }
-                .distance {
-                   width: 2px;
-                   height: 100px;
-                   background-color: #707070;
-                   margin-top: 60px; 
-                   @include mq-sp() {
-                       height: 50px;
-                       margin-top: 30px;
-                   }
-                }
-                .time_move {
-                    font-size: 20px;
-                    font-weight: 700;
-                    font-family: 'Source Han Sans JP';
-                    margin-top: 20px;
-                    @include mq-sp() {
-                        font-size: 18px;
-                        margin-top: 10px;
-                        line-height: 30px;
-                    }
-                }
-                .schedule_move {
-                    min-width: 410px;
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 60px;
-                    justify-content: center;
-                    @include mq-large() {
-                        min-width: 100%;
-                    }
-                    @include mq-sp() {
-                        min-width: 95%;
-                        margin-top: 30px;
-                    }
-                    .destination {
-                        .destination_top {
-                            display: flex;
-                            .box_left {
-                                width: 44px;
-                                height: 44px;
-                                border-radius: 50%;
-                                border: 10px solid #B7B7B7;
-                                @include mq-sp() {
-                                    width: 28px;
-                                    height: 28px;
-                                    border: 8px solid #B7B7B7;
-                                }
-                            }
-                            .destination_name {
-                                font-size: 20px;
-                                line-height: 44px;
-                                margin-left: 40px;
-                                font-weight: 700;
-                                font-family: 'Source Han Sans JP';
-                                @include mq-sp() {
-                                    font-size: 16px;
-                                    line-height: 28px;
-                                    margin-left: 15px;
-                                }
-                            }
-                        }
-                        .destination_bot {
-                            display: flex;
-                            .hyphen {
-                                height: 80px;
-                                border-left: 5px solid #B7B7B7;
-                                margin-left: 19px;
-                                @include mq-sp() {
-                                    height: 60px;
-                                    margin-left: 12px;
-                                }
-                            }
-                            .destination_des {
-                                font-size: 18px;
-                                line-height: 30px;
-                                margin-left: 60px;
-                                font-family: 'Source Han Sans JP';
-                                font-weight: 400;
-                                margin-top: 8px;
-                                @include mq-sp() {
-                                    font-size: 14px;
-                                    margin-left: 26px;
-                                    line-height: 20px;
-                                    margin-top: 12px;
-                                }
-                            }
-                        }
-                    }
-                    .destination_last {
-                        .destination_top {
-                            display: flex;
-                            .box_left {
-                                width: 44px;
-                                height: 44px;
-                                border-radius: 50%;
-                                border: 10px solid #000000;
-                                @include mq-sp() {
-                                    width: 28px;
-                                    height: 28px;
-                                    border: 8px solid #000000;
-                                }
-                            }
-                            .destination_name {
-                                font-size: 20px;
-                                line-height: 44px;
-                                margin-left: 40px;
-                                font-weight: 700;
-                                font-family: 'Source Han Sans JP';
-                                @include mq-sp() {
-                                    font-size: 16px;
-                                    line-height: 28px;
-                                    margin-left: 15px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .parking_fee {
-                    max-width: 410px;
-                    margin-top: 60px;
-                    display: flex;
-                    flex-direction: column;
-                    font-family: 'Source Han Sans JP';
-                    @include mq-large() {
-                        min-width:100%;
-                    }
-                    @include mq-sp() {
-                        min-width: 95%;
-                        margin-top: 30px;
-                    }
-                    .parking_fee_title {
-                        font-size: 16px;
-                        line-height: 20px;
-                        font-weight: 700;
-                        @include mq-sp() {
-                            font-size: 12px;
-                        }
-                    }
-                    .fee_type {
-                        ul.ul_1 {
-                            list-style-type: inherit;
-                            margin-left: 20px;
-                            li {
-                                font-size: 16px;
-                                font-weight: 400;
-                                line-height: 20px;
-                                @include mq-sp() {
-                                    font-size: 12px;
-                                }
-                            }
-                        }
-                        .note {
-                            font-size: 16px;
-                            font-weight: 400;
-                            line-height: 20px;
-                            @include mq-sp() {
-                                font-size: 12px;
-                                margin-right: 0;
-                                margin-left: 4px;
-                            }
-                        }
-                        ul.ul_2 {
-                            list-style-type: "※";
-                            margin-left: 16px;
-                            li {
-                                font-size: 16px;
-                                font-weight: 400;
-                                line-height: 20px;
-                                @include mq-sp() {
-                                    font-size: 12px;
-                                }
-                            } 
-                        }
-                    }
-                }
-            }
+            margin-top: 50px;
         }
     }
-    .stay_plan_content {
-        padding: 55px 0 91px;
-        margin: 60px 0 56px;
+    .allcontaints__content.pc {
+        display: none !important;
+    }
+    .between-justify {
+        justify-content: space-between;
+    }
+    .around-justify {
+        justify-content: space-around;
+    }
+    .display-wrap {
+        flex-wrap: wrap;
+    }
+    .col-sp {
         @include mq-sp() {
-           padding: 0;
-           margin-top: 60px; 
-        }
-        .container_child {
-            .text_title_EN {
-                text-align: center;
-                color: #000000;
-                font-family: 'Montserrat';
-                @include mq-sp() {
-                    font-size: 30px;
-                    margin-bottom: 0;
-                    line-height: 37px;
-                }
-            }
-            .text_title_JP {
-                font-size: 12px;
-                text-align: center;
-                line-height: 44px;
-                @include mq-sp() {
-                    font-size: 10px;
-                }
-            }
-        }
-        .slide_plan_item {
-            box-shadow: 0 0 10px rgb(0 0 0 / 30%);
-            .slide_txt_description {
-                font-weight: 700;
-            }
+            flex-direction: column;
         }
     }
 }

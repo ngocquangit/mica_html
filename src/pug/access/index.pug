@@ -1,9 +1,8 @@
 extends ../_include/layouts/master.pug
-include ../_include/components/btn-link.pug
 include ../_include/components/allcontaints.pug
 include ../_include/components/menu-inside-image.pug
-include ../_include/components/plan-model.pug
 include ../_include/components/banner-block.pug
+include ../_include/components/plan-slide.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
@@ -19,242 +18,87 @@ block ogpType
   - var thisPageOgpType = "article"
 
 block main
-  .access_page
-    +banner-block("/assets/img/news/banner.png","ACCESS","浅草ビューホテルの","最新情報をご紹介します。","浅草ビューホテルの","最新情報をご紹介します。") 
-
-    .map(data-aos='fade-in') 
-      .map_content
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.0498219974465!2d105.78166711540196!3d20.99063989445333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acb5604da667%3A0x1ae60e03053e4a42!2zQ2h1bmcgY8awIEMxNCwgMTkgUC4gVOG7kSBI4buvdSwgVHJ1bmcgVsSDbiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1654155769357!5m2!1svi!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    .vehicle
-      .vehicle_content(data-aos='fade-in',data-aos-anchor-placement="top-center") 
-        .trainbus_content 
-          .trainbus_title TRAIN/BUS
-          .moved_by 電車・バスでのアクセス
-          .distance
-          .time_move 東京から約4時間10分
-          .schedule_move 
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 東京駅
-              .destination_bot
-                .hyphen
-                .destination_des 東海道・山陽新幹線ひかり(約130分)
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 米原駅
-              .destination_bot
-                .hyphen
-                .destination_des 特急しらさぎ(約50分)
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 武生駅
-              .destination_bot
-                .hyphen
-                .destination_des 副鉄バス[かれい崎行](約70分)
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name くりや
-              .destination_bot
-                .hyphen
-                .destination_des 徒歩(約2分)
-            .destination_last
-               .destination_top
-                .box_left
-                .destination_name 浅草ビューホテル
-          .distance
-          .time_move 東京から約4時間10分
-          .schedule_move 
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 大阪駅
-              .destination_bot
-                .hyphen
-                .destination_des サンダーバード金沢行(約100分)
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 武生駅
-              .destination_bot
-                .hyphen
-                .destination_des 福鉄バス[かれい崎行](約70分)
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name くりや
-              .destination_bot
-                .hyphen
-                .destination_des 徒歩(約2分)
-            .destination_last
-               .destination_top
-                .box_left
-                .destination_name 浅草ビューホテル
-        .car_content 
-          .car_title CAR
-          .moved_by お車でのアクセス
-          .distance
-          .time_move 東京から約6時間30分
-          .schedule_move 
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 練馬IC
-              .destination_bot
-                .hyphen
-                .destination_des 関越自動車道
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 八王子JCT
-              .destination_bot
-                .hyphen
-                .destination_des 中央自動車道
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 小牧JCT
-              .destination_bot
-                .hyphen
-                .destination_des 東名自動車道
-            .destination 
-              .destination_top
-                .box_left
-                .destination_name 一宮JCT
-              .destination_bot
-                .hyphen
-                .destination_des 名神高速道路
-            .destination_last
-               .destination_top
-                .box_left
-                .destination_name 浅草ビューホテル
-          .parking_fee 
-            .parking_fee_title 「駐車料金のご案内」
-            .fee_type 
-              ul.ul_1 
-                li ご宿泊：1泊につき￥1,500（入庫より22時間まで）
-                li レストラン：2時間まで無料
-                li ご宴会：3時間まで無料
-                li ご婚礼：5時間まで無料
-              .note （上記以外は30分￥500）
-              ul.ul_2 
-                li 車高2.1ｍまで
-                li 駐車場台数180台
-                li 駐車場のご予約は承っておりません。
-              .note 当日万が一当ホテルの駐車場が満車だった場合はホテル周辺の有料駐車場をご案内致します。
-    .stay_plan_content 
-        .container_child
-            .text_title_EN(data-aos='fade-in') PLAN 
-            .text_title_JP(data-aos='fade-in') 宿泊プラン
-            .stay_plan_row.flex(data-aos='fade-in') 
-                .stay_plan_left
-                    .col_select
-                        #recommendation.col_select_item.flex.center__align.center__justify.active おすすめ
-                        #popular_plan.col_select_item.flex.center__align.center__justify 人気
-                        #winter_only.col_select_item.flex.center__align.center__justify 期間限定
-                    .col_radio_wrap.relative    
-                        .flex.col.recommendation.col_radio_wrap-item.active
-                            .flex.center__align.radio_item
-                                input#recommendation-01(type="radio", name="recommendation", checked) 
-                                label(for='recommendation-01') 食事付き
-                            .flex.center__align.radio_item
-                                input#recommendation-02(type="radio", name="recommendation") 
-                                label(for='recommendation-02') 素泊まり
-                            .flex.center__align.radio_item
-                                input#recommendation-03(type="radio", name="recommendation") 
-                                label(for='recommendation-03') すべて
-                        .flex.col.popular_plan.col_radio_wrap-item
-                            .flex.center__align.radio_item
-                                input#popular_plan-01(type="radio", name="popular_plan", checked) 
-                                label(for='popular_plan-01') すべて
-                            .flex.center__align.radio_item
-                                input#popular_plan-02(type="radio", name="popular_plan") 
-                                label(for='popular_plan-02') 素泊まり
-                            .flex.center__align.radio_item
-                                input#popular_plan-03(type="radio", name="popular_plan") 
-                                label(for='popular_plan-03') 食事付き
-                        .flex.col.winter_only.col_radio_wrap-item
-                            .flex.center__align.radio_item
-                                input#winter_only-01(type="radio", name="winter_only", checked) 
-                                label(for='winter_only-01') すべて
-                            .flex.center__align.radio_item
-                                input#winter_only-02(type="radio", name="winter_only") 
-                                label(for='winter_only-02') すべて
-                            .flex.center__align.radio_item
-                                input#winter_only-03(type="radio", name="winter_only") 
-                                label(for='winter_only-03') 食事付き
-                .stay_plan_right.flex.relative
-                    .stay_plan_btn_swiper.swiper-button-next.pc_flex
-                    .slide_stay_plan.pc
-                        .swiper-wrapper.slide_stay_plan_wrap.flex
-                            .slide_plan_item.swiper-slide.relative
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約 
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き
-                                    .slide_txt_price
-                            .slide_plan_item.swiper-slide.relative
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約 
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price
-                            .slide_plan_item.swiper-slide.relative
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price           
-                    .slide_stay_plan.sp
-                        .slide_stay_plan_wrap
-                            .slide_plan_item.relative
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約 
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き
-                                    .slide_txt_price
-                            .slide_plan_item.relative
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約 
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price
-                            .slide_plan_item.relative.hide
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price
-                            .slide_plan_item.relative.hide
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price   
-                            .slide_plan_item.relative.hide
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price
-                            .slide_plan_item.relative.hide
-                                .img_wrap
-                                    img(src="../assets/img/top/img_food.png", alt="")
-                                .slide_txt_wrap
-                                    .slide_txt_title [極上夜景プラン] 16階以上、<br>東京スカイツリー®側お部屋確約
-                                    .slide_txt_description 期間：2022年04月01日〜2022年06月30日<br>料金：45,100円(税込)~/人<br>料理：夕食付き   
-                                    .slide_txt_price
-                            #btn_view_more.btn_view_more.sp_flex.center__justify.center__align もっとみる          
-    +allcontaints()
-    +menu-inside-image('/assets/img/top/reserve.png')
+    .access_page
+      +banner-block("/assets/img/news/banner.png","ACCESS","アクセス") 
+      .map_content(data-aos='fade-in')
+        .container
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662873.2451231668!2d139.7698121!3d35.50924045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2zVMO0a3nDtCwgTmjhuq10IELhuqNu!5e0!3m2!1svi!2s!4v1655274358673!5m2!1svi!2s' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')   
+      .map_vehicle_content
+        .container 
+          .map_vehicle_row 
+            .map_vehicle_left
+              .vehicle_type_EN TRAIN/BUS
+              .vehicle_type_JP 電車・バスでのアクセス
+              .flex.between-justify.display-wrap.col-sp
+                .map_vehicle_col 
+                  .time_extimate 東京から約4時間10分 
+                  .map_vehicle_detail 
+                    .map_vehicle_detail-item
+                      .destination_txt 東京駅
+                      .location_txt 東海道・山陽新幹線ひかり(約130分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado駅
+                      .location_txt 特急しらさぎ(約50分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado駅
+                      .location_txt 副鉄バス[かれい崎行](約70分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado
+                      .location_txt 徒歩(約2分)
+                    .map_vehicle_detail-item
+                      .destination_txt 東京駅
+                .map_vehicle_col 
+                  .time_extimate 大阪から約4時間10分 
+                  .map_vehicle_detail 
+                    .map_vehicle_detail-item
+                      .destination_txt micado駅
+                      .location_txt 特急しらさぎ(約50分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado駅
+                      .location_txt 副鉄バス[かれい崎行](約70分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado
+                      .location_txt 徒歩(約2分)
+                    .map_vehicle_detail-item
+                      .destination_txt micado INN
+            .map_vehicle_right
+              .vehicle_type_EN CAR
+              .vehicle_type_JP お車でのアクセス
+              .flex.around-justify.col-sp
+                .map_vehicle_col 
+                  .time_extimate 東京から約4時間10分 
+                  .map_vehicle_detail 
+                    .map_vehicle_detail-item
+                      .destination_txt micadoIC
+                      .location_txt 関越自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 中央自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 東名自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 名神高速道路
+                    .map_vehicle_detail-item
+                      .destination_txt micado INN
+                .map_vehicle_col 
+                  .time_extimate 東京から約4時間10分 
+                  .map_vehicle_detail 
+                    .map_vehicle_detail-item
+                      .destination_txt micadoIC
+                      .location_txt 関越自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 中央自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 東名自動車道
+                    .map_vehicle_detail-item
+                      .destination_txt micadoJCT
+                      .location_txt 名神高速道路
+                    .map_vehicle_detail-item
+                      .destination_txt micado INN
+      +plan-slide() 
+      +allcontaints()
+      +menu-inside-image('/assets/img/top/reserve.png')

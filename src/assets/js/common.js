@@ -276,7 +276,9 @@ $(document).ready(function () {
   let count = 0;
   let countSlide = 0;
   let widthPage = $(window).width();
-  imageSlideShow(count);
+  if($('#four_seasons').length == 1) {
+    imageSlideShow(count);
+  }
   allcontaintsContentAutoFix()
   if (widthPage < 769) {
     $(".home__banner_pc").remove();
@@ -288,7 +290,6 @@ $(document).ready(function () {
   });
 });
 $('.amenity_more').click(function(){
-  console.log('tesst');
   $('.amenity_box.amenity_hide_sp').removeClass('amenity_hide_sp')
   $('.amenity_more').addClass('amenity_hide_sp')
 })
@@ -451,7 +452,6 @@ $(function () {
   for(let i = 0 ; i < 100 ; i++) {
     dataSource.push(dataTemp)
   }
-  console.log(dataSource)
   container.pagination({
       dataSource: dataSource,
       pageSize: 12,
@@ -606,5 +606,4 @@ AOS.init({
   [].slice.call(document.querySelectorAll('.mv-slide')).forEach(function(item) {
     init(item);
   });
-
 })();
