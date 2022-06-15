@@ -1,11 +1,22 @@
 .facilities{
-  .container{
-    @include mq-pc(){
-      max-width: unset;
+  .custorm-container{
+    width: 100%;
+    @include mq-sp(){
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
   .facilities-box{
-    margin: 186px 0 100px;
+    margin-top: 80px;
+    &.first {
+      margin-top: 0;
+      @include mq-sp(){
+        margin-top: 40px;
+      }
+    }
+    @include mq-sp(){
+      margin-top: 45px;
+    }
     .facilities-box__left{
       width: 50%;
       @include mq-sp(){
@@ -149,9 +160,6 @@
       opacity: var(--swiper-pagination-bullet-opacity, 1);
       background: var(--swiper-pagination-color,var(--swiper-theme-color));
     }
-    @include mq-sp(){
-      margin: 36px 0 60px;
-    }
   }
   .column-sp{
     @include mq-sp(){
@@ -172,14 +180,10 @@
   img{
     width: 100%;
   }
-  .top__page{
-    .container{
-      @include mq-pc(){
-        max-width: 1280px;
-      }
-    }
-  }
-  .mt-100{
+  .plan_content {
     margin-top: 100px;
+    @include mq-sp(){
+      margin-top: 45px;
+    }
   }
 }

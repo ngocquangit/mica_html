@@ -2,10 +2,9 @@ extends ../_include/layouts/master.pug
 include ../_include/components/btn-link.pug
 include ../_include/components/location-slide.pug
 include ../_include/components/menu-inside-image.pug
-include ../_include/components/plan-model.pug
 include ../_include/components/banner-block.pug
 include ../_include/components/amenity.pug
-include ../_include/components/plan-block.pug
+include ../_include/components/plan-slide.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
@@ -29,7 +28,7 @@ block main
             .container_child
                 .intro_txt_JP 遥かな眺望と心身のリラックスを誘うゲストルーム  
                 .intro_txt_description 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など江戸情緒を<br>色濃く残す「浅草」の風景が広がります。<br>つくばエクスプレス「浅草駅」直結、東京を代表する観光地 「浅草」に<br>佇む浅草唯一の高層シティーホテルです。
-        .rooms_type
+        .rooms_type.first
             .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in')  
                 .rooms_type_txt 
                     h3 Double Rooms
@@ -71,8 +70,8 @@ block main
                                     a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
                 .control_layout.sp_flex  
                     a(href="#").rooms_button_link.flex.center__align 
-                    span MORE TWIN ROOM
-                    .next_icon.flex.center__align     
+                      span MORE TWIN ROOM
+                      .next_icon.flex.center__align     
         .rooms_type 
             .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in') 
                 .rooms_type_txt 
@@ -115,9 +114,9 @@ block main
                                     a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
                 .control_layout.sp_flex  
                     a(href="#").rooms_button_link.flex.center__align 
-                    span MORE TWIN ROOM
-                    .next_icon.flex.center__align     
-        .rooms_type 
+                      span MORE TWIN ROOM
+                      .next_icon.flex.center__align     
+        .rooms_type.end
             .rooms_type_title.relative.img_wrap.flex.center__justify.center__align(data-aos='fade-in') 
                 .rooms_type_txt 
                     h3 Double Rooms
@@ -159,9 +158,9 @@ block main
                                     a(href="#").btn_link.flex.center__justify.center__align 宿泊プランを見る       
                 .control_layout.sp_flex  
                     a(href="#").rooms_button_link.flex.center__align 
-                    span MORE TWIN ROOM
-                    .next_icon.flex.center__align             
-        +plan-block()
+                      span MORE TWIN ROOM
+                      .next_icon.flex.center__align             
+        +plan-slide()
         .allcontaints__content.pc.mt-94(data-aos='fade-in')
           .container_child
             h3.text__title_EN.color_FB9.flex ALL CONTAINTS

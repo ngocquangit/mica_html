@@ -71,39 +71,45 @@
             }
             
         }
-        .couple_btn {
-            margin-top: 35px;
-            @include mq-sp() {
-                margin-top: 30px;
-            }
-            a {
-                width: 165px;
-                height: 60px;
-                border-radius: 5px;
-                border: 2px solid #552C6E;
-                color: #552C6E;
-                font-size: 16px;
-                line-height: 24px;
-                font-weight: 600;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @include mq-sp() {
-                    font-size: 12px;
-                    line-height: 17px;
-                    width: 165px;
-                    height: 44px;
-                }
-            }
-            .btn-violet {
-                background-color: #552C6E;
-                color: #fff;
-                margin-right: 10px;
-            }
+    }
+    .btn_search_vacancy {
+        min-width: 269px;
+        min-height: 70px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        margin-top: 45px;
+        background: linear-gradient(130deg, #2C8AAE, #2AB1AA);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all .3s;
+        width: fit-content;
+        height: fit-content;
+        &:hover {
+            opacity: .8;
         }
+        @include mq-sp(){
+            min-width: unset;
+            margin: 45px auto 0;
+            max-width: 335px;
+            width: 100%;
+            min-height: 60px;
+        }
+    }
+    .plan_content {
+        margin-top: 40px;
     }
     .allcontaints__content 
     {
+        margin-top: 100px;
+        @include mq-sp(){
+            margin-top: 40px;
+        }
         .text__title_EN{
             color: #AFAFB9;
             font-family: 'Gotham';

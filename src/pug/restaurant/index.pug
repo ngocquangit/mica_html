@@ -1,6 +1,8 @@
 extends ../_include/layouts/master.pug
 include ../_include/components/banner-block.pug
 include ../_include/components/allcontaints.pug
+include ../_include/components/plan-slide.pug
+include ../_include/components/menu-inside-image.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"
@@ -20,11 +22,9 @@ block main
       +banner-block("/assets/img/restaurant/restaurant_img06.png","DINING","レストラン紹介")
       .restaurant-box.pc(data-aos='fade-in')
         .container
-          .restaurant-box__title 遥かな眺望と心身のリラックスを誘うゲストルーム
-          .restaurant-box__desc 東京スカイツリー®を正面に、眼下には浅草寺五重の塔など江戸情緒を
-            |<br>色濃く残す「浅草」の風景が広がります。
-            |<br>つくばエクスプレス「浅草駅」直結、東京を代表する観光地 「浅草」に
-            |<br>佇む浅草唯一の高層シティーホテルです。
+          .restaurant-box__title ミシュラン2つ星の絶品料理を堪能
+          .restaurant-box__desc 誰もが納得するこだわりのコース料理は、特別な日をもっと特別にしてくれるスパイスです。
+            |<br>ミシュラン2つ星の料理を絶景を眺めながら楽しめるのは日本中探してもここだけ。
       .restaurant-list.container.sp
         .restaurant-title RESTAURANT LIST
         ul.restaurant-list__menu
@@ -113,14 +113,12 @@ block main
               .restaurant-desc__gray 営業時間
               ul.restaurant-desc__list.pc
                 li.restaurant-desc__item.restaurant-desc__text 朝食  6:30 - 10:00
-                li.restaurant-desc__item.restaurant-desc__text ランチ <90分制>  ①11:30  ②13:30
-                li.restaurant-desc__item.restaurant-desc__text ディナー<120分制>  -平日
               .restaurant-desc__text.sp 17:30 - 23:30 (ラストオーダー 23:00)
             .restaurant-desc__row.sp_flex
               .restaurant-desc__gray 直通電話
               .restaurant-desc__text 03-3842-3367
             .restaurant-desc__row 
-              .restaurant-desc__gray.pc コース
+              .restaurant-desc__gray.pc メニュー
               .restaurant-desc__gray.sp 入会金
               a.restaurant-desc__link.restaurant-desc__text 詳細はこちら
               span
@@ -132,9 +130,7 @@ block main
                       path#Path_719(data-name='Path 719' d='M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z' transform='translate(-247.764 -240.936)' fill='#4b4b4b')
             .restaurant-desc__row.pc_flex
               .restaurant-desc__gray ご予約
-              .restaurant-desc__text スカイグリルブッフェ 武蔵予約専用 
-                |<br>03-3842-6341（10:00～17:00）
-                |<br>当日のご予約は 03-3842-3376（直通）
+              .restaurant-desc__text 03-1234-5678（10:00～17:00）
             .restaurant-desc__row.sp
               .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
               .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
@@ -243,151 +239,6 @@ block main
               .restaurant-desc__gray.restaurant-desc__gray--custom.lh-15 ご利用上の注意
               .restaurant-desc__text.restaurant-desc__gray--custom.lh-20 -窓際のお席はテーブルチャージを頂戴いたします。(1席 ¥1,500)
           .restaurant-desc__button.sp_flex 詳細をみる
-      .rooms_page.sp
-        .stay_plan_content 
-          .container
-              .text_title_EN STAY PLAN
-              .stay_plan_row.flex 
-                  .stay_plan_left
-                      .col_select
-                          #recommendation.col_select_item.flex.center__align.center__justify.active おすすめ
-                          #popular_plan.col_select_item.flex.center__align.center__justify 人気プラン
-                          #winter_only.col_select_item.flex.center__align.center__justify 冬季限定
-                      .col_radio_wrap.relative    
-                          .flex.col.recommendation.col_radio_wrap-item.active
-                              .flex.center__align.radio_item
-                                  input#recommendation-01(type="radio", name="recommendation", checked) 
-                                  label(for='recommendation-01') 全て
-                              .flex.center__align.radio_item
-                                  input#recommendation-02(type="radio", name="recommendation") 
-                                  label(for='recommendation-02') 素泊まり
-                              .flex.center__align.radio_item
-                                  input#recommendation-03(type="radio", name="recommendation") 
-                                  label(for='recommendation-03') 朝食付き
-                              .flex.center__align.radio_item
-                                  input#recommendation-04(type="radio", name="recommendation") 
-                                  label(for='recommendation-04') 朝夕食付き
-                          .flex.col.popular_plan.col_radio_wrap-item
-                              .flex.center__align.radio_item
-                                  input#popular_plan-01(type="radio", name="popular_plan", checked) 
-                                  label(for='popular_plan-01') 朝食付き
-                              .flex.center__align.radio_item
-                                  input#popular_plan-02(type="radio", name="popular_plan") 
-                                  label(for='popular_plan-02') 素泊まり
-                              .flex.center__align.radio_item
-                                  input#popular_plan-03(type="radio", name="popular_plan") 
-                                  label(for='popular_plan-03') 全て
-                              .flex.center__align.radio_item
-                                  input#popular_plan-04(type="radio", name="popular_plan") 
-                                  label(for='popular_plan-04') 朝夕食付き
-                          .flex.col.winter_only.col_radio_wrap-item
-                              .flex.center__align.radio_item
-                                  input#winter_only-01(type="radio", name="winter_only", checked) 
-                                  label(for='winter_only-01') 朝食付き
-                              .flex.center__align.radio_item
-                                  input#winter_only-02(type="radio", name="winter_only") 
-                                  label(for='winter_only-02') 朝食付き
-                              .flex.center__align.radio_item
-                                  input#winter_only-03(type="radio", name="winter_only") 
-                                  label(for='winter_only-03') 全て
-                              .flex.center__align.radio_item
-                                  input#winter_only-04(type="radio", name="winter_only") 
-                                  label(for='winter_only-04') 素泊まり
-                  .stay_plan_right.flex.relative
-                      .stay_plan_btn_swiper.swiper-button-next.pc_flex
-                      .slide_stay_plan.pc
-                          .swiper-wrapper.slide_stay_plan_wrap.flex
-                              .slide_plan_item.swiper-slide.relative
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.swiper-slide.relative
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.swiper-slide.relative
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜           
-                      .slide_stay_plan.sp
-                          .slide_stay_plan_wrap
-                              .slide_plan_item.relative
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.relative
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約 
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.relative.hide
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.relative.hide
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜   
-                              .slide_plan_item.relative.hide
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              .slide_plan_item.relative.hide
-                                  .img_wrap
-                                      img(src="../assets/img/top/img_food.png", alt="")
-                                  .slide_txt_wrap
-                                      .slide_txt_title 極上夜景プラン<br>16階以上、東京スカイツリー®側お部屋確約
-                                      .slide_txt_description 東京スカイツリー®と下町浅草が織りなす当ホテル自慢<br>の眺望をどの客室からもお愉しみいただけます。   
-                                      .slide_txt_price.flex 
-                                          .properties 一人あたりの参考料金
-                                          .value 4,014 
-                                              span 円〜
-                              #btn_view_more.btn_view_more.sp_flex.center__justify.center__align もっとみる    
+      +plan-slide()    
       +allcontaints()
+      +menu-inside-image('/assets/img/top/reserve.png')

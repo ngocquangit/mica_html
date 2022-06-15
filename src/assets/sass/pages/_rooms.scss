@@ -5,12 +5,11 @@
         letter-spacing: 0.06rem;
         font-weight: 600;
         color: #fff;
-        background-color: #482E63;
+        background: linear-gradient(140deg, #2C8AAE, #2AB1AA);
         height: 60px;
         width: 100%;
         margin-top: 40px;
         border-radius: 10px;
-        margin-bottom: 30px;
         &::after {
             top: unset;
             transform: rotate(135deg);
@@ -53,6 +52,22 @@
         background-color: #F0F0F0;
         padding-top: 102px;
         margin-bottom: 40px;
+
+        &.first {
+            @include mq-sp(){
+                padding-top: 40px;
+            }
+        }
+        &.end {
+            @include mq-sp(){
+                padding-bottom: 60px;
+            }
+        }
+        @include mq-sp(){
+            padding-top: 60px;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
         .rooms_post_container {
             justify-content: space-between;
             flex-wrap: wrap;
@@ -105,7 +120,7 @@
             padding: 10px 0 120px;
             background-color: #F0F0F0;
             @include mq-sp(){
-                padding: 0 0 65px 0;
+                padding: 0;
                 background-color: #fff;
             }
         }
@@ -216,6 +231,7 @@
         }
         .rooms_button_link {
             margin-top: 20px;
+            margin-right: 20px;
             span {
                 font-size: 14px;
                 line-height: 20px;
