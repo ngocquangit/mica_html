@@ -2,7 +2,7 @@ extends ../_include/layouts/master.pug
 include ../_include/components/banner-block.pug
 include ../_include/components/allcontaints.pug
 include ../_include/components/menu-inside-image.pug
-include ../_include/components/plan-block.pug
+include ../_include/components/plan-slide.pug
 
 block variable
   - var thisPageTitle = "Micadorayout"  
@@ -20,8 +20,8 @@ block ogpType
 block main
     .facilities
       +banner-block("/assets/img/facilities/facilities_imgtop.png","OTHER FACILITIES","その他施設")
-      .facilities-box(data-aos='fade-in')
-        .container
+      .facilities-box.first(data-aos='fade-in')
+        .custorm-container
           .facilities-box__title-sp OTHER FACILITIES
           .flex.column-sp
             .facilities-box__left
@@ -62,7 +62,7 @@ block main
               .facilities-box__note ご利用上の注意
               .facilities-box__note-desc - お子様(小学生以下)のご利用は7・8月のみとなります。(￥2,200)
       .facilities-box(data-aos='fade-in')
-        .container
+        .custorm-container
           .flex.column-sp.jsb
             .facilities-box__left.order-2
               .facilities-box__slide.swiper
@@ -88,7 +88,7 @@ block main
                   .facilities-box__text 03-3841-7584
               .line-border
       .facilities-box(data-aos='fade-in')
-        .container
+        .custorm-container
           .flex.column-sp
             .facilities-box__left
               .facilities-box__slide.swiper
@@ -114,7 +114,7 @@ block main
                   .facilities-box__text 03-3841-7584
               .line-border
       .facilities-box(data-aos='fade-in')
-        .container
+        .custorm-container
           .flex.column-sp.jsb
             .facilities-box__left.order-2
               .facilities-box__slide.swiper
@@ -139,6 +139,6 @@ block main
                 .facilities-box__row-right
                   .facilities-box__text 03-3841-7584
               .line-border
-      +plan-block()
-      .mt-100
+      +plan-slide() 
+      +allcontaints()
       +menu-inside-image('/assets/img/facilities/reserve.png')
