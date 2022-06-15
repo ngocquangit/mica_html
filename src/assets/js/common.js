@@ -441,34 +441,19 @@ var swiper = new Swiper(".tour__swiper_swap", {
 
 $(function () {
   let container = $('#pagination');
+  let dataTemp = {
+    title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
+    imgsrc: "/assets/img/news/event-img-1.jpg",
+    date: "2022.01.03"
+  }
+  
+  let dataSource = [];
+  for(let i = 0 ; i < 100 ; i++) {
+    dataSource.push(dataTemp)
+  }
+  console.log(dataSource)
   container.pagination({
-      dataSource: [
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-2.jpg",
-            date: "2022.01.03"
-          },
-          {
-            title: "ブライダルフェアのご案内1月8(土)、9(日)、10(月)",
-            imgsrc: "/assets/img/news/event-img-1.jpg",
-            date: "2022.01.03"
-          }
-      ],
+      dataSource: dataSource,
       pageSize: 12,
       nextText: "次へ >",
       prevText: "< 前へ",
