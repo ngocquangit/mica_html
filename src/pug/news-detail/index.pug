@@ -18,7 +18,14 @@ block ogpType
 
 block main
     .newsdetail
-      +banner-block("/assets/img/newsdetail/banner.png","2022.06.01","東京都民限定スペシャルパ","ッケージを販売開始！","2022.06.01","東京都民限定スペシャルパ","ッケージを販売開始！")
+      .banner-block.flex.center__align.relative.banner-detail 
+        .banner__txt
+            .container_child 
+              .txt_date 2022.06.01
+              .txt_title 東京都民限定スペシャルパ<br>ッケージを販売開始！
+        .img_wrap 
+            img(src="/assets/img/newsdetail/banner.png")
+        .overlay
       .voucher 
         .voucher_content
           .voucher_des 「もっと楽しもう！TokyoTokyo」（略称：もっとTokyo/東京都民割）とは、都民が都内を旅行する場合の旅行代金を補助する観光需要喚起策です。<br><br>
