@@ -53,10 +53,20 @@
             width: 100%;
             .product_table_row {
                 border-bottom: 1px solid #ddd;
+                display: flex;
+                justify-content: space-between;
             }
             .product_table_left {
-                width: 80px;
+                // width: 80px;
                 color: #AFAFB9;
+                overflow:hidden;
+                display:inline-block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: .16;
+            }
+            .product_table_right {
+                flex: .82;
             }
             .product_table_col {
                 padding: 20px 0;
@@ -68,8 +78,19 @@
                     font-size: 12px;
                     line-height: 17px;
                 }
+                .txt_link_defaul {
+                    color: #0000ff;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    display: flex;
+                }
+                svg {
+                    margin-left: 10px;
+                }
             }
-            
         }
     }
     .btn_search_vacancy {

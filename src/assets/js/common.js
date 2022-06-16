@@ -277,16 +277,16 @@ const dataRoomDetail = [
           6:"../assets/img/top/pc_slide_top_img01.jpg",
           7:"../assets/img/top/pc_slide_top_img01.jpg",
         },
-        "name_ja":"エグゼクティブツインルーム",
+        "name_ja":"エグゼクティブツインルーム21321312",
         "breadth":1,
         "capacity":"1~3",
-        "body":"最大3名までご利用いただける、こちらの客室では、\nスタンダードとデラックスの2種類からお選びいただけます。",
+        "body":"最大3名までご利用いただける、こちらの客室では、\nスタンダードとデラックスの2種類からお選びいただけます。213212",
         "name_en":"STANDARD TRIPPLE",
         "descriptive":null,
         "reservation_engine_link":"#",
         "information_material": [
           {
-            "heading": "営業時間",
+            "heading": "営業時間12",
             "type": 1,
             "descriptive": "03-1234-5678（10:00～17:00）",
             "button_name": "",
@@ -295,7 +295,7 @@ const dataRoomDetail = [
             "pdf_link": ""
           },
           {
-            "heading": "営業時間",
+            "heading": "営業時間32",
             "type": 2,
             "descriptive": "",
             "button_name": "link",
@@ -304,8 +304,8 @@ const dataRoomDetail = [
             "pdf_link": ""
           },
           {
-            "heading": "営業時間",
-            "type": 3,
+            "heading": "営業時間31",
+            "type": 1,
             "descriptive": "",
             "button_name": "",
             "button_link": "",
@@ -339,13 +339,28 @@ function showDataRoomDetail (data) {
   // create Infor Row Component --->
     let infoTableArr = [];
     for(let i = 0 ; i < informationData.length; i++ ) {
-      infoTableArr.push(informationData[i].image_slide)
+      infoTableArr.push(informationData[i].information_material)
     }
+    console.log(infoTableArr)
     let inforTableHtml = []
-    for(let i = 0; i < imgSlideArr.length; i++) {
+    for(let i = 0; i < infoTableArr.length; i++) {
       let tempHtml =""
-      for (const index in imgSlideArr[i]) {
-        tempHtml += '<div class="product_slide_box swiper-slide img_wrap"><img src="'+ imgSlideArr[i][index] + '" alt=""></div>'
+      for (const index in infoTableArr[i]) {
+      tempHtml += `
+      <tr class="product_table_row">
+        <td class="product_table_col product_table_left">`+infoTableArr[i][index].heading+`</td>
+        <td class="product_table_col product_table_right">`
+          +(infoTableArr[i][index].type == 1 ? infoTableArr[i][index].descriptive : infoTableArr[i][index].type == 2 ? '<a class="txt_link_defaul" href="'+ infoTableArr[i][index].button_link +'">'+ infoTableArr[i][index].button_name+'</a>' : `<a class="txt_link_defaul" href="`+ infoTableArr[i][index].pdf_link +`">`+ infoTableArr[i][index].pdf_descriptive+`<svg xmlns="http://www.w3.org/2000/svg" width="19.528" height="24" viewBox="0 0 19.528 24">
+          <g id="PDFアイコン" transform="translate(-47.706)">
+            <path id="Path_716" data-name="Path 716" d="M63.208,0H54.616l-.437.437L48.143,6.474l-.437.437V19.974A4.031,4.031,0,0,0,51.732,24H63.208a4.031,4.031,0,0,0,4.026-4.026V4.026A4.03,4.03,0,0,0,63.208,0Zm2.535,19.974a2.535,2.535,0,0,1-2.535,2.536H51.732A2.535,2.535,0,0,1,49.2,19.974V7.528h3.924a2.113,2.113,0,0,0,2.113-2.113V1.491h7.974a2.535,2.535,0,0,1,2.535,2.536Z" fill="#4b4b4b"></path>
+            <path id="Path_717" data-name="Path 717" d="M136.476,252.785h-1.337a.383.383,0,0,0-.407.414v3.457a.469.469,0,1,0,.935,0v-1.05a.034.034,0,0,1,.039-.038h.77a1.4,1.4,0,1,0,0-2.782Zm-.058,1.974h-.713a.034.034,0,0,1-.039-.038v-1.089a.034.034,0,0,1,.039-.038h.713a.584.584,0,1,1,0,1.165Z" transform="translate(-82.947 -240.936)" fill="#4b4b4b"></path>
+            <path id="Path_718" data-name="Path 718" d="M221.069,252.785h-1.025a.383.383,0,0,0-.407.414v3.508a.378.378,0,0,0,.407.408h1.025c.923,0,1.5-.293,1.725-1a5.382,5.382,0,0,0,0-2.33C222.566,253.078,221.992,252.785,221.069,252.785Zm.828,3.005c-.109.344-.42.49-.854.49h-.433a.034.034,0,0,1-.039-.038v-2.585a.034.034,0,0,1,.039-.038h.433c.433,0,.745.147.854.49a4.688,4.688,0,0,1,0,1.681Z" transform="translate(-163.872 -240.936)" fill="#4b4b4b"></path>
+            <path id="Path_719" data-name="Path 719" d="M310.163,252.785h-2.1a.383.383,0,0,0-.408.414v3.457a.469.469,0,1,0,.936,0v-1.235a.034.034,0,0,1,.038-.038h1.223a.4.4,0,1,0,0-.8h-1.223a.034.034,0,0,1-.038-.038v-.911a.034.034,0,0,1,.038-.038h1.534a.405.405,0,1,0,0-.808Z" transform="translate(-247.764 -240.936)" fill="#4b4b4b"></path>
+          </g>
+        </svg></a>` )+
+        `</td>
+      </tr>
+      `
       }
       inforTableHtml.push(tempHtml)
     }
@@ -385,23 +400,14 @@ function showDataRoomDetail (data) {
       <div class="product_infor" data-aos="fade-in">
         <div class="container_child flex col_sp"> 
           <div class="product_infor_left">
-            <h3 class="product_title">エグゼクティブツインルーム</h3>
-            <p class="product_description">こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。</p><a class="btn_search_vacancy pc_flex" href="#">空室検索    </a>
+            <h3 class="product_title">`+ item.name_ja +`</h3>
+            <p class="product_description">`+ item.body +`</p><a class="btn_search_vacancy pc_flex" href="`+ item.reservation_engine_link +`">空室検索    </a>
           </div>
           <div class="product_infor_right">
             <table class="product_table_infor"> 
-              <tr class="product_table_row">
-                <td class="product_table_col product_table_left">広さ</td>
-                <td class="product_table_col product_table_right">26.1㎡   </td>
-              </tr>
-              <tr class="product_table_row">
-                <td class="product_table_col product_table_left">定員</td>
-                <td class="product_table_col product_table_right">3名 </td>
-              </tr>
-              <tr class="product_table_row">
-                <td class="product_table_col product_table_left">設備</td>
-                <td class="product_table_col product_table_right">バス / トイレ /加湿機能付空気清浄機   </td>
-              </tr>
+            `
+              +inforTableHtml[index]+
+            `
             </table>
           </div><a class="btn_search_vacancy sp_flex" href="#">空室検索</a>
         </div>
