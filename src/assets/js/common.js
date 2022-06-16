@@ -487,7 +487,7 @@ $(function () {
           $("#data-news").html(dataHtml);
       }
   })
-})
+})  
 
 //AOS
 AOS.init({
