@@ -499,7 +499,7 @@ AOS.init({
   offset: 100,
   mirror: true,
   easing: 'ease-in-sine',
-  anchorPlacement: 'center-bottom',
+  anchorPlacement: 'top-bottom',
 });
 
 (function() {
