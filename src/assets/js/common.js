@@ -220,9 +220,9 @@ const dataRoomDetail = [
     "room_information": [
       {
         "image_slide": {
-          0:"../assets/img/top/pc_slide_top_img01.jpg",
+          0:"../assets/img/top/pc_slide_top_img02.jpg",
           1:"../assets/img/top/pc_slide_top_img01.jpg",
-          2:"../assets/img/top/pc_slide_top_img01.jpg",
+          2:"../assets/img/top/pc_slide_top_img03.jpg",
           3:"../assets/img/top/pc_slide_top_img01.jpg",
           4:"../assets/img/top/pc_slide_top_img01.jpg",
           5:"../assets/img/top/pc_slide_top_img01.jpg",
@@ -269,8 +269,8 @@ const dataRoomDetail = [
       {
         "image_slide": {
           0:"../assets/img/top/pc_slide_top_img01.jpg",
-          1:"../assets/img/top/pc_slide_top_img01.jpg",
-          2:"../assets/img/top/pc_slide_top_img01.jpg",
+          1:"../assets/img/top/pc_slide_top_img02.jpg",
+          2:"../assets/img/top/pc_slide_top_img03.jpg",
           3:"../assets/img/top/pc_slide_top_img01.jpg",
           4:"../assets/img/top/pc_slide_top_img01.jpg",
           5:"../assets/img/top/pc_slide_top_img01.jpg",
@@ -385,7 +385,7 @@ function showDataRoomDetail (data) {
       <div class="product_infor" data-aos="fade-in">
         <div class="container_child flex col_sp"> 
           <div class="product_infor_left">
-            <h3 class="product_title">エグゼクティブツインルーム   </h3>
+            <h3 class="product_title">エグゼクティブツインルーム</h3>
             <p class="product_description">こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。</p><a class="btn_search_vacancy pc_flex" href="#">空室検索    </a>
           </div>
           <div class="product_infor_right">
