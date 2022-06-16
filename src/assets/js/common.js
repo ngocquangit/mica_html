@@ -83,7 +83,7 @@ $(".sp_row_select_item").click(function () {
 // <---- PLAN CONTENT ---->
 const dataPlan = [
   {
-    image: "../assets/img/top/img_food.png",
+    image: "../assets/img/top/pc_slide_top_img01.jpg",
     heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
     period_from: "2022年04月01日",
     period_to: "2022年06月30日",
@@ -92,7 +92,7 @@ const dataPlan = [
     breakfast: "素泊まり"
   },
   {
-    image: "../assets/img/top/img_food.png",
+    image: "../assets/img/top/pc_slide_top_img01.jpg",
     heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
     period_from: "2022年04月01日",
     period_to: "2022年06月30日",
@@ -101,7 +101,7 @@ const dataPlan = [
     breakfast: "すべて"
   },
   {
-    image: "../assets/img/top/img_food.png",
+    image: "../assets/img/top/pc_slide_top_img01.jpg",
     heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
     period_from: "2022年04月01日",
     period_to: "2022年06月30日",
@@ -110,7 +110,7 @@ const dataPlan = [
     breakfast: "すべて"
   },
   {
-    image: "../assets/img/top/img_food.png",
+    image: "../assets/img/top/pc_slide_top_img01.jpg",
     heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
     period_from: "2022年04月01日",
     period_to: "2022年06月30日",
@@ -119,7 +119,7 @@ const dataPlan = [
     breakfast: "すべて"
   },
   {
-    image: "../assets/img/top/img_food.png",
+    image: "../assets/img/top/pc_slide_top_img01.jpg",
     heading: "[極上夜景プラン] 16階以上、\n東京スカイツリー®側\nお部屋確約プラン",
     period_from: "2022年04月01日",
     period_to: "2022年06月30日",
@@ -183,14 +183,237 @@ function showDataPlan (data) {
     },
   });
 }
+
 // first show data 
 $(document).ready(function () {
   var idxRCM = $('#recommended .plan_button_item.active').text()
   var idxBRF = $('#breakfast .plan_button_item.active').text()
   forEachPlanItem(idxRCM,idxBRF)
-})
+});
 
 // <---- PLAN CONTENT ----/>
+
+// <---- ROOM-DETAIL CONTENT ---->
+const dataRoomDetail = [
+  {
+    "id":4,
+    "title_en":"Double Roomsádasasd",
+    "title_ja":"ダブルルーム",
+    "body":"こちらのエグゼクティブツインルームは26.1㎡の広さをご用意\nしており、おふたりのちょっと贅沢な東京でのご宿泊をお楽し\nみいただけます。最大3名様までご利用頂けます。",
+    "is_internet_access":1,
+    "is_refrigerator":0,
+    "is_towels":0,
+    "is_bathrobe":0,
+    "is_espresso_maker":0,
+    "is_tv_set":0,
+    "is_hairdryer":0,
+    "is_hanger":0,
+    "is_shampoos":0,
+    "is_toothbrush":0,
+    "is_soap":0,
+    "is_body_towel":0,
+    "is_cotton_swab":0,
+    "is_cosmetics":0,
+    "is_sewing_kit":0,
+    "is_shaving":0,
+    "is_hairbrush":0,
+    "room_information": [
+      {
+        "image_slide": {
+          0:"../assets/img/top/pc_slide_top_img01.jpg",
+          1:"../assets/img/top/pc_slide_top_img01.jpg",
+          2:"../assets/img/top/pc_slide_top_img01.jpg",
+          3:"../assets/img/top/pc_slide_top_img01.jpg",
+          4:"../assets/img/top/pc_slide_top_img01.jpg",
+          5:"../assets/img/top/pc_slide_top_img01.jpg",
+          6:"../assets/img/top/pc_slide_top_img01.jpg",
+          7:"../assets/img/top/pc_slide_top_img01.jpg",
+        },
+        "name_ja":"エグゼクティブツインルーム",
+        "breadth":1,
+        "capacity":"1~3",
+        "body":"最大3名までご利用いただける、こちらの客室では、\nスタンダードとデラックスの2種類からお選びいただけます。",
+        "name_en":"STANDARD TRIPPLE",
+        "descriptive":null,
+        "reservation_engine_link":"#",
+        "information_material": [
+          {
+            "heading": "営業時間",
+            "type": 1,
+            "descriptive": "03-1234-5678（10:00～17:00）",
+            "button_name": "",
+            "button_link": "",
+            "pdf_descriptive": "",
+            "pdf_link": ""
+          },
+          {
+            "heading": "営業時間",
+            "type": 2,
+            "descriptive": "",
+            "button_name": "link",
+            "button_link": "#",
+            "pdf_descriptive": "",
+            "pdf_link": ""
+          },
+          {
+            "heading": "営業時間",
+            "type": 3,
+            "descriptive": "",
+            "button_name": "",
+            "button_link": "",
+            "pdf_descriptive": "file.pdf",
+            "pdf_link": "#"
+          }
+        ]
+      },
+      {
+        "image_slide": {
+          0:"../assets/img/top/pc_slide_top_img01.jpg",
+          1:"../assets/img/top/pc_slide_top_img01.jpg",
+          2:"../assets/img/top/pc_slide_top_img01.jpg",
+          3:"../assets/img/top/pc_slide_top_img01.jpg",
+          4:"../assets/img/top/pc_slide_top_img01.jpg",
+          5:"../assets/img/top/pc_slide_top_img01.jpg",
+          6:"../assets/img/top/pc_slide_top_img01.jpg",
+          7:"../assets/img/top/pc_slide_top_img01.jpg",
+        },
+        "name_ja":"エグゼクティブツインルーム",
+        "breadth":1,
+        "capacity":"1~3",
+        "body":"最大3名までご利用いただける、こちらの客室では、\nスタンダードとデラックスの2種類からお選びいただけます。",
+        "name_en":"STANDARD TRIPPLE",
+        "descriptive":null,
+        "reservation_engine_link":"#",
+        "information_material": [
+          {
+            "heading": "営業時間",
+            "type": 1,
+            "descriptive": "03-1234-5678（10:00～17:00）",
+            "button_name": "",
+            "button_link": "",
+            "pdf_descriptive": "",
+            "pdf_link": ""
+          },
+          {
+            "heading": "営業時間",
+            "type": 2,
+            "descriptive": "",
+            "button_name": "link",
+            "button_link": "#",
+            "pdf_descriptive": "",
+            "pdf_link": ""
+          },
+          {
+            "heading": "営業時間",
+            "type": 3,
+            "descriptive": "",
+            "button_name": "",
+            "button_link": "",
+            "pdf_descriptive": "file.pdf",
+            "pdf_link": "#"
+          }
+        ]
+      },
+    ]
+  }
+]
+
+function showDataRoomDetail (data) {
+  let informationData = data[0].room_information
+
+  // create Slide Component --->
+    let imgSlideArr = [];
+    for(let i = 0 ; i < informationData.length; i++ ) {
+      imgSlideArr.push(informationData[i].image_slide)
+    }
+    let imageSlideHtml = []
+    for(let i = 0; i < imgSlideArr.length; i++) {
+      let tempHtml =""
+      for (const index in imgSlideArr[i]) {
+        tempHtml += '<div class="product_slide_box swiper-slide img_wrap"><img src="'+ imgSlideArr[i][index] + '" alt=""></div>'
+      }
+      imageSlideHtml.push(tempHtml)
+    }
+  // create Slide Component ---/>
+  
+  // create Infor Row Component --->
+    let infoTableArr = [];
+    for(let i = 0 ; i < informationData.length; i++ ) {
+      infoTableArr.push(informationData[i].image_slide)
+    }
+    let inforTableHtml = []
+    for(let i = 0; i < imgSlideArr.length; i++) {
+      let tempHtml =""
+      for (const index in imgSlideArr[i]) {
+        tempHtml += '<div class="product_slide_box swiper-slide img_wrap"><img src="'+ imgSlideArr[i][index] + '" alt=""></div>'
+      }
+      inforTableHtml.push(tempHtml)
+    }
+  // create Infor Row Component ---/>
+
+  var mvContainer = '<div class="banner-block flex center__align relative"> '
+  $(data).each(function (index, item) {
+    mvContainer += `        
+      <div class="banner__txt">
+        <div class="container_child"> 
+          <h1>` + item.title_en + `</h1>
+          <p>` + item.title_ja + `</p>
+        </div>
+      </div>
+      <div class="img_wrap"> <img src="/assets/img/executive/executive-mv.jpg" alt="SUITE ROOM banner"/></div>
+      <div class="overlay"></div>
+    `
+  });
+  mvContainer += '</div>';
+  $("#room-banner").html(mvContainer);
+
+  var contentRoomDetail = '<div class="product-review">'
+  $(informationData).each(function (index, item) {
+    contentRoomDetail += `
+      <div class="slide_product_content"> 
+        <div class="slide__product_swiper">
+          <div class="swiper-wrapper slide__product_wrap flex center__align">
+            `+ imageSlideHtml[index] +`
+          </div>
+          <div class="slide_product_pagination swiper-pagination"> </div>
+          <div class="swiper-button flex"> 
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="product_infor" data-aos="fade-in">
+        <div class="container_child flex col_sp"> 
+          <div class="product_infor_left">
+            <h3 class="product_title">エグゼクティブツインルーム   </h3>
+            <p class="product_description">こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。</p><a class="btn_search_vacancy pc_flex" href="#">空室検索    </a>
+          </div>
+          <div class="product_infor_right">
+            <table class="product_table_infor"> 
+              <tr class="product_table_row">
+                <td class="product_table_col product_table_left">広さ</td>
+                <td class="product_table_col product_table_right">26.1㎡   </td>
+              </tr>
+              <tr class="product_table_row">
+                <td class="product_table_col product_table_left">定員</td>
+                <td class="product_table_col product_table_right">3名 </td>
+              </tr>
+              <tr class="product_table_row">
+                <td class="product_table_col product_table_left">設備</td>
+                <td class="product_table_col product_table_right">バス / トイレ /加湿機能付空気清浄機   </td>
+              </tr>
+            </table>
+          </div><a class="btn_search_vacancy sp_flex" href="#">空室検索</a>
+        </div>
+      </div>
+    `
+  });
+  contentRoomDetail += '</div>';
+  $("#rooms-detail-information").html(contentRoomDetail);
+}
+
+showDataRoomDetail(dataRoomDetail)
+// <---- ROOM-DETAIL CONTENT ----/>
 
 
 

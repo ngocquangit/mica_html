@@ -20,103 +20,41 @@ block ogpType
 
 block main
   .executive_page
-    +banner-block("/assets/img/executive/executive-mv.jpg","SUITE ROOM","スイートルーム") 
-    .product-review
-      .slide_product_content(data-aos='fade-in') 
-        .slide__product_swiper
-          .swiper-wrapper.slide__product_wrap.flex.center__align
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
-          .slide_product_pagination.swiper-pagination  
-          .swiper-button.flex 
-            .swiper-button-prev
-            .swiper-button-next
-      .product_infor(data-aos='fade-in')
-        .container_child.flex.col_sp 
-          .product_infor_left
-            h3.product_title エグゼクティブツインルーム   
-            p.product_description こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
-            a(href="#").btn_search_vacancy.pc_flex 空室検索    
-          .product_infor_right
-            table.product_table_infor 
-              tr.product_table_row
-                td.product_table_col.product_table_left 広さ
-                td.product_table_col.product_table_right 26.1㎡   
-              tr.product_table_row
-                td.product_table_col.product_table_left 定員
-                td.product_table_col.product_table_right 3名 
-              tr.product_table_row
-                td.product_table_col.product_table_left 設備
-                td.product_table_col.product_table_right バス / トイレ /加湿機能付空気清浄機   
-          a(href="#").btn_search_vacancy.sp_flex 空室検索
-    .product-review
-      .slide_product_content(data-aos='fade-in') 
-        .slide__product_swiper
-          .swiper-wrapper.slide__product_wrap.flex.center__align
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
-          .slide_product_pagination.swiper-pagination  
-          .swiper-button.flex 
-            .swiper-button-prev
-            .swiper-button-next
-      .product_infor(data-aos='fade-in')
-        .container_child.flex.col_sp 
-          .product_infor_left
-            h3.product_title エグゼクティブツインルーム   
-            p.product_description こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。   
-            a(href="#").btn_search_vacancy.pc_flex 空室検索       
-          .product_infor_right
-            table.product_table_infor 
-              tr.product_table_row
-                td.product_table_col.product_table_left 広さ
-                td.product_table_col.product_table_right 26.1㎡   
-              tr.product_table_row
-                td.product_table_col.product_table_left 定員
-                td.product_table_col.product_table_right 3名 
-              tr.product_table_row
-                td.product_table_col.product_table_left 設備
-                td.product_table_col.product_table_right バス / トイレ /加湿機能付空気清浄機   
-          a(href="#").btn_search_vacancy.sp_flex 空室検索
-    .product-review
-      .slide_product_content(data-aos='fade-in') 
-        .slide__product_swiper
-          .swiper-wrapper.slide__product_wrap.flex.center__align
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
-            .product_slide_box.swiper-slide.img_wrap
-              img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
-          .slide_product_pagination.swiper-pagination  
-          .swiper-button.flex 
-            .swiper-button-prev
-            .swiper-button-next
-      .product_infor(data-aos='fade-in')
-        .container_child.flex.col_sp 
-          .product_infor_left
-            h3.product_title エグゼクティブツインルーム   
-            p.product_description こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。   
-            a(href="#").btn_search_vacancy.pc_flex 空室検索     
-          .product_infor_right
-            table.product_table_infor 
-              tr.product_table_row
-                td.product_table_col.product_table_left 広さ
-                td.product_table_col.product_table_right 26.1㎡   
-              tr.product_table_row
-                td.product_table_col.product_table_left 定員
-                td.product_table_col.product_table_right 3名 
-              tr.product_table_row
-                td.product_table_col.product_table_left 設備
-                td.product_table_col.product_table_right バス / トイレ /加湿機能付空気清浄機   
-          a(href="#").btn_search_vacancy.sp_flex 空室検索    
+    #room-banner
+    //- +banner-block("/assets/img/executive/executive-mv.jpg","SUITE ROOM","スイートルーム") 
+    #rooms-detail-information
+      //- .product-review
+      //-   .slide_product_content(data-aos='fade-in') 
+      //-     .slide__product_swiper
+      //-       .swiper-wrapper.slide__product_wrap.flex.center__align
+      //-         .product_slide_box.swiper-slide.img_wrap
+      //-           img(src="../assets/img/top/pc_slide_top_img01.jpg", alt="")
+      //-         .product_slide_box.swiper-slide.img_wrap
+      //-           img(src="../assets/img/top/pc_slide_top_img02.jpg", alt="")
+      //-         .product_slide_box.swiper-slide.img_wrap
+      //-           img(src="../assets/img/top/pc_slide_top_img03.jpg", alt="")
+      //-       .slide_product_pagination.swiper-pagination  
+      //-       .swiper-button.flex 
+      //-         .swiper-button-prev
+      //-         .swiper-button-next
+      //-   .product_infor(data-aos='fade-in')
+      //-     .container_child.flex.col_sp 
+      //-       .product_infor_left
+      //-         h3.product_title エグゼクティブツインルーム   
+      //-         p.product_description こちらのエグゼクティブツインルームは26.1㎡の広さをご用意しており、おふたりのちょっと贅沢な東京でのご宿泊をお楽しみいただけます。最大3名様までご利用頂けます。
+      //-         a(href="#").btn_search_vacancy.pc_flex 空室検索    
+      //-       .product_infor_right
+      //-         table.product_table_infor 
+      //-           tr.product_table_row
+      //-             td.product_table_col.product_table_left 広さ
+      //-             td.product_table_col.product_table_right 26.1㎡   
+      //-           tr.product_table_row
+      //-             td.product_table_col.product_table_left 定員
+      //-             td.product_table_col.product_table_right 3名 
+      //-           tr.product_table_row
+      //-             td.product_table_col.product_table_left 設備
+      //-             td.product_table_col.product_table_right バス / トイレ /加湿機能付空気清浄機   
+      //-       a(href="#").btn_search_vacancy.sp_flex 空室検索
     .amenity
       .container_child
         .amenity_title AMENITY
