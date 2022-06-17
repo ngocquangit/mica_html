@@ -223,18 +223,6 @@ $(document).ready(function () {
       },
     },
   });
-  var swiper = new Swiper(".allcontaints__wrap_slide", {
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: '',
-        spaceBetween: 0,
-      },
-    },
-  });
   var swiper = new Swiper(".news_slide_swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -484,3 +472,16 @@ AOS.init({
   });
 })();
 // SLIDE BANNER --/>
+
+var swiper = new Swiper(".allcontaints__wrap_slide", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: '',
+      spaceBetween: 0,
+    },
+  },
+});
