@@ -85,17 +85,6 @@ function beforeText(text) {
   return tag.join('<br>'); 
 }
 
-function getDetailWithLink(link,data) {
-  let array= link.split("id=");
-  let id= array[array.length-1]
-  for (const item in data) {
-    if(data[item].id == id)
-    {
-      return data[item];
-    }
-  }
-}
-
 $("#btn_view_more").click(function () {
   $(".slide_stay_plan.sp .slide_plan_item.hide").toggle();
 });
@@ -190,172 +179,171 @@ $(document).ready(function () {
       el: ".facilities-box__swiper-pagination",
     },
   });
+  var swiper = new Swiper(".slide__top_swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: ".slide__top_pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+      },
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 13,
+      },
+    },
+  });
+  var swiper = new Swiper(".slide__product_swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".slide_product_pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+      },
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 13,
+      },
+    },
+  });
+  var swiper = new Swiper(".allcontaints__wrap_slide", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: '',
+        spaceBetween: 0,
+      },
+    },
+  });
+  var swiper = new Swiper(".news_slide_swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      769: {
+        slidesPerView: 4,
+        spaceBetween: 27,
+      }
+    },
+  });
+  var swiper = new Swiper(".slide__plan_swiper", {
+    centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: "auto"
+      },
+      769: {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next-plan",
+          prevEl: ".swiper-button-prev-plan",
+        },
+      },
+    },
+  });
+  var swiper = new Swiper(".rooms__content_slide", {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+  });
+  var swiper = new Swiper(".cooking_swiper", {
+    slidesPerView: 3,
+    spaceBetween: 58,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1.15,
+        spaceBetween: 10,
+      },
+      375: {
+        slidesPerView: 1.15,
+        spaceBetween: 10,
+      },
+      320: {
+        slidesPerView: 1.15,
+        spaceBetween: 10,
+      }
+    }
+  });
+  var swiper = new Swiper(".slide__rooms_swiper", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    breakpoints: {
+      991: {
+        spaceBetween: 20,
+      },
+      768: {
+        spaceBetween: 12,
+        slidesPerView: 2.15,
+      },
+      375: {
+        spaceBetween: 12,
+        slidesPerView: 2.15,
+      },
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 2.15,
+      }
+    }
+  });
+  var swiper = new Swiper(".facilities__content_slide", {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+  });
+  var swiper = new Swiper(".location__swiper_swap", {
+    slidesPerView: "auto",
+    spaceBetween: 25,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+    },
+  });
+  var swiper = new Swiper(".tour__swiper_swap", {
+    slidesPerView: "auto",
+    spaceBetween: 25,
+  });
 });
 $('.amenity_more').click(function(){
   $('.amenity_box.amenity_hide_sp').removeClass('amenity_hide_sp')
   $('.amenity_more').addClass('amenity_hide_sp')
 })
-
-var swiper = new Swiper(".slide__top_swiper", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  pagination: {
-    el: ".slide__top_pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-    },
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 13,
-    },
-  },
-});
-var swiper = new Swiper(".slide__product_swiper", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  centeredSlides: true,
-  pagination: {
-    el: ".slide_product_pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-    },
-    769: {
-      slidesPerView: 2,
-      spaceBetween: 13,
-    },
-  },
-});
-var swiper = new Swiper(".allcontaints__wrap_slide", {
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: '',
-      spaceBetween: 0,
-    },
-  },
-});
-var swiper = new Swiper(".news_slide_swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 15
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    769: {
-      slidesPerView: 4,
-      spaceBetween: 27,
-    }
-  },
-});
-var swiper = new Swiper(".slide__plan_swiper", {
-  centeredSlides: true,
-  breakpoints: {
-    768: {
-      slidesPerView: "auto"
-    },
-    769: {
-      slidesPerView: 1.6,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    },
-  },
-});
-var swiper = new Swiper(".rooms__content_slide", {
-  slidesPerView: 1.5,
-  spaceBetween: 20,
-});
-var swiper = new Swiper(".cooking_swiper", {
-  slidesPerView: 3,
-  spaceBetween: 58,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 1.15,
-      spaceBetween: 10,
-    },
-    375: {
-      slidesPerView: 1.15,
-      spaceBetween: 10,
-    },
-    320: {
-      slidesPerView: 1.15,
-      spaceBetween: 10,
-    }
-  }
-});
-var swiper = new Swiper(".slide__rooms_swiper", {
-  slidesPerView: 3,
-  spaceBetween: 40,
-  breakpoints: {
-    991: {
-      spaceBetween: 20,
-    },
-    768: {
-      spaceBetween: 12,
-      slidesPerView: 2.15,
-    },
-    375: {
-      spaceBetween: 12,
-      slidesPerView: 2.15,
-    },
-    320: {
-      spaceBetween: 10,
-      slidesPerView: 2.15,
-    }
-  }
-});
-var swiper = new Swiper(".facilities__content_slide", {
-  slidesPerView: 1.2,
-  spaceBetween: 10,
-});
-var swiper = new Swiper(".location__swiper_swap", {
-  slidesPerView: "auto",
-  spaceBetween: 25,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-  },
-});
-var swiper = new Swiper(".tour__swiper_swap", {
-  slidesPerView: "auto",
-  spaceBetween: 25,
-});
  
 //AOS
 AOS.init({
