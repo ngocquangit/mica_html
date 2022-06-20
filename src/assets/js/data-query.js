@@ -717,7 +717,7 @@ function showDataRoomDetail (data) {
   var contentRoomDetail = '<div class="product-review">'
   $(informationData).each(function (index, item) {
     contentRoomDetail += `
-      <div class="slide_product_content"> 
+      <div class="slide_product_content" data-aos="fade-in"> 
         <div class="slide__product_swiper">
           <div class="swiper-wrapper slide__product_wrap flex center__align">
             `+ imageSlideHtml[index] +`
@@ -1082,7 +1082,7 @@ function showDataRestaurantDetail (data) {
         </div>
       </div>
       <div class="cooking_content">
-        <div class="container"> 
+        <div class="container" data-aos="fade-right"> 
           <div class="cooking_title">お料理メニュー</div>
           <div class="cooking_title sp">MENU</div>
           <div class="cooking_desc sp">メニュー一覧</div>

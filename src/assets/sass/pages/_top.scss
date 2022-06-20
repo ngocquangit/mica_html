@@ -763,6 +763,17 @@
     @include mq-sp(){
       margin: 57px 0;
     }
+    .news_slide__link{
+      font-family: "Source Han Sans JP";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.04rem;
+      display: flex;
+      color: #000;
+      opacity: 0.3;
+      justify-content: flex-end;
+    }
     .text_title_JP {
       font-weight: bold;
       font-size: 14px;
@@ -800,7 +811,7 @@
       }
     }
     .news_slide_swiper {
-        margin-top: 55px;
+        margin-top: 35px;
         overflow: hidden;
         @include mq-sp(){
           margin-top: 20px;
