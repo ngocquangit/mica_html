@@ -87,6 +87,12 @@
         font-size: 14px;
       }
     }
+    .facilities-box__link{
+      color: #0000ff;
+      text-decoration: underline;
+      margin-right: 9.5px;
+      cursor: pointer;
+    }
     .facilities-gray{
       line-height: 17px;
       color: #AFAFB9;
@@ -186,4 +192,5 @@
       margin-top: 45px;
     }
   }
+
 }
