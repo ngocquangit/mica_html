@@ -346,15 +346,28 @@ AOS.init({
   anchorPlacement: 'top-bottom',
 });
 
-// SLIDE BANNER -->
+let sliceClass = document.querySelectorAll('.mv-slide-pc');
+
+function reSizeFunc () {
+  let widthScreen = document.getElementById('top__page').offsetWidth
+  if(widthScreen > 768) {
+    sliceClass = document.querySelectorAll('.mv-slide-pc');
+  }
+  else {
+    sliceClass = document.querySelectorAll('.mv-slide-sp')
+  }
+}
+reSizeFunc ();
+
 (function() {
   function init(item) {
+    //create name slide
+    let nameSlide = document.querySelectorAll('.pc .name-slide__item')
+
     var items = item.querySelectorAll('.mv-slide__item'),
       current = 0,
       autoUpdate = true,
       timeTrans = 5000;
-    var nameSlideActive = document.querySelectorAll('.name-slide__item.active')
-    var nameSlide = document.querySelectorAll('.name-slide__item')
     //create nav
     var nav = document.createElement('nav');
     nav.className = 'nav-arrows';
@@ -379,9 +392,8 @@ AOS.init({
     if (items.length > 1) items[items.length - 1].className = "prev_slide";
 
     var endRunProgess
-
     function moveProgess() {
-      let progessAnimation = document.getElementById('progess-bar__inner')
+      let progessAnimation =  document.getElementById('progess-bar__inner')
       clearTimeout(endRunProgess)
       progessAnimation.classList.remove("progess-bar__animation")
       setTimeout(function() {
@@ -467,10 +479,11 @@ AOS.init({
       yDown = null;
     };
   }
-  [].slice.call(document.querySelectorAll('.mv-slide')).forEach(function(item) {
+  [].slice.call(sliceClass).forEach(function(item) {
     init(item);
   });
 })();
+
 // SLIDE BANNER --/>
 
 var swiper = new Swiper(".allcontaints__wrap_slide", {
