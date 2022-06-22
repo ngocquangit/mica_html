@@ -349,20 +349,18 @@ AOS.init({
 // SLIDE BANNER -->
 (function() {
   function init(item) {
+
+    let progessAnimation = document.querySelector('.pc .progess-bar__inner')
+    var nameSlide = document.querySelectorAll('.pc .name-slide__item')
+
     var items = item.querySelectorAll('.mv-slide__item'),
       current = 0,
       autoUpdate = true,
       timeTrans = 5000;
-    var nameSlideActive = document.querySelectorAll('.name-slide__item.active')
-    var nameSlide = document.querySelectorAll('.name-slide__item')
+
     //create nav
     var nav = document.createElement('nav');
     nav.className = 'nav-arrows';
-
-    //create progess bar
-    var progess = document.createElement('div');
-    progess.className = 'progess-bar';
-    progess.innerHTML = "<div id='progess-bar__inner'></div>";
 
     //create counter
     var counter = document.createElement('div');
@@ -371,17 +369,29 @@ AOS.init({
 
     if (items.length > 1) {
       nav.appendChild(counter);
-      item.appendChild(progess);
       item.appendChild(nav);
     }
 
     items[current].className = "current";
     if (items.length > 1) items[items.length - 1].className = "prev_slide";
 
-    var endRunProgess
+    function resizeFunc() {
+      let screen = document.getElementById('top__page')
+      if(screen.offsetWidth > 768) {
+        progessAnimation = document.querySelector('.pc .progess-bar__inner')
+        nameSlide = document.querySelectorAll('.pc .name-slide__item')
+      }
+      else {
+        progessAnimation = document.querySelector('.sp .progess-bar__inner')
+        console.log(progessAnimation)
+        nameSlide = document.querySelectorAll('.sp .name-slide__item')
+      }
+    }
+    resizeFunc();
+    window.onresize = resizeFunc;
 
+    var endRunProgess
     function moveProgess() {
-      let progessAnimation = document.getElementById('progess-bar__inner')
       clearTimeout(endRunProgess)
       progessAnimation.classList.remove("progess-bar__animation")
       setTimeout(function() {

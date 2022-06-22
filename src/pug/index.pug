@@ -18,10 +18,10 @@ block ogpType
   - var thisPageOgpType = "article"
 
 block main 
-  .top__page.master__body
+  #top__page.top__page.master__body
     .home__banner.relative
       .mv-content__slide
-        ul.mv-slide.container
+        ul.mv-slide.container.pc
           li.mv-slide__item
             .image-slide.img_wrap
               img(src='/assets/img/top/pc_slide_top_img01.jpg' alt='')
@@ -31,6 +31,24 @@ block main
           li.mv-slide__item
             .image-slide.img_wrap
               img(src='/assets/img/top/pc_slide_top_img03.jpg' alt='')
+          .progess-bar
+            #progess-bar__inner.progess-bar__inner
+          .name-silde
+            p.name-slide__item.active testname1
+            p.name-slide__item testname2 
+            p.name-slide__item testname3
+        ul.mv-slide.container.sp
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='/assets/img/top/pc_slide_top_img01.jpg' alt='')
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='/assets/img/top/pc_slide_top_img02.jpg' alt='')
+          li.mv-slide__item
+            .image-slide.img_wrap
+              img(src='/assets/img/top/pc_slide_top_img03.jpg' alt='')
+          .progess-bar
+            #progess-bar__inner.progess-bar__inner
           .name-silde
             p.name-slide__item.active testname1
             p.name-slide__item testname2 
