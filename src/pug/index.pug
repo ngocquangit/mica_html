@@ -67,6 +67,8 @@ block main
               .search_box__text.pc チェックイン日
               .search_box__time 
                 input#input_date.input_date(type='date' name='date' value='2021-12-27')
+                label(for="input_date").calendar_img
+                  img(src="/assets/img/top/datetime.svg", alt="calendar_img")
             .search_box__select.search_border
               .search_box__text.pc ご宿泊数
               .search_box__text.sp DAY
@@ -141,14 +143,14 @@ block main
         img(src="/assets/img/top/img_main26.png")
       .top_concept__image.img_wrap.sp
         img(src="/assets/img/top/img_main26.png")
-    .four_image.pc_flex(data-aos='fade-in') 
+    .four_image(data-aos='fade-in') 
       .four_image__box
         .four_image__text
           .four_image__number 01
           .four_image__title ROOMS
           .four_image__sub リラックス
           .four_image_desc 体と心を整えたい
-        .four_image__image.relative
+        .four_image__image.relative.img_wrap
           img(src="/assets/img/top/img_rooms.png")
           .overlay
       .four_image__box
@@ -157,7 +159,7 @@ block main
           .four_image__title FOOD
           .four_image__sub ダイニング
           .four_image_desc 食を楽しみたい
-        .four_image__image.relative
+        .four_image__image.relative.img_wrap
           img(src="/assets/img/top/img_food.png")
           .overlay
       .four_image__box
@@ -166,7 +168,7 @@ block main
           .four_image__title FACILITIES
           .four_image__sub ウェディング
           .four_image_desc 体と心を整えたい
-        .four_image__image.relative
+        .four_image__image.relative.img_wrap
           img(src="/assets/img/top/img_facilities.png")
           .overlay
       .four_image__box
@@ -175,7 +177,7 @@ block main
           .four_image__title ACTIVITIES
           .four_image__sub アクティビティ
           .four_image_desc いろんなアクティビティに挑戦したい
-        .four_image__image.relative
+        .four_image__image.relative.img_wrap
           img(src="/assets/img/top/img_activities.png")
           .overlay
     .rooms__content.sp
