@@ -327,6 +327,8 @@ $(document).ready(function () {
     slidesPerView: "auto",
     spaceBetween: 25,
   });
+
+  document.getElementById('input_date').valueAsDate = new Date()
 });
 $('.amenity_more').click(function(){
   $('.amenity_box.amenity_hide_sp').removeClass('amenity_hide_sp')
@@ -494,4 +496,15 @@ var swiper = new Swiper(".allcontaints__wrap_slide", {
       spaceBetween: 0,
     },
   },
+});
+
+$('#search-btn-handle').click(function() {
+  let date = new Date($('#input_date').val());
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  let numberOfNights = $('#numOfNight').val()
+  let numberOfRoom = $('#numOfRoom').val()
+  let numberOfPeople = $('#numOfPeople').val()
+  window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
 });

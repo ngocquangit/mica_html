@@ -70,32 +70,32 @@ block main
             .search_box__date_time.search_border 
               .search_box__text.pc チェックイン日
               .search_box__time 
-                input#input_date.input_date(type='date' name='date' value='2021-12-27')
+                input#input_date.input_date(type='date' name='date')
                 label(for="input_date").calendar_img
                   img(src="/assets/img/top/datetime.svg", alt="calendar_img")
             .search_box__select.search_border
               .search_box__text.pc ご宿泊数
               .search_box__text.sp DAY
               .search_box__option 
-                select#cars(name='numNight')
+                select#numOfNight(name='numNight')
                   option(value='1') 1泊
                   option(value='2') 2泊
             .search_box__select.search_border
               .search_box__text.pc お部屋数
               .search_box__text.sp ROOMS
               .search_box__option 
-                select#cars(name='numRoom')
+                select#numOfRoom(name='numRoom')
                   option(value='1') 1室
                   option(value='2') 2室
             .search_box__select 
               .search_box__text.pc 人数(1部屋あたり)
               .search_box__text.sp GUESTS
               .search_box__option 
-                select#cars(name='numPeople')
-                  option(value='1') 2名
-                  option(value='2') 3室            
+                select#numOfPeople(name='numPeople')
+                  option(value='2') 2名
+                  option(value='3') 3室            
           .search_box__right    
-            .couple__button_purple.search_box__button.flex.center__align.center__justify.pc_flex
+            .couple__button_purple.search_box__button.flex.center__align.center__justify.pc_flex#search-btn-handle
               svg(xmlns='http://www.w3.org/2000/svg' width='17.355' height='17.355' viewbox='0 0 17.355 17.355')
                 path#Path_925(data-name='Path 925' d='M16.843,14.367l-2.893-2.893a8.412,8.412,0,0,1-.522.717L12.36,11.123c.046-.06.092-.121.136-.182.03-.042.06-.083.088-.125l.014-.02c.029-.043.058-.086.086-.129.061-.093.12-.187.176-.283a6.892,6.892,0,0,0,0-6.964A6.957,6.957,0,0,0,10.384.944a6.892,6.892,0,0,0-6.964,0l-.125.076c-.053.033-.106.066-.158.1-.093.061-.184.123-.274.188l-.089.066-.093.071L2.6,1.512c-.056.045-.112.091-.166.138a6.913,6.913,0,0,0-.78.78c-.047.055-.093.11-.138.166l-.068.086-.071.093-.066.089c-.065.09-.128.181-.188.274-.034.052-.068.105-.1.158s-.051.083-.076.125a6.892,6.892,0,0,0,0,6.964A6.957,6.957,0,0,0,3.42,12.86a6.892,6.892,0,0,0,6.964,0q.1-.056.19-.116l.094-.06L10.8,12.6l.02-.014c.042-.029.084-.058.125-.088.062-.045.122-.09.182-.136l1.067,1.067a8.436,8.436,0,0,1-.717.522l2.893,2.893a1.751,1.751,0,0,0,2.476-2.476ZM9.65,10.958l-.043.029-.049.033-.045.029-.059.036-.055.034-.119.069-.009.005-.1.053-.04.021-.079.04q-.076.038-.153.072a4.9,4.9,0,0,1-4,0A4.927,4.927,0,0,1,2.427,8.9a4.885,4.885,0,0,1,.259-4.5l.033-.055c.031-.052.064-.1.1-.153.019-.029.037-.057.057-.085s.048-.07.074-.1c.038-.053.078-.1.119-.156a4.955,4.955,0,0,1,.786-.786c.051-.041.1-.08.156-.119q.051-.038.1-.074L4.2,2.817c.05-.034.1-.067.153-.1L4.4,2.686A4.9,4.9,0,0,1,11.377,8.9q-.035.077-.072.153l-.04.079c-.007.013-.014.027-.021.04-.017.033-.035.066-.053.1l-.005.009c-.022.04-.045.08-.069.119l-.033.055-.036.059-.029.045c-.011.017-.021.033-.033.049s-.019.029-.029.043l-.029.042a.209.209,0,0,1-.017.025l-.035.05a4.642,4.642,0,0,1-.291.365l-.057.064c-.025.027-.049.054-.074.08l-.089.091-.091.089-.08.074-.064.057a4.643,4.643,0,0,1-.365.291l-.05.035-.025.017Z' transform='translate(0)' fill='#fff')
               |検索する      
