@@ -46,7 +46,7 @@
                 }
                 .infomation_event_img {
                     height: 75.4%;
-                    @include mq-sp() {
+                    @include mq-mobile() {
                         height: 65.6%;
                     }
                     img {
