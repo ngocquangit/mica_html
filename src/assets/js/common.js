@@ -382,11 +382,24 @@ AOS.init({
       if(screen.offsetWidth > 768) {
         progessAnimation = document.querySelector('.pc .progess-bar__inner')
         nameSlide = document.querySelectorAll('.pc .name-slide__item')
+        if(nameSlide.length == 1) {
+          nameSlide.remove()
+          let singleSlideItem = document.querySelector('.pc .mv-slide__item')
+          singleSlideItem.classList.add('current')
+          singleSlideItem.classList.remove('mv-slide__item')
+          return 0
+        }
       }
       else {
         progessAnimation = document.querySelector('.sp .progess-bar__inner')
-        console.log(progessAnimation)
         nameSlide = document.querySelectorAll('.sp .name-slide__item')
+        if(nameSlide.length == 1) {
+          let singleSlideItem = document.querySelector('.sp .mv-slide__item')
+          nameSlide.remove()
+          singleSlideItem.classList.add('current')
+          singleSlideItem.classList.remove('mv-slide__item')
+          return 0
+        }
       }
     }
     resizeFunc();
@@ -480,6 +493,7 @@ AOS.init({
     };
   }
   [].slice.call(document.querySelectorAll('.mv-slide')).forEach(function(item) {
+    console.log(item)
     init(item);
   });
 })();
@@ -512,7 +526,7 @@ $('#search-btn-handle').click(function() {
   let numberOfRoom = $('#numOfRoom').val()
   let numberOfPeople = $('#numOfPeople').val()
   let typeSearch = $('#search_box').attr('type-search')
-  if(typeSearch == 2 ) {
+  if(typeSearch == 3 ) {
     lastDate = date.addDays(parseInt(numberOfNights))
     let lastDay = lastDate.getDate();
     let lastMonth = lastDate.getMonth() + 1;
@@ -523,11 +537,7 @@ $('#search-btn-handle').click(function() {
     }
     let tempArr = JSON.stringify(roomArr)
     window.location.href = `https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`;
-  } else if (typeSearch == 3) {
-
-  } else {
-    window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
-  }
-
-
+  } else if (typeSearch == 2) {
+      window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
+  } else {}
 });
