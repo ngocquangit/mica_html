@@ -499,12 +499,35 @@ var swiper = new Swiper(".allcontaints__wrap_slide", {
 });
 
 $('#search-btn-handle').click(function() {
-  let date = new Date($('#input_date').val());
+  Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+  }
+  var date = new Date($('#input_date').val());
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
   let numberOfNights = $('#numOfNight').val()
   let numberOfRoom = $('#numOfRoom').val()
   let numberOfPeople = $('#numOfPeople').val()
-  window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
+  let typeSearch = $('#search_box').attr('type-search')
+  if(typeSearch == 2 ) {
+    lastDate = date.addDays(parseInt(numberOfNights))
+    let lastDay = lastDate.getDate();
+    let lastMonth = lastDate.getMonth() + 1;
+    let lastYear = lastDate.getFullYear();
+    let roomArr = []
+    for(let i = 0 ; i < parseInt(numberOfRoom); i ++ ) {
+      roomArr.push({'adults':parseInt(numberOfPeople)})
+    }
+    let tempArr = JSON.stringify(roomArr)
+    window.location.href = `https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`;
+  } else if (typeSearch == 3) {
+
+  } else {
+    window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
+  }
+
+
 });

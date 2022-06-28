@@ -57,7 +57,7 @@ block main
       .banner_text.flex.center__align
         .container
           h1.relative 忘れられない<br>体験が<br>生まれる場所へ。
-    .search_box(data-aos='fade-up')
+    #search_box.search_box(data-aos='fade-up' type-search='2')
       .container
         .search_box__body
           .search_box__search_text.sp 宿泊予約空室検索
@@ -87,7 +87,7 @@ block main
                 select#numOfRoom(name='numRoom')
                   option(value='1') 1室
                   option(value='2') 2室
-            .search_box__select 
+            .search_box__select.search_border 
               .search_box__text.pc 人数(1部屋あたり)
               .search_box__text.sp GUESTS
               .search_box__option 
