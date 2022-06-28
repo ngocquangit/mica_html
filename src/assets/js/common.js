@@ -382,24 +382,10 @@ AOS.init({
       if(screen.offsetWidth > 768) {
         progessAnimation = document.querySelector('.pc .progess-bar__inner')
         nameSlide = document.querySelectorAll('.pc .name-slide__item')
-        if(nameSlide.length == 1) {
-          nameSlide.remove()
-          let singleSlideItem = document.querySelector('.pc .mv-slide__item')
-          singleSlideItem.classList.add('current')
-          singleSlideItem.classList.remove('mv-slide__item')
-          return 0
-        }
       }
       else {
         progessAnimation = document.querySelector('.sp .progess-bar__inner')
         nameSlide = document.querySelectorAll('.sp .name-slide__item')
-        if(nameSlide.length == 1) {
-          let singleSlideItem = document.querySelector('.sp .mv-slide__item')
-          nameSlide.remove()
-          singleSlideItem.classList.add('current')
-          singleSlideItem.classList.remove('mv-slide__item')
-          return 0
-        }
       }
     }
     resizeFunc();
