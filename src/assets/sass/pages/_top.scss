@@ -59,7 +59,7 @@
           line-height: 22px;
           letter-spacing: 0.06rem;
           font-weight: 400;
-          font-family: 'Helvetica';
+          // font-family: 'Helvetica';
           color: #fff;
           top: 20px;
           opacity: 0;
@@ -178,7 +178,7 @@
         line-height: 22px;
         letter-spacing: 0.06rem;
         font-weight: 400;
-        font-family: 'Helvetica';
+        // font-family: 'Helvetica';
         color: #fff;
         position: relative;
         z-index: 1;
@@ -400,7 +400,7 @@
       }
       .input_date {
         max-width: 109px;
-        font-family: "DINPro", sans-serif;
+        // font-family: "DINPro", sans-serif;
         font-size: 20px;
         letter-spacing: 0.004rem;
         line-height: 24px;
@@ -444,7 +444,7 @@
       }
       .search_box__option {
         select {
-          font-family: "DINPro", sans-serif;
+          // font-family: "DINPro", sans-serif;
           font-size: 20px;
           letter-spacing: 0.004rem;
           line-height: 24px;
@@ -570,13 +570,13 @@
       text-align: center;
     }
     .four_image__number {
-      font-family: "Gotham";
+      // font-family: "Gotham";
       font-size: 16px;
       line-height: 21px;
       font-weight: 700;
     }
     .four_image__title {
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-size: 46px;
       line-height: 57px;
       font-weight: 400;
@@ -609,14 +609,14 @@
   .rooms__content {
     padding-top: 60px;
     .rooms__content_title {
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-size: 30px;
       line-height: 37px;
       text-align: center;
       text-transform: uppercase;
     }
     .rooms__content_sub_title {
-      font-family: "Source Han Sans JP";
+      // font-family: "Source Han Sans JP";
       font-weight: bold;
       font-size: 10px;
       line-height: 44px;
@@ -636,14 +636,14 @@
       height: 280px;
     }
     .text_big {
-      font-family: "Source Han Sans JP";
+      // font-family: "Source Han Sans JP";
       font-weight: bold;
       font-size: 16px;
       line-height: 24px;
       margin-top: 10px;
     }
     .text_small {
-      font-family: "DINPro";
+      // font-family: "DINPro";
       font-weight: 400;
       font-size: 14px;
       line-height: 19px;
@@ -671,7 +671,7 @@
       margin-top: 20px;
     }
     .facilities__title{
-      font-family: 'Source Han Sans JP';
+      // font-family: 'Source Han Sans JP';
       color: #333;
       font-size: 20px;
       font-weight: bold;
@@ -682,7 +682,7 @@
       justify-content: center;
     }
     .facilities__desc{
-      font-family: 'Source Han Sans JP';
+      // font-family: 'Source Han Sans JP';
       color: #37373C;
       opacity: .8;
       font-size: 12px;
@@ -699,7 +699,7 @@
     margin-top: 120px;
     text-align: center;
     .top_concept__title {
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-size: 46px;
       line-height: 57px;
       font-weight: 400;
@@ -709,7 +709,7 @@
       }
     }
     .top_concept__sub_title {
-      font-family: 'Source Han Sans JP';
+      // font-family: 'Source Han Sans JP';
       font-weight: bold;
       font-size: 14px;
       line-height: 44px;
@@ -766,7 +766,7 @@
       margin: 57px 0;
     }
     .news_slide__link{
-      font-family: "Source Han Sans JP";
+      // font-family: "Source Han Sans JP";
       font-weight: 600;
       font-size: 16px;
       line-height: 18px;
@@ -783,7 +783,7 @@
       letter-spacing: 0.06rem;
     }
     .text_title_EN {
-      font-family: 'Montserrat';
+      // font-family: 'Montserrat';
       font-size: 46px;
       line-height: 57px;
       font-weight: 400;
@@ -836,7 +836,7 @@
                 line-height: 22px;
                 letter-spacing: 0.06rem;
                 font-weight: 500;
-                font-family: 'DINPro';
+                // font-family: 'DINPro';
                 @include mq-sp(){
                   font-size: 12px;
                 }
@@ -856,7 +856,7 @@
   .dining__content {
     margin-top: 60px;
     flex-direction: column;
-    font-family: 'Source Han Sans JP';
+    // font-family: 'Source Han Sans JP';
     .dining__content_left {
       position: relative;
       width: 100%;
@@ -899,7 +899,7 @@
       }
     }
     .text__title_EN{
-      font-family: 'Montserrat';
+      // font-family: 'Montserrat';
       font-size: 30px;
       line-height: 37px;
       margin-top: 29px;
@@ -955,7 +955,7 @@
       }
     }
     .four_seasons__title {
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-weight: 400;
       font-size: 26px;
       line-height: 32px;
@@ -967,7 +967,7 @@
       }
     }
     .four_seasons__link {
-      font-family: "Source Han Sans JP";
+      // font-family: "Source Han Sans JP";
       font-weight: 600;
       font-size: 16px;
       line-height: 18px;

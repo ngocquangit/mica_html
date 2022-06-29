@@ -50,7 +50,7 @@
       }
 
       .txt_logo {
-        font-family: 'Hei';
+        // font-family: 'Hei';
         font-size: 32px;
         line-height: 36px;
         margin-left: 10px;
@@ -73,7 +73,7 @@
           font-size: 14px;
           line-height: 20px;
           font-weight: 500;
-          font-family: 'Source Han Sans JP', serif;
+          // font-family: 'Source Han Sans JP', serif;
           margin-right: 30px;
           color: #fff;
           @include mq-laptop(){
@@ -144,7 +144,7 @@
       font-size: 16px;
       line-height: 30px;
       font-weight: 600;
-      font-family: 'Source Han Sans JP', serif;
+      // font-family: 'Source Han Sans JP', serif;
       border-radius: 5px;
       @include mq-lg() {
         width: 96px;

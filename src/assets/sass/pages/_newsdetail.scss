@@ -6,7 +6,7 @@
                 font-size: 24px;
                 line-height: 29px;
                 letter-spacing: 0.06rem;
-                font-family: 'Gotham';
+                // font-family: 'Gotham';
                 font-weight: 600;
                 color: #fff;
                 @include mq-sp() {
@@ -67,10 +67,10 @@
                 line-height: 24px;
                 letter-spacing: 0.1rem;
                 text-align: justify;
-                font-family: 'Source Han Sans JP';
+                // font-family: 'Source Han Sans JP';
                 @include mq-sp() {
                     font-size: 12px;
-                    font-family: 'Source Han Sans JP';
+                    // font-family: 'Source Han Sans JP';
                     letter-spacing: 0.1rem;
                     line-height: 24px;       
                 }

@@ -15,7 +15,7 @@
             font-size: 30px;
             line-height: 36px;
             letter-spacing: 0.1rem;
-            font-family: "Gotham";
+            // font-family: "Gotham";
             font-weight: 500;
             color: #AFAFB9;
             @include mq-sp() {
@@ -57,7 +57,7 @@
                     font-size: 24px;
                     margin-top: 28px;
                     font-weight: 400;
-                    font-family: 'DINPro';
+                    // font-family: 'DINPro';
                     @include mq-large() {
                         font-size: 16px;
                         line-height: 22px;
@@ -75,14 +75,14 @@
                     font-size: 24px;
                     margin-top: 8px;
                     font-weight: 400;
-                    font-family: 'Source Han Sans JP';
+                    // font-family: 'Source Han Sans JP';
                     @include mq-large() {
                         max-width: 320px;
                         font-size: 16px;
                         line-height: 22px;
                         margin-top: 4px;
                         font-weight: 400;
-                        font-family: 'Source Han Sans JP';
+                        // font-family: 'Source Han Sans JP';
                     }
                     @include mq-sp() {
                         font-size: 12px;

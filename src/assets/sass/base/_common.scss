@@ -84,7 +84,7 @@ body {
     }
   }
   .text_title_EN {
-      font-family: 'Gotham';
+      // font-family: 'Gotham';
       font-size: 46px;
       line-height: 55px;
       font-weight: 400;
@@ -94,7 +94,7 @@ body {
         text-align: center;
         font-size: 30px;
         line-height: 37px;
-        font-family: 'Montserrat';
+        // font-family: 'Montserrat';
         font-weight: 500;
         color: #000;
       }
@@ -374,7 +374,7 @@ body {
 .allcontaints__content {
   .text__title_EN {
     color: #afafb9;
-    font-family: "Gotham";
+    // font-family: "Gotham";
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
@@ -397,7 +397,7 @@ body {
   .text__title_EN {
     @include mq-sp() {
       justify-content: unset;
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.1rem;
@@ -457,7 +457,7 @@ body {
         line-height: 21px;
         letter-spacing: 0.01em;
         font-weight: 500;
-        font-family: "Gotham", sans-serif;
+        // font-family: "Gotham", sans-serif;
         margin-top: 16px;
         @include mq-sp() {
           font-size: 14px;
@@ -469,7 +469,7 @@ body {
         line-height: 26px;
         letter-spacing: 0.06rem;
         font-weight: 400;
-        font-family: "Source Han Sans JP", sans-serif;
+        // font-family: "Source Han Sans JP", sans-serif;
         margin-top: 4px;
         opacity: .9;
       }
@@ -544,7 +544,7 @@ body {
       line-height: 57px;
       letter-spacing: 0.1rem;
       font-weight: 500;
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       @include mq-sp() {
         font-size: 30px;
         line-height: 37px;
@@ -571,7 +571,7 @@ body {
       line-height: 32px;
       letter-spacing: 0.04rem;
       font-weight: 400;
-      font-family: "Source Han Sans JP";
+      // font-family: "Source Han Sans JP";
       margin-top: 52px;
       @include mq-sp() {
         font-size: 12px;
@@ -986,7 +986,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
-    font-family: "Montserrat";
+    // font-family: "Montserrat";
     color: #fff;
     @include mq-sp() {
       font-size: 16px;
@@ -997,7 +997,7 @@ body {
       color: #fff;
       font-size: 18px;
       line-height: 44px;
-      font-family: 'Source Han Sans JP';
+      // font-family: 'Source Han Sans JP';
       @include mq-sp() {
         font-size: 14px;
       }
@@ -1099,7 +1099,7 @@ body {
       font-size: 30px;
       line-height: 36px;
       letter-spacing: 0.1rem;
-      font-family: 'Gotham';
+      // font-family: 'Gotham';
       font-weight: 500;
       color: #AFAFB9;
       @include mq-sp() {
@@ -1208,7 +1208,7 @@ body {
               font-size: 30px;
               line-height: 22px;
               font-weight: 600;
-              font-family: 'DINPro';
+              // font-family: 'DINPro';
               color: #D90000;
               @include mq-laptop(){
                   font-size: 25px;
@@ -1430,13 +1430,13 @@ body {
     h1 {
       font-size: 70px;
       line-height: 86px;
-      font-family: "Montserrat";
+      // font-family: "Montserrat";
       font-weight: 400;
       color: #fff;
       @include mq-sp() {
         font-size: 14px;
         line-height: 16px;
-        font-family: "Gotham";
+        // font-family: "Gotham";
         letter-spacing: 0.06rem;
         text-align: center;
       }
@@ -1496,7 +1496,7 @@ body {
     }
   }
   .amenity_title {
-    font-family: "Gotham";
+    // font-family: "Gotham";
     font-size: 30px;
     font-weight: bold;
     line-height: 40px;
@@ -1533,7 +1533,7 @@ body {
     }
   }
   .amenity_desc {
-    font-family: "Source Han Sans JP";
+    // font-family: "Source Han Sans JP";
     font-size: 16px;
     line-height: 24px;
     margin-left: 15px;
@@ -1551,7 +1551,7 @@ body {
   .amenity_more {
     display: none;
     color: #666666;
-    font-family: "Source Han Sans JP";
+    // font-family: "Source Han Sans JP";
     font-size: 16px;
     line-height: 20px;
     span {
