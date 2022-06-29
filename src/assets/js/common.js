@@ -327,6 +327,8 @@ $(document).ready(function () {
     slidesPerView: "auto",
     spaceBetween: 25,
   });
+
+  document.getElementById('input_date').valueAsDate = new Date()
 });
 $('.amenity_more').click(function(){
   $('.amenity_box.amenity_hide_sp').removeClass('amenity_hide_sp')
@@ -346,36 +348,21 @@ AOS.init({
   anchorPlacement: 'top-bottom',
 });
 
-let sliceClass = document.querySelectorAll('.mv-slide-pc');
-
-function reSizeFunc () {
-  let widthScreen = document.getElementById('top__page').offsetWidth
-  if(widthScreen > 768) {
-    sliceClass = document.querySelectorAll('.mv-slide-pc');
-  }
-  else {
-    sliceClass = document.querySelectorAll('.mv-slide-sp')
-  }
-}
-reSizeFunc ();
-
+// SLIDE BANNER -->
 (function() {
   function init(item) {
-    //create name slide
-    let nameSlide = document.querySelectorAll('.pc .name-slide__item')
+
+    let progessAnimation = document.querySelector('.pc .progess-bar__inner')
+    var nameSlide = document.querySelectorAll('.pc .name-slide__item')
 
     var items = item.querySelectorAll('.mv-slide__item'),
       current = 0,
       autoUpdate = true,
       timeTrans = 5000;
+
     //create nav
     var nav = document.createElement('nav');
     nav.className = 'nav-arrows';
-
-    //create progess bar
-    var progess = document.createElement('div');
-    progess.className = 'progess-bar';
-    progess.innerHTML = "<div id='progess-bar__inner'></div>";
 
     //create counter
     var counter = document.createElement('div');
@@ -384,16 +371,28 @@ reSizeFunc ();
 
     if (items.length > 1) {
       nav.appendChild(counter);
-      item.appendChild(progess);
       item.appendChild(nav);
     }
 
     items[current].className = "current";
     if (items.length > 1) items[items.length - 1].className = "prev_slide";
 
+    function resizeFunc() {
+      let screen = document.getElementById('top__page')
+      if(screen.offsetWidth > 768) {
+        progessAnimation = document.querySelector('.pc .progess-bar__inner')
+        nameSlide = document.querySelectorAll('.pc .name-slide__item')
+      }
+      else {
+        progessAnimation = document.querySelector('.sp .progess-bar__inner')
+        nameSlide = document.querySelectorAll('.sp .name-slide__item')
+      }
+    }
+    resizeFunc();
+    window.onresize = resizeFunc;
+
     var endRunProgess
     function moveProgess() {
-      let progessAnimation =  document.getElementById('progess-bar__inner')
       clearTimeout(endRunProgess)
       progessAnimation.classList.remove("progess-bar__animation")
       setTimeout(function() {
@@ -479,11 +478,11 @@ reSizeFunc ();
       yDown = null;
     };
   }
-  [].slice.call(sliceClass).forEach(function(item) {
+  [].slice.call(document.querySelectorAll('.mv-slide')).forEach(function(item) {
+    console.log(item)
     init(item);
   });
 })();
-
 // SLIDE BANNER --/>
 
 var swiper = new Swiper(".allcontaints__wrap_slide", {
@@ -497,4 +496,34 @@ var swiper = new Swiper(".allcontaints__wrap_slide", {
       spaceBetween: 0,
     },
   },
+});
+
+$('#search-btn-handle').click(function() {
+  Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+  }
+  var date = new Date($('#input_date').val());
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  let numberOfNights = $('#numOfNight').val()
+  let numberOfRoom = $('#numOfRoom').val()
+  let numberOfPeople = $('#numOfPeople').val()
+  let typeSearch = $('#search_box').attr('type-search')
+  if(typeSearch == 3 ) {
+    lastDate = date.addDays(parseInt(numberOfNights))
+    let lastDay = lastDate.getDate();
+    let lastMonth = lastDate.getMonth() + 1;
+    let lastYear = lastDate.getFullYear();
+    let roomArr = []
+    for(let i = 0 ; i < parseInt(numberOfRoom); i ++ ) {
+      roomArr.push({'adults':parseInt(numberOfPeople)})
+    }
+    let tempArr = JSON.stringify(roomArr)
+    window.location.href = `https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`;
+  } else if (typeSearch == 2) {
+      window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
+  } else {}
 });
