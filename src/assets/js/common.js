@@ -529,7 +529,7 @@ $('#search-btn-handle').click(function() {
 });
 
 const picker = datepicker('#input_date', {
-  customDays: ['天', '一', '二', '三', '四', '五', '六'],
+  customDays: ['日', '月 ', '火 ', '水 ', '木 ', '金 ', '土 '],
   customMonths: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
   formatter: (input, date, instance) => {
     const value = date.toLocaleDateString('zh-Hans-CN')
