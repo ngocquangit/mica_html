@@ -147,6 +147,8 @@
                 height: 290px;
                 @include mq-sp(){
                     height: 40vw;
+                    border-radius: 3px;
+                    overflow: hidden;
                 }
             }
             .rooms_name_JP {
@@ -226,7 +228,7 @@
             justify-content: flex-end;
         }
         .rooms_button_link {
-            margin-top: 20px;
+            margin-top: 30px;
             margin-right: 20px;
             span {
                 font-size: 14px;

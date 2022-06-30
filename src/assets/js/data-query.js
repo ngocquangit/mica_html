@@ -292,6 +292,7 @@ const dataRoomDetail = [
     "id":4,
     "title_en":"Double Roomsádasasd",
     "title_ja":"ダブルルーム",
+    "img_mv": "/assets/img/executive/executive-mv.jpg",
     "body":"こちらのエグゼクティブツインルームは26.1㎡の広さをご用意\nしており、おふたりのちょっと贅沢な東京でのご宿泊をお楽し\nみいただけます。最大3名様までご利用頂けます。",
     "is_internet_access":1,
     "is_refrigerator":1,
@@ -707,7 +708,7 @@ function showDataRoomDetail (data) {
           <p>` + item.title_ja + `</p>
         </div>
       </div>
-      <div class="img_wrap"> <img src="/assets/img/executive/executive-mv.jpg" alt="SUITE ROOM banner"/></div>
+      <div class="img_wrap"> <img src="`+ item.img_mv +`" alt="SUITE ROOM banner"/></div>
       <div class="overlay"></div>
     `
   });

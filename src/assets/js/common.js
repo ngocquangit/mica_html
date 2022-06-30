@@ -328,7 +328,7 @@ $(document).ready(function () {
     spaceBetween: 25,
   });
 
-  document.getElementById('input_date').valueAsDate = new Date()
+  // document.getElementById('input_date').valueAsDate = new Date()
 });
 $('.amenity_more').click(function(){
   $('.amenity_box.amenity_hide_sp').removeClass('amenity_hide_sp')
