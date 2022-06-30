@@ -117,7 +117,7 @@
         @include mq-sp(){
             min-width: unset;
             margin: 45px auto 0;
-            max-width: 335px;
+            max-width: unset;
             width: 100%;
             min-height: 60px;
         }
