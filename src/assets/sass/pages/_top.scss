@@ -279,7 +279,7 @@
   }
   .search_box {
     position: relative;
-    margin-top: -39px;
+    margin-top: -40px;
     .search_box__body {
       width: 100%;
       height: 150px;
@@ -300,14 +300,14 @@
       @include mq-sp() {
         flex-direction: column;
         height: unset;
-        padding: 20px 15px 20px 20px;
+        padding: 14px 15px 18px 20px;
       }
     }
     .search_box__search_text {
       @include mq-sp() {
         font-size: 16px;
         line-height: 30px;
-        padding-bottom: 20px;
+        padding-bottom: 12px;
         border-bottom: 3px solid #d4d1cc;
         text-align: center;
         font-weight: bold;
@@ -316,6 +316,10 @@
     .search_box__left {
       display: flex;
       flex: 1;
+      @include mq-sp() {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       .search_border {
         border-right: 1px solid #ddd;
         @include mq-sp() {
@@ -384,7 +388,7 @@
           justify-content: start;
           border-bottom: 1px solid #ddd;
           padding-bottom: 14px;
-          padding-top: 27px;
+          padding-top: 26px;
         }
       }
       .search_box__time {
@@ -439,11 +443,11 @@
         @include mq-sp() {
           padding: 0;
           flex-direction: row;
-          width: 50%;
+          width: calc(50% - 15px);
           justify-content: space-between;
           border-bottom: 1px solid #ddd;
           padding-bottom: 14px;
-          padding-top: 27px;
+          padding-top: 26px;
         }
       }
       .search_box__option {
@@ -462,9 +466,6 @@
             font-size: 16px;
           }
         }
-      }
-      @include mq-sp() {
-        flex-wrap: wrap;
       }
     }
     .search_box__right {
@@ -529,6 +530,11 @@
         @include mq-laptop() {
           font-size: 12px;
         }
+        @include mq-sp() {
+          display: block;
+          margin-top: 12px;
+          font-weight: 600;
+        }
       }
       @include mq-laptop() {
         max-width: 265px;
@@ -548,6 +554,9 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-top: 120px;
+    @include mq-sp() {
+      display: none;
+    }
     .four_image__box {
       width: 100%;
       position: relative;
@@ -612,6 +621,9 @@
   }
   .rooms__content {
     padding-top: 60px;
+    @include mq-sp() {
+      padding-bottom: 37px;
+    }
     .rooms__content_title {
       // font-family: "Montserrat";
       font-size: 30px;
@@ -744,12 +756,15 @@
       font-size: 16px;
       line-height: 44px;
       letter-spacing: 0.06rem;
+      margin: 0 auto;
       margin-top: 40px;
+      max-width: 75%;
       @include mq-sp() {
         font-size: 12px;
         line-height: 24px;
         letter-spacing: 0.04rem;
         margin-top: 20px;
+        max-width: 100%;
       }
     }
     .top_concept__image {

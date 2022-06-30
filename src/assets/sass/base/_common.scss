@@ -317,6 +317,9 @@ body {
       height: 20.9vw;
       @include mq-sp(){
         height: 48vw;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
       }
     }
     .slide_txt_wrap {
@@ -324,6 +327,8 @@ body {
       background-color: #fff;
       @include mq-sp(){
         padding: 4vw;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
     }
     .slide_txt_title {
