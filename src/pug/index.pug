@@ -75,21 +75,21 @@ block main
                 input#input_date.input_date(type='text' name='date')
                 label(for="input_date").calendar_img
                   img(src="/assets/img/top/datetime.svg", alt="calendar_img")
-            .search_box__select.search_border
+            .search_box__select.search_border.pl-sp-15
               .search_box__text.pc ご宿泊数
               .search_box__text.sp DAY
               .search_box__option 
                 select#numOfNight(name='numNight')
                   option(value='1') 1泊
                   option(value='2') 2泊
-            .search_box__select.search_border
+            .search_box__select.search_border.pr-sp-15
               .search_box__text.pc お部屋数
               .search_box__text.sp ROOMS
               .search_box__option 
                 select#numOfRoom(name='numRoom')
                   option(value='1') 1室
                   option(value='2') 2室
-            .search_box__select.search_border 
+            .search_box__select.search_border.pl-sp-15 
               .search_box__text.pc 人数(1部屋あたり)
               .search_box__text.sp GUESTS
               .search_box__option 
