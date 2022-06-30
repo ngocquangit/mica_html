@@ -280,6 +280,7 @@
   .search_box {
     position: relative;
     margin-top: -39px;
+    z-index: 9;
     .search_box__body {
       width: 100%;
       height: 150px;
@@ -318,6 +319,9 @@
       flex: 1;
       .search_border {
         border-right: 1px solid #ddd;
+        &:last-of-type {
+          border-right: none;
+        }
         @include mq-sp() {
           border-right: none;
         }
@@ -392,7 +396,7 @@
         .calendar_img {
           position: relative;
           top: -4px;
-          margin-left: 7px;
+          margin-left: 8px;
           @include mq-laptop() {
             margin-left: 0px;
           }
@@ -520,6 +524,9 @@
         letter-spacing: 0.06rem;
         line-height: 30px;
         color: #2C8AAE;
+        &:hover {
+          text-decoration: underline;
+        }
         &:last-child {
           margin-top: 12px;
           @include mq-lg() {
