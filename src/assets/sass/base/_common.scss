@@ -655,9 +655,8 @@ body {
       border: 2px solid transparent;
     }
     @include mq-sp() {
-      order: 2;
-      margin-right: 0;
-      margin-left: 5px;
+      margin-right: 5px;
+      margin-left: 0;
     }
   }
 
