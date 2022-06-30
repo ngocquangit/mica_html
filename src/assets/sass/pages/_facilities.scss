@@ -26,6 +26,7 @@
     }
     .facilities-box__slide{
       width: calc( 100% - 80px);
+      max-width: 620px;
       margin: unset;
       @include mq-sp(){
         width: unset;

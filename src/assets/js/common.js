@@ -527,3 +527,13 @@ $('#search-btn-handle').click(function() {
       window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
   } else {}
 });
+
+const picker = datepicker('#input_date', {
+  customDays: ['天', '一', '二', '三', '四', '五', '六'],
+  customMonths: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString('zh-Hans-CN')
+    input.value = value 
+  }
+})
+picker.calendarContainer.style.setProperty('font-size', '1.5rem')
