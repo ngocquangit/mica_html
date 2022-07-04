@@ -765,7 +765,7 @@
       letter-spacing: 0.06rem;
       margin: 0 auto;
       margin-top: 40px;
-      max-width: 75%;
+      max-width: 696px;
       @include mq-sp() {
         font-size: 12px;
         line-height: 24px;
@@ -862,9 +862,11 @@
                 line-height: 22px;
                 letter-spacing: 0.06rem;
                 font-weight: 500;
+                padding-bottom: 10px;
                 // font-family: 'DINPro';
                 @include mq-sp(){
                   font-size: 12px;
+                  padding-bottom: 0;
                 }
             }
             .txt_desc {
