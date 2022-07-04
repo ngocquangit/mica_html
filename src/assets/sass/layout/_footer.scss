@@ -40,7 +40,7 @@
     }
   }
   &-col{
-    padding-top: 44px;
+    padding-top: 57px;
     &__title{
       // font-family: 'Gotham';
       font-size: 20px;
@@ -193,6 +193,8 @@
   }
   &-map{
     position: relative;
+    width: 328px;
+    height: 244px;
     iframe{
       @include mq-sp(){
         position: absolute;
