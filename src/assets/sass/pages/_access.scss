@@ -43,8 +43,14 @@
         }
         .map_vehicle_right {
             width: 50%;
+            >div:last-child {
+                margin-left: 92px;
+            }
             @include mq-sp() {
                 width: 100%;
+                >div:last-child {
+                    margin-left: 0;
+                }
             }
         }
         .map_vehicle_col {
