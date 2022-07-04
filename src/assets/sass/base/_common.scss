@@ -1007,7 +1007,8 @@ body {
       }
       &::after {
         right: -20px;
-        top: 7px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
         @include mq-sp(){
           right: -17px;
           top: 6px;
