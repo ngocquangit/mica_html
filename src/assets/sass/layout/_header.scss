@@ -65,6 +65,16 @@
       .txt_logo.active {
         color: #000;
       }
+      .svg_logo {
+        max-height: 32px;
+        // filter:  brightness(0) invert(1);
+      }
+      .svg_logo_sp {
+        @include mq-sp() {
+          max-height: 20px;
+          // filter: invert(0%) sepia(100%) saturate(11%) hue-rotate(200deg) brightness(99%) contrast(104%);
+        }
+      }
     }
 
     .top_bar_right {

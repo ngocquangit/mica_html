@@ -93,6 +93,7 @@ function fix_menu() {
   var lastScroll = 0;
   var header = $("#header");
   var textLogo = $(".txt_logo");
+  var svgLogo = $(".svg_logo");
   var textMenu = $(".order__link .nav_item");
   let widthPage = $(window).width();
   window.onscroll = function () {
@@ -117,10 +118,12 @@ function fix_menu() {
       header.css("background-color", "RGBA(255 255 255 / 90%)");
       textLogo.css("color", "#000");
       textMenu.css("color", "#000");
+      // svgLogo.css("filter", "invert(0%) sepia(100%) saturate(11%) hue-rotate(200deg) brightness(99%) contrast(104%)");
     } else {
       header.css("background-color", "transparent");
       textLogo.css("color", "#fff");
       textMenu.css("color", "#fff");
+      // svgLogo.css("filter", "brightness(0) invert(1)");
     }
   };
 }
@@ -479,7 +482,6 @@ AOS.init({
     };
   }
   [].slice.call(document.querySelectorAll('.mv-slide')).forEach(function(item) {
-    console.log(item)
     init(item);
   });
 })();

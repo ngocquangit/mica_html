@@ -17,9 +17,22 @@
             width: calc(100% - 20px);
             margin: 0 auto;
             display: flex;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: calc(50% - 1px);
+                width: 2px;
+                background-color: #EFEFEF;
+            }
             @include mq-sp() {
                 flex-direction: column;
                 width: 100%;
+                &::after {
+                    content: none;
+                }
             }
         }
         .map_vehicle_left {
@@ -30,8 +43,14 @@
         }
         .map_vehicle_right {
             width: 50%;
+            >div:last-child {
+                margin-left: 92px;
+            }
             @include mq-sp() {
                 width: 100%;
+                >div:last-child {
+                    margin-left: 0;
+                }
             }
         }
         .map_vehicle_col {
@@ -102,7 +121,7 @@
             margin-top: 5px;
         }
         .time_extimate {
-            text-align: center;
+            // text-align: center;
             font-size: 18px;
             line-height: 30px;
             letter-spacing: 0.06rem;
