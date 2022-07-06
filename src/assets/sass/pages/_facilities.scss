@@ -33,14 +33,12 @@
       }
     }
     .facilities-box__title{
-      font-size: 16px;
+      font-size: 24px;
       line-height: 24px;
       font-weight: bold;
       color: #333333;
-      @include mq-extra-large(){
-        font-size: 18px;
-      }
       @include mq-sp(){
+        font-size: 16px;
         margin-top: 20px;
       }
     }
@@ -61,13 +59,13 @@
       }
     }
     .facilities-box__desc{
-      font-size: 12px;
+      font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.04rem;
       margin: 10px 0 5px;
       color: #333333;
-      @include mq-extra-large(){
-        font-size: 14px;
+      @include mq-sp(){
+        font-size: 12px;
       }
     }
     .facilities-box__row {
@@ -80,12 +78,12 @@
       }
     }
     .facilities-box__text{
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       line-height: 20px;
       color: #37373C;
-      @include mq-extra-large(){
-        font-size: 14px;
+      @include mq-sp(){
+        font-size: 12px;
       }
     }
     .facilities-box__link{
