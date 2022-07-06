@@ -859,9 +859,18 @@
         .news_slide_item {
             .img_wrap {
                 height: 200px;
+                overflow: hidden;
                 @include mq-sp(){
                   height: 26.8vw;
                 }
+                img {
+                  transition: all 0.5s;
+                }
+            }
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
             }
         }
         .slide_item_txt {
