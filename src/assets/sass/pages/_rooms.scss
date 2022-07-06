@@ -221,7 +221,8 @@
                 padding: 17px;
                 margin-top: 25px;
                 &:hover {
-                    opacity: .8;
+                    background: linear-gradient(135deg, #2C8AAE, #2AB1AA);
+                    color: #fff;
                 }
             }
         }
