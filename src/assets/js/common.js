@@ -344,7 +344,7 @@ AOS.init({
     var maxWidth = 768;
     return window.innerWidth < maxWidth;
   },
-  duration: 550,
+  duration: 450,
   offset: 100,
   mirror: true,
   easing: 'ease-in-sine',

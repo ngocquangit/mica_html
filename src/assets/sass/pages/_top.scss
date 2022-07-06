@@ -22,6 +22,7 @@
         letter-spacing: 0.1rem;
         font-weight: 600;
         color: #fff;
+        margin-top: 100px;
         @include mq-lg() {
           font-size: 40px;
           line-height: 60px;
@@ -114,7 +115,7 @@
         height: 2px;
         background-color: #fff;
         z-index: 2;
-        margin-top: 567px;
+        margin-top: 620px;
         @include mq-sp () {
           margin-top: 505px;
           width: 60px;
