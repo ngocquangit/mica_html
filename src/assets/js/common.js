@@ -538,12 +538,25 @@ var d = new Date(),
     ].join('/');
 $('#input_date').val(output);
 
-const picker = datepicker('#input_date', {
-  customDays: ['日', '月 ', '火 ', '水 ', '木 ', '金 ', '土 '],
-  customMonths: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
-  formatter: (input, date, instance) => {
-    const value = date.toLocaleDateString('zh-Hans-CN')
-    input.value = value 
-  }
-})
-picker.calendarContainer.style.setProperty('font-size', '1.5rem')
+// const picker = datepicker('#input_date', {
+//   customDays: ['日', '月 ', '火 ', '水 ', '木 ', '金 ', '土 '],
+//   customMonths: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
+//   formatter: (input, date, instance) => {
+//     const value = date.toLocaleDateString('zh-Hans-CN')
+//     input.value = value 
+//   }
+// })
+// picker.calendarContainer.style.setProperty('font-size', '1.5rem')
+
+
+$(function() {
+  $('input[name="dates"]').daterangepicker({
+    opens: 'center',
+    autoApply : true,
+    minDate: moment() ,
+    locale: {
+      format: 'YYYY-MM-DD'
+    }
+  }, 
+  );
+});

@@ -72,16 +72,9 @@ block main
             .search_box__date_time.search_border 
               .search_box__text.pc チェックイン日
               .search_box__time 
-                input#input_date.input_date(type='text' name='date')
-                label(for="input_date").calendar_img
+                input#datepicker.input_date(type='text' name='dates')
+                label(for="datepicker").calendar_img
                   img(src="/assets/img/top/datetime.svg", alt="calendar_img")
-            .search_box__select.search_border.pl-sp-15
-              .search_box__text.pc ご宿泊数
-              .search_box__text.sp DAY
-              .search_box__option 
-                select#numOfNight(name='numNight')
-                  option(value='1') 1泊
-                  option(value='2') 2泊
             .search_box__select.search_border.pr-sp-15
               .search_box__text.pc お部屋数
               .search_box__text.sp ROOMS

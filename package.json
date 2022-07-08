@@ -41,5 +41,7 @@
     "stylelint": "^13.5.0",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lightpick": "^1.6.2"
+  }
 }
