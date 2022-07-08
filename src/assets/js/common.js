@@ -551,11 +551,14 @@ $('#input_date').val(output);
 
 $(function() {
   $('input[name="dates"]').daterangepicker({
+    format: 'YYYY/MM/DD',
     opens: 'center',
     autoApply : true,
     minDate: moment() ,
     locale: {
-      format: 'YYYY-MM-DD'
+      format: 'YYYY-MM-DD',
+      "daysOfWeek": ['日', '月 ', '火 ', '水 ', '木 ', '金 ', '土 '],
+      "monthNames": ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
     }
   }, 
   );
