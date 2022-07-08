@@ -344,7 +344,7 @@ AOS.init({
     var maxWidth = 768;
     return window.innerWidth < maxWidth;
   },
-  duration: 550,
+  duration: 450,
   offset: 100,
   mirror: true,
   easing: 'ease-in-sine',
@@ -524,9 +524,9 @@ $('#search-btn-handle').click(function() {
       roomArr.push({'adults':parseInt(numberOfPeople)})
     }
     let tempArr = JSON.stringify(roomArr)
-    window.location.href = `https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`;
+    window.open(`https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`);
   } else if (typeSearch == 2) {
-      window.location.href = `https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`;
+      window.open(`https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`);
   } else {}
 });
 //date-picker

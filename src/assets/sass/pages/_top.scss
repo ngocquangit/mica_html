@@ -22,6 +22,7 @@
         letter-spacing: 0.1rem;
         font-weight: 600;
         color: #fff;
+        margin-top: 100px;
         @include mq-lg() {
           font-size: 40px;
           line-height: 60px;
@@ -114,7 +115,7 @@
         height: 2px;
         background-color: #fff;
         z-index: 2;
-        margin-top: 567px;
+        margin-top: 620px;
         @include mq-sp () {
           margin-top: 505px;
           width: 60px;
@@ -272,8 +273,19 @@
     }
     .top__slide_box {
       height: 100%;
+      .overlay {
+        transition: all 0.5s;
+        z-index: 1;
+      }
       img {
         height: 100%;
+        transition: all 0.5s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -848,9 +860,18 @@
         .news_slide_item {
             .img_wrap {
                 height: 200px;
+                overflow: hidden;
                 @include mq-sp(){
                   height: 26.8vw;
                 }
+                img {
+                  transition: all 0.5s;
+                }
+            }
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
             }
         }
         .slide_item_txt {

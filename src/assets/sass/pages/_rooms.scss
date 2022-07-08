@@ -42,7 +42,7 @@
             letter-spacing: 0.04rem;
             font-weight: 400;
             color: #333;
-            margin-top: 69px;
+            margin-top: 40px;
         }
     }
     .mt-94{
@@ -181,6 +181,7 @@
                 border-bottom: 1px solid #ddd ;
                 padding-bottom: 20px;
                 margin-bottom: 15px;
+                margin-top: 6px;
                 @include mq-laptop(){
                     padding-bottom: 10px;
                     margin-bottom: 5px;
@@ -220,7 +221,8 @@
                 padding: 17px;
                 margin-top: 25px;
                 &:hover {
-                    opacity: .8;
+                    background: linear-gradient(135deg, #2C8AAE, #2AB1AA);
+                    color: #fff;
                 }
             }
         }
