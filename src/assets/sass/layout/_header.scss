@@ -378,13 +378,13 @@
 .header__fixed {
   -webkit-animation: showFixedMenu .3s linear forwards;
   animation: showFixedMenu .3s linear forwards;
-  transition: all .3s;
+  transition: all .5s;
 }
 
 .header__unfixed {
   -webkit-animation: hideFixedMenu .5s linear forwards;
   animation: hideFixedMenu .5s linear forwards;
-  transition: all .3s;
+  transition: all .5s;
 }
 
 

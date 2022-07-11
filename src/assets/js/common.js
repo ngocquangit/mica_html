@@ -151,8 +151,13 @@ function imageSlideShow(count) {
     }
   }
 
-  setTimeout("imageSlideShow()", 4000);
+  // setTimeout("imageSlideShow()", 4000);
+  $('.four_seasons__link-slide').click(function(){
+    imageSlideShow()
+  })
 }
+
+
 
 $(window).on("resize", function () {
   let widthPage = $(window).width();
@@ -501,32 +506,29 @@ var swiper = new Swiper(".allcontaints__wrap_slide", {
 });
 
 $('#search-btn-handle').click(function() {
-  Date.prototype.addDays = function(days) {
-    var date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
-    return date;
-  }
-  var date = new Date($('#input_date').val());
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
-  let numberOfNights = $('#numOfNight').val()
+  var startDates = new Date($('#datepicker').data('daterangepicker').startDate);
+  var endDates = new Date($('#datepicker').data('daterangepicker').endDate);
+  var sumDate = endDates.getTime() - startDates.getTime()  
+  let TotalDays = Math.ceil(sumDate / (1000 * 3600 * 24));
+  console.log(TotalDays)
+  let dayStart = startDates.getDate();
+  let monthStart = startDates.getMonth() + 1;
+  let yearStar = startDates.getFullYear();
+  let dayEnd = startDates.getDate();
+  let monthEnd = startDates.getMonth() + 1;
+  let yearEnd = startDates.getFullYear();
   let numberOfRoom = $('#numOfRoom').val()
   let numberOfPeople = $('#numOfPeople').val()
   let typeSearch = $('#search_box').attr('type-search')
   if(typeSearch == 3 ) {
-    lastDate = date.addDays(parseInt(numberOfNights))
-    let lastDay = lastDate.getDate();
-    let lastMonth = lastDate.getMonth() + 1;
-    let lastYear = lastDate.getFullYear();
     let roomArr = []
     for(let i = 0 ; i < parseInt(numberOfRoom); i ++ ) {
       roomArr.push({'adults':parseInt(numberOfPeople)})
     }
     let tempArr = JSON.stringify(roomArr)
-    window.open(`https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${year}/${month}/${day}&checkout=${lastYear}/${lastMonth}/${lastDay}&rooms=${tempArr}`);
+    window.open(`https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${yearStar}/${monthStart}/${dayStart}&checkout=${yearEnd}/${monthEnd}/${dayEnd}&rooms=${tempArr}`);
   } else if (typeSearch == 2) {
-      window.open(`https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${day}&monthIn=${month}&yearIn=${year}&nightNb=${numberOfNights}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`);
+      window.open(`https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${dayStart}&monthIn=${monthStart}&yearIn=${yearStar}&nightNb=${TotalDays}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`);
   } else {}
 });
 //date-picker
@@ -559,7 +561,7 @@ $(function() {
       format: 'YYYY-MM-DD',
       "daysOfWeek": ['日', '月 ', '火 ', '水 ', '木 ', '金 ', '土 '],
       "monthNames": ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月'],
-    }
+    },
   }, 
   );
 });

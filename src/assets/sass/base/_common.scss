@@ -432,6 +432,13 @@ body {
 
   .allcontaints__img {
     height: 207px;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.1);
+        transition: all .3s;
+      }
+    }
     @include mq-lg() {
       height: 360px;
     }

@@ -221,7 +221,7 @@ const dataPlan = [
     period_to: "2022年06月30日",
     amount: "45,100~",
     recommended: "おすすめ",
-    breakfast: "すべて"
+    breakfast: "素泊まり"
   },
 ];
 let tempDataPlan = [];
@@ -246,11 +246,16 @@ $("#breakfast .plan_button_item").click(function (e) {
 // sort data by active recommended variable , breakfast variable
 function forEachPlanItem(idxRCM,idxBRF) {
   tempDataPlan = [];
-  dataPlan.forEach(element => {
-    if(element.recommended == idxRCM && element.breakfast == idxBRF) {
-      tempDataPlan.push(element)
-    }
-  });
+  if(idxBRF == 'すべて') {
+    tempDataPlan = dataPlan 
+  }
+  else {
+    dataPlan.forEach(element => {
+      if(element.recommended == idxRCM && element.breakfast == idxBRF && element.breakfast != 'すべて') {
+         tempDataPlan.push(element)
+       }
+     });
+  }
   showDataPlan(tempDataPlan)
 }
 // show data
