@@ -369,6 +369,7 @@ AOS.init({
   duration: 450,
   offset: 100,
   mirror: true,
+  delay: 300,
   easing: 'ease-in-sine',
   anchorPlacement: 'top-bottom',
 });
