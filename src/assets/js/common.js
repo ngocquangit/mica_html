@@ -128,7 +128,7 @@ function fix_menu() {
   };
 }
 fix_menu();
-
+let timeOutSlide;
 function imageSlideShow(count) {
   const slides = document.querySelectorAll(".four_seasons__image-slide");
   const current = document.querySelector(".image-active");
@@ -150,10 +150,10 @@ function imageSlideShow(count) {
       textSlides[0].classList.add("active");
     }
   }
-
-  setTimeout("imageSlideShow()", 4000);
+  timeOutSlide = setTimeout("imageSlideShow()", 4000);
 }
-
+$(document).ready(function () {
+})
 $(window).on("resize", function () {
   let widthPage = $(window).width();
   fix_menu();
@@ -173,6 +173,28 @@ $(document).ready(function () {
   if($('#four_seasons').length == 1) {
     imageSlideShow(count);
   }
+  $('.four_seasons__link-slide').click(function (e) {
+    let titleSlide = e.target 
+    count = 0;
+    const textSlides = document.querySelectorAll(".four_seasons__link-slide");
+    const slides = document.querySelectorAll(".four_seasons__image-slide");
+    let tempId;
+    clearTimeout(timeOutSlide)
+    $('.four_seasons__link-slide').removeClass('active')
+    $(titleSlide).addClass('active')
+    textSlides.forEach((element,index) => {
+      if(element === titleSlide){
+        tempId = index
+      }
+    });
+    $('.four_seasons__image-slide').removeClass('image-active')
+    slides.forEach((element,index) => {
+      if(index === tempId){
+        $(element).addClass('image-active')
+      }
+    });
+    imageSlideShow(count)
+  })
   allcontaintsContentAutoFix()
   if (widthPage < 769) {
     $(".home__banner_pc").remove();
