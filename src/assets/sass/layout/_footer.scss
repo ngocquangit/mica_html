@@ -104,6 +104,24 @@
         line-height: 22px;
         margin-top: 10px;
       }
+      &.first {
+        margin-top: 33px;
+      }
+    }
+    &__mail{
+      font-size: 28px;
+      line-height: 37px;
+      font-weight: 500;
+      color: #fff;
+      @include mq-laptop(){
+        font-size: 20px;
+        white-space: nowrap;
+      }
+      @include mq-sp(){
+        font-size: 20px;
+        line-height: 27px;
+        margin-top: 8px;
+      }
     }
     @include mq-sp(){
       text-align: center;
@@ -213,7 +231,7 @@
     font-size: 12px;
     line-height: 26px;
     color: #fff;
-    text-align: right;
+    opacity: .6;
     @include mq-sp(){
       text-align: center;
     }

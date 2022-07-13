@@ -378,7 +378,7 @@ body {
 
 .allcontaints__content {
   .text__title_EN {
-    color: #afafb9;
+    color: #000;
     // font-family: "Gotham";
     font-size: 20px;
     font-weight: 400;
@@ -388,11 +388,6 @@ body {
       font-size: 14px;
       line-height: 19px;
       letter-spacing: 0.1rem;
-    }
-  }
-  .allcontaints__wrap_slide {
-    @include mq-sp() {
-      padding-right: 20px;
     }
   }
   @include mq-sp() {
@@ -413,11 +408,10 @@ body {
   .allcontaints__wrap_slide {
     @include mq-sp() {
       margin-top: 24px;
-      margin-left: 20px;
     }
   }
   .swiper-pagination-progressbar {
-    width: calc(100% - 20px) !important;
+    width: 100% !important;
   }
   .allcontaints__wrap_item {
     width: 31.72%;

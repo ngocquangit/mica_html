@@ -20,7 +20,7 @@ block ogpType
 block main 
   #top__page.top__page.master__body
     .home__banner.relative
-      .mv-content__slide.hide
+      .mv-content__slide
         ul.mv-slide.container.pc
           li.mv-slide__item
             .image-slide.img_wrap
@@ -53,7 +53,7 @@ block main
             p.name-slide__item.active testname1
             p.name-slide__item testname2 
             p.name-slide__item testname3
-      .mv-slide-single.img_wrap 
+      .mv-slide-single.img_wrap.hide
         img(src='/assets/img/top/pc_slide_top_img01.jpg' alt='') 
       .overlay
       .banner_text.flex.center__align
@@ -193,24 +193,35 @@ block main
                 p.text_small 19.00㎡ - 22.04㎡
         +btn-link('客室一覧を見る','#')
     +plan-slide()             
-    .facilities__content.rooms__content.sp
+    .facilities__content.rooms__content.sp(data-aos='fade-in')
       .container
         .rooms__content_title facilities
         .rooms__content_sub_title その他施設
-      .facilities__content_slide.swiper
-        .swiper-wrapper
-          .swiper-slide.facilities_slide
-            .facilities_img.img_wrap
-              img(src="/assets/img/top/facilities_club.png", alt="")
-          .swiper-slide.facilities_slide
-            .facilities_img.img_wrap
-              img(src="/assets/img/top/facilities_img09.png", alt="")
-          .swiper-slide.facilities_slide
-            .facilities_img.img_wrap
-              img(src="/assets/img/top/facilities_club.png", alt="")
-          .swiper-slide.facilities_slide
-            .facilities_img.img_wrap
-              img(src="/assets/img/top/facilities_img09.png", alt="")
+        .loop__img_wrap.flex
+          ul.flex.item01.loop__img_item01
+            li.loop_item
+                img.location__img_01(src="/assets/img/top/facilities_club.png", alt="")
+            li.loop_item
+                img.location__img_02(src="/assets/img/top/facilities_img09.png", alt="")
+          ul.flex.item02.loop__img_item02
+            li.loop_item
+                img.location__img_01(src="/assets/img/top/facilities_club.png", alt="")
+            li.loop_item
+                img.location__img_02(src="/assets/img/top/facilities_img09.png", alt="")
+      //- .facilities__content_slide.swiper
+      //-   .swiper-wrapper
+      //-     .swiper-slide.facilities_slide
+      //-       .facilities_img.img_wrap
+      //-         img(src="/assets/img/top/facilities_club.png", alt="")
+      //-     .swiper-slide.facilities_slide
+      //-       .facilities_img.img_wrap
+      //-         img(src="/assets/img/top/facilities_img09.png", alt="")
+      //-     .swiper-slide.facilities_slide
+      //-       .facilities_img.img_wrap
+      //-         img(src="/assets/img/top/facilities_club.png", alt="")
+      //-     .swiper-slide.facilities_slide
+      //-       .facilities_img.img_wrap
+      //-         img(src="/assets/img/top/facilities_img09.png", alt="")
       .container
         .facilities__title 歴史を感じる7つの神社と、
           |<br>街を見渡すスカイチャペル
@@ -434,8 +445,7 @@ block main
           img(src="/assets/img/top/content_img03.png", alt="content img")
     .allcontaints__content.sp
       .container
-        .container
-          h3.text__title_EN.color_FB9.flex.center__justify ALL CONTENTS
+        h3.text__title_EN.color_FB9.flex.center__justify ALL CONTENTS
         .allcontaints__wrap_slide.swiper
           .container
             .swiper-pagination.allcontaints__pagination

@@ -34,22 +34,26 @@
     }
     .facilities-box__title{
       font-size: 24px;
-      line-height: 24px;
+      line-height: 34px;
+      margin-bottom: 20px;
       font-weight: bold;
       color: #333333;
       @include mq-sp(){
-        font-size: 16px;
+        font-size: 18px;
         margin-top: 20px;
+        margin-bottom: 0px
       }
     }
     .facilities-box__right{
       max-width: 335px;
+      margin-top: 40px;
       @include mq-extra-large(){
         max-width: unset;
       }
       @include mq-sp(){
         max-width: unset;
         margin-left: 0;
+        margin-top: 0;
       }
     }
     .ml-180{
@@ -65,7 +69,8 @@
       margin: 10px 0 5px;
       color: #333333;
       @include mq-sp(){
-        font-size: 12px;
+        font-size: 14px;
+        margin: 10px 0px;
       }
     }
     .facilities-box__row {
@@ -77,10 +82,13 @@
         width: 80px;
       }
     }
+    .facilities-box__row-right {
+      margin-left: 20px;
+    }
     .facilities-box__text{
       font-size: 14px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 28px;
       color: #37373C;
       @include mq-sp(){
         font-size: 12px;
@@ -93,7 +101,7 @@
       cursor: pointer;
     }
     .facilities-gray{
-      line-height: 17px;
+      line-height: 28px;
       color: #AFAFB9;
     }
     .mt-23{
