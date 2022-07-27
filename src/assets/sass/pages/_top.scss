@@ -478,9 +478,12 @@
           border: none;
           outline: none;
           padding-left: 0;
-          text-indent: -1px;
+          text-indent: 1px;
+          position: relative;
+          left: -5px;
           @include mq-laptop() {
             font-size: 16px;
+            left: 0;
           }
         }
       }

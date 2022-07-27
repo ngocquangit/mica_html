@@ -520,7 +520,26 @@ var swiper = new Swiper(".allcontaints__wrap_slide", {
     },
   },
 });
-
+let hotelCode = $('#search_box').attr('data-hotel')
+if(hotelCode !== ''){
+  let numberOfRoom = 0
+  let numberOfPeople = 0 
+  $('#numOfRoom').change(function() {
+    numberOfRoom = $('#numOfRoom').val()
+    numberOfPeople = $('#numOfPeople').val()
+    console.log(numberOfPeople);
+    let output = []
+    for (let index = 1; index <= 10; index++) {
+      output.push('<option value="'+ index +'">'+ index*numberOfRoom +'名</option>');
+    }
+    $('#numOfPeople').html(output.join(''));
+    $('#numOfPeople option[value="'+numberOfPeople+'"]').attr("selected", "selected");
+  })
+}
+getFullMonth = function(date) {
+  const month = date.getMonth()+1
+  return month < 10 ? '0'+month : month
+}
 $('#search-btn-handle').click(function() {
   var startDates = new Date($('#datepicker').data('daterangepicker').startDate);
   var endDates = new Date($('#datepicker').data('daterangepicker').endDate);
@@ -530,12 +549,13 @@ $('#search-btn-handle').click(function() {
   let dayStart = startDates.getDate();
   let monthStart = startDates.getMonth() + 1;
   let yearStar = startDates.getFullYear();
-  let dayEnd = startDates.getDate();
-  let monthEnd = startDates.getMonth() + 1;
-  let yearEnd = startDates.getFullYear();
+  let dayEnd = endDates.getDate();
+  let monthEnd = endDates.getMonth() + 1;
+  let yearEnd = endDates.getFullYear();
   let numberOfRoom = $('#numOfRoom').val()
   let numberOfPeople = $('#numOfPeople').val()
   let typeSearch = $('#search_box').attr('type-search')
+  let hotelCode = $('#search_box').attr('data-hotel')
   if(typeSearch == 3 ) {
     let roomArr = []
     for(let i = 0 ; i < parseInt(numberOfRoom); i ++ ) {
@@ -545,6 +565,8 @@ $('#search-btn-handle').click(function() {
     window.open(`https://booking.tripla-ryokan.com/#/booking/result?code=a6262b57ad9f26daf528d7eefd85303a&checkin=${yearStar}/${monthStart}/${dayStart}&checkout=${yearEnd}/${monthEnd}/${dayEnd}&rooms=${tempArr}`);
   } else if (typeSearch == 2) {
       window.open(`https://all.accor.com/lien_externe.svlt?goto=rech_resa&destination=tokyo&dayIn=${dayStart}&monthIn=${monthStart}&yearIn=${yearStar}&nightNb=${TotalDays}&roomNumber=${numberOfRoom}&adultNumber=${numberOfPeople}&code_langue=ja`);
+  } else if (typeSearch == 1) {
+    window.open(`https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=${hotelCode}&lodgingDateFrom=${yearStar+''+getFullMonth(startDates)+''+dayStart}&lodgingDateTo=${yearEnd+''+getFullMonth(endDates)+''+dayEnd}&sumrm=${numberOfRoom}&lt001=0&lnum001=${numberOfPeople}`);
   } else {}
 });
 //date-picker
