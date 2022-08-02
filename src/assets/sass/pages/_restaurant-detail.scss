@@ -62,14 +62,26 @@
             }
             .cooking_swiper {
                 overflow: hidden;
+                height: 444px;
+                @include mq-sp() {
+                    height: 365px;
+                }
                 .swiper-slide {
                     background-color: #fff;
+                    img {
+                        height: 200px;
+                    }
                     .txt_menu {
                         font-size: 18px;
                         font-weight: 700;
                         line-height: 34px;
                         margin-left: 30px;
-                        margin-top: 25px;
+                        margin-top: 25px;   
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         @include mq-lg() {
                             font-size: 22px;
                             margin-left: 30px;
@@ -89,6 +101,11 @@
                         margin-bottom: 29px;
                         font-weight: 700;
                         line-height: 34px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         @include mq-lg() {
                             font-size: 18px;
                             margin: 0;
@@ -97,6 +114,7 @@
                         }
                         @include mq-sp() {
                             max-width: 95%;
+                            -webkit-line-clamp: 4;
                         }
                         @include mq-mobile() {
                             line-height: 26px;

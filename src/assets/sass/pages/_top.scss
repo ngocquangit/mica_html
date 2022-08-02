@@ -97,7 +97,7 @@
           height: 100%;
           transform: scale(1.2);
           clip: rect(0, 100vw, 70vw, 100vw);
-          transition: clip 0.7s cubic-bezier(0.1, 0.1, 0.9, 0.9) 0s;
+          transition: clip 0.7s cubic-bezier(0, 0, 0.9, 0.9) 0s;
           will-change: clip;
           @include mq-laptop() {
             clip: rect(0, 150vw, 105vw, 150vw);
@@ -143,7 +143,7 @@
         }
         .progess-bar__animation {
           width: 100% !important;
-          transition-duration: 4.8s;
+          transition-duration: 5s;
           transition-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0.1);
         }
       }

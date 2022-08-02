@@ -200,6 +200,11 @@ $(document).ready(function () {
   var swiper = new Swiper(".facilities-box__slide", {
     pagination: {
       el: ".facilities-box__swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
     },
   });
   var swiper = new Swiper(".slide__top_swiper", {
