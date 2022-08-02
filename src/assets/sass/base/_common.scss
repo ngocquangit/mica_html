@@ -315,11 +315,20 @@ body {
     cursor: pointer;
     .img_wrap {
       height: 20.9vw;
+      overflow: hidden;
       @include mq-sp(){
         height: 48vw;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         overflow: hidden;
+      }
+      img {
+        transition: all 0.7s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
       }
     }
     .slide_txt_wrap {
