@@ -412,8 +412,8 @@
       .search_box__time {
         position: relative;
         .calendar_img {
-          position: absolute;
-          top: 0px;
+          display: flex;
+          width: 20px;
           margin-left: 8px;
           @include mq-laptop() {
             margin-left: 0px;
@@ -422,10 +422,13 @@
             max-width: 15px;
             max-height: 10px;
           }
+          img {
+            width: 100%;
+          }
         }
       }
       .input_date {
-        max-width: 235px;
+        width: calc(100% - 20px);
         // font-family: "DINPro", sans-serif;
         font-size: 20px;
         letter-spacing: 0.004rem;
@@ -435,7 +438,6 @@
         outline: none;
         @include mq-laptop() {
           font-size: 16px;
-          max-width: 190px;
         }
       }
 
