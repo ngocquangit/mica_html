@@ -1101,7 +1101,7 @@ function showDataRestaurantDetail (data) {
             <div class="swiper-button-prev cooking"></div>
             <div class="swiper-button-next cooking"></div>
           </div>
-          <div class="book_dinner">ディナーを予約する</div>
+          <a class="book_dinner">ディナーを予約する</a>
         </div>
       </div>
     `
