@@ -97,7 +97,7 @@
           height: 100%;
           transform: scale(1.2);
           clip: rect(0, 100vw, 70vw, 100vw);
-          transition: clip 0.7s cubic-bezier(0, 0, 0.9, 0.9) 0s;
+          transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
           will-change: clip;
           @include mq-laptop() {
             clip: rect(0, 150vw, 105vw, 150vw);
@@ -151,14 +151,15 @@
         visibility: visible;
         transition-delay: 0s;
       }
+
       li.current .image-slide {
-        clip: rect(0, 100vw, 70vw, 0);
+        clip: rect(0, 100vw, 70vw, -10vw);
         animation: zoom-out-img linear 7s forwards;
         @include mq-laptop() {
           clip: rect(0, 150vw, 105vw, 0);
         }
         @include mq-sp() {
-          clip: rect(0, 100vw, 300vw, 0);
+          clip: rect(0, 100vw, 300vw, -10vw);
         }
       }
 
